@@ -188,8 +188,20 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 							map.put("is_self_subscribed", obj.getString("is_self_subscribed"));
 							map.put("is_self_recommended", obj.getString("is_self_recommended"));
 							map.put("is_self_posted", obj.getString("is_self_posted"));
-							
-							list.add(map);
+
+
+							if( con2 instanceof Tab_My_Profile_Sessions)
+							{
+								if(obj.getString("is_self_subscribed").equals("Y"))
+								{
+									list.add(map);
+								}
+
+							}
+							else
+							{	list.add(map);
+							}
+
 						}
 						
 						Log.e("list", ""+list.size());

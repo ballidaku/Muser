@@ -154,6 +154,11 @@ public class Tab_My_Profile_Sessions extends Fragment
 
 		hide_temp_logo();
 
+		if(list.size() == 0)
+		{
+			show_temp_logo();
+		}
+
 		if(this.list.size() == 0)
 		{
 			this.list = list;

@@ -7,104 +7,12 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b44ba2c-ab5b-4ac3-aadd-c46b19ba57f2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/muser/src/main/res/drawable-xxhdpi/top_bubble_left.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/muser/src/main/res/drawable-hdpi/top_bubble_left2.9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/CancelUploadingVideo.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/CancelUploadingVideo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Cancel_Sessions$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Cancel_Sessions$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Captured_Image.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Captured_Image.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Change_Username_Password_Thread$1$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Change_Username_Password_Thread$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Chats.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Chats.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Comments_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Comments_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Common_Grid_Video_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Common_Grid_Video_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$2.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$3.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$4.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$5.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$6$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$6.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$7.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$GetVideos_ProgressTask.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$GetVideos_ProgressTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$MyBroadcastReceiver.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer$MyBroadcastReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Drawer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/DrawerList_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/DrawerList_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiAdapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconGridFragment.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconGridFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconRecentsGridFragment.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconRecentsGridFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconsFragment.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/rockerhieu/emojicon/EmojiconsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Expandable_list_adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Expandable_list_adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Find_Friends.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Find_Friends.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Find_Friends_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Find_Friends_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Followers_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Followers_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Following_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Following_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/GCMIntentService.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/GCMIntentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Image_Video_Details.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Image_Video_Details.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Invite_Others.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Invite_Others.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Invite_Others_Twitter_Adapter$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Invite_Others_Twitter_Adapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Invite_Others_Twitter_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Invite_Others_Twitter_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Login.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Messages.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Messages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Messages_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Messages_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/My_Profile.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/My_Profile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/New_Camera.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/New_Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Notification.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Notification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Notification_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Notification_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Picture_fragment.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Picture_fragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$drawable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/digits/sdk/android/R$drawable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/digits/sdk/android/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/R$drawable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/core/R$drawable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/core/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/tweetui/R$drawable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/tweetui/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/digits/sdk/android/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/digits/sdk/android/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/facebook/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/handmark/pulltorefresh/library/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/core/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/core/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/tweetui/R$id.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/twitter/sdk/android/tweetui/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$integer.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$layout.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$menu.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$plurals.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$plurals.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$raw.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$string.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$style.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$styleable.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Recomended.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Recomended.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Registration.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Registration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Search_Hashtags_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Search_Hashtags_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Search_Hashtags_Child_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Search_Hashtags_Child_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts$1$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Contacts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email$1$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Email.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Facebook.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Facebook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Twitter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Invite_Others_Twitter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Connects.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Connects.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Pictures.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Pictures.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Sessions.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Sessions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Videos.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Notification_Videos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Search_Hashtags.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Search_Hashtags.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Trending_Friends.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_Trending_Friends.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Tag_People$5$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Tag_People$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Tag_People$5.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Tag_People$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients$1$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Total_Clients.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Trainers$Trainer_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Trainers$Trainer_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Trending_Friends_Adapter.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Adapter/Trending_Friends_Adapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Update_Profile$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Update_Profile$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Update_Profile$2.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Update_Profile$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/classes/Util_Class.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/classes/Util_Class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Video_fragment.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Video_fragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Wallet.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/ameba/muser/Wallet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask$1.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_My_Profile_Sessions.class" afterPath="$PROJECT_DIR$/muser/build/intermediates/classes/debug/com/example/Tabs/Tab_My_Profile_Sessions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/multi-dex/debug/allclasses.jar" afterPath="$PROJECT_DIR$/muser/build/intermediates/multi-dex/debug/allclasses.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/muser/build/intermediates/dex/debug/classes.dex" />
@@ -115,31 +23,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/outputs/apk/muser-debug.apk" afterPath="$PROJECT_DIR$/muser/build/outputs/apk/muser-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/muser/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/muser/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Drawer.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Drawer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/DrawerList_Adapter.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/DrawerList_Adapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/GCMIntentService.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/GCMIntentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Messages.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Notification.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Notification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/ameba/muser/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/ameba/muser/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/digits/sdk/android/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/digits/sdk/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/facebook/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/core/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/core/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/tweetui/R.java" afterPath="$PROJECT_DIR$/muser/build/generated/source/r/debug/com/twitter/sdk/android/tweetui/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/muser/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Total_Clients.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Total_Clients.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_My_Profile_Sessions.java" afterPath="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_My_Profile_Sessions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/res/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/res/debug/values/com_crashlytics_build_id.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/common_listview_block_followe_following.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/common_listview_block_followe_following.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/res/layout/common_listview_block_followe_following.xml" afterPath="$PROJECT_DIR$/muser/src/main/res/layout/common_listview_block_followe_following.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/assets/debug/crashlytics-build.properties" afterPath="$PROJECT_DIR$/muser/build/intermediates/assets/debug/crashlytics-build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/custom_drawer_item.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/custom_drawer_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/res/layout/custom_drawer_item.xml" afterPath="$PROJECT_DIR$/muser/src/main/res/layout/custom_drawer_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/drawer.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/res/debug/layout/drawer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/src/main/res/layout/drawer.xml" afterPath="$PROJECT_DIR$/muser/src/main/res/layout/drawer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muser/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/muser/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Muser.iws" />
@@ -169,7 +57,38 @@
     <favorites_list name="Muser" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Tab_Trending_Videos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_Trending_Videos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Get_Trending_Pictures_Videos_ProgressTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Trending_Pictures_Videos_ProgressTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util_Class.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/classes/Util_Class.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42561984">
+              <caret line="86" column="102" selection-start-line="86" selection-start-column="94" selection-end-line="86" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -5080,7 +4999,6 @@
         <option value="$PROJECT_DIR$/muser/src/main/res/layout/activity_captured_image.xml" />
         <option value="$PROJECT_DIR$/muser/src/main/res/layout/custom_drawer_item_first.xml" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_Home_Pictures.java" />
-        <option value="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_My_Profile_Sessions.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Home_Pictures_Videos_ProgressTask.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Image_Video_Details.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_My_Favoutite_Pictures_Videos_Users_ProgressTask.java" />
@@ -5088,7 +5006,6 @@
         <option value="$PROJECT_DIR$/muser/src/main/res/layout/activity_chat.xml" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Send_Invite_Contacts_Thread.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Send_Invite_Email_Thread.java" />
-        <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_Invite_Others_Contacts.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/Invite_Others_Twitter_Adapter.java" />
         <option value="$PROJECT_DIR$/muser/src/main/res/layout/custom_email_contacts.xml" />
@@ -5112,6 +5029,8 @@
         <option value="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Notification.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Messages.java" />
         <option value="$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Drawer.java" />
+        <option value="$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java" />
+        <option value="$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_My_Profile_Sessions.java" />
         <option value="$PROJECT_DIR$/muser/src/main/res/layout/custom_drawer_item.xml" />
       </list>
     </option>
@@ -5700,7 +5619,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441354188135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Badges">
+      <created>1441372627951</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1441372627951</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -5718,7 +5643,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49377123" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26540285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39336494" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2748466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -5777,7 +5702,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="uploading code" />
     <MESSAGE value="uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="uploading" />
+    <MESSAGE value="Badges" />
+    <option name="LAST_COMMIT_MESSAGE" value="Badges" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5794,41 +5720,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Send_Invite_Email_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.12">
-          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="367" column="64" selection-start-line="367" selection-start-column="64" selection-end-line="367" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Send_Invite_Contacts_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4609375">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_Invite_Others_Contacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="188" column="48" selection-start-line="188" selection-start-column="48" selection-end-line="188" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/Invite_Others_Twitter_Adapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.72">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/muser/src/main/res/layout/custom_email_contacts.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.689655">
@@ -6095,26 +5986,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Other_Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="167" column="47" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Set_Block_Follow_Users_ProgressTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="208" column="64" selection-start-line="208" selection-start-column="64" selection-end-line="208" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/classes/Util_Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="103" selection-start-line="93" selection-start-column="103" selection-end-line="93" selection-end-column="103" />
           <folding />
         </state>
       </provider>
@@ -6213,23 +6088,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/DrawerList_Adapter.java">
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/ameba/muser/Other_Profile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="55" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
+          <caret line="481" column="151" selection-start-line="481" selection-start-column="151" selection-end-line="481" selection-end-column="151" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/muser/src/main/res/layout/custom_drawer_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4866785">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding />
+        <state vertical-scroll-proportion="0.34517765">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#910#931#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/DrawerList_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43870968">
+          <caret line="91" column="53" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_My_Profile_Sessions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25042018">
+          <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Adapter/My_Profile_Videos_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7709677">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Pictures_Videos_ProgressTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3303887">
+          <caret line="194" column="83" selection-start-line="194" selection-start-column="83" selection-end-line="194" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/Tabs/Tab_Trending_Videos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/ProgressTask/Get_Trending_Pictures_Videos_ProgressTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muser/src/main/java/com/example/classes/Util_Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42561984">
+          <caret line="86" column="102" selection-start-line="86" selection-start-column="94" selection-end-line="86" selection-end-column="102" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
