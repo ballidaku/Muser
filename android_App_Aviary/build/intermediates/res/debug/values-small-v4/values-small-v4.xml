@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/android_App_Aviary/build/intermediates/exploded-aar/Muser/aviaryAndroidSDKmaster/unspecified/res/values-small-v4/values-small-v4.xml -->
+    <eat-comment/>
+    <dimen name="aviary_textSizeLarge">20sp</dimen>
+    <integer name="aviary_iap_dialog_height_weight">90</integer>
+    <integer name="aviary_iap_dialog_width_weight">100</integer>
+</resources>

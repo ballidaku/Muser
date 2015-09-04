@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/stroke" >
+
+    <RelativeLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content">
+        
+	    <ImageView
+	        android:id="@+id/image_pic"
+	        android:layout_width="match_parent"
+	        android:layout_height="180dp"
+	        android:scaleType="fitXY"
+	        android:layout_margin="1dp" >
+	    </ImageView>
+
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/image_pic"
+	        android:layout_alignRight="@+id/image_pic"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginRight="10dp"
+	        android:text="00:15"
+	        android:padding="5dp"
+	        android:textColor="@color/White"
+	        android:background="@drawable/white_stroke" />
+    
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+       
+            <ImageView
+                android:id="@+id/user_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/loading_image" />
+       
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jimmy"
+                android:textColor="#4f606a"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/name_tesdaxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="46 min ago"
+                android:textSize="10sp" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/name_texsaxawfawct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clap" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/name_tesasfcasdfqwaxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="46"
+                android:textSize="10sp" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/custom_home_videos.xml -->

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 5px;
+    width: 97%;
+}
+.muser_heading
+{
+	float:left;
+	width:100%;
+}
+.muser_heading h2
+{
+	float:left;
+	width:100%;
+	font-size:24px;
+	color:black;
+	text-transform:uppercase;
+}
+
+
+.muser_heading p {
+    float: left;
+    width: 100%;
+}
+.muser_heading > span {
+    color: grey;
+    float: left;
+    font-size: 14px;
+    margin-top: 0;
+    width: 100%;
+}
+.muser_heading p {
+    float: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.muser_txt {
+    float: left;
+    padding: 4px;
+    width: 96%;
+}
+
+.muser_txt p {
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+	text-align:justify;
+}
+
+
+.muser_txt h4 {
+    float: left;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+}
+
+.muser_txt  ul {
+    float: left;
+    width: 91%;
+}
+
+.muser_txt  ul li {
+    float: left;
+    line-height: 26px;
+    width: 100%;
+}
+.muser_list  ul {
+    float: left;
+    width: 91%;
+}
+
+.muser_list  ul li {
+    float: left;
+    line-height: 26px;
+    width: 100%;
+}
+
+.muser_txt  ol {
+    float: left;
+    width: 91%;
+}
+
+.muser_txt  ol li {
+    float: left;
+    line-height: 26px;
+    width: 100%;
+}
+.muser_list
+{
+	float:left;
+	width:100%;
+}

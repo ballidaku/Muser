@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/White"
+  android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#C8C8C8" >
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/search_icon"
+            android:gravity="center_vertical"
+            android:hint="search"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/text_size_14"
+            android:singleLine="true"
+            android:background="@drawable/rounded_corner"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapSentences"
+            android:maxLength="30" >
+        </EditText>
+    </LinearLayout>
+    
+    
+     <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#000"
+        android:text="No data found."
+        android:gravity="center"
+        android:visibility="gone"/>
+    
+    <ListView
+        android:id="@+id/hashtags_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+ 		
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/tab_search_hashtags.xml -->

@@ -1,0 +1,255 @@
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/firstLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/insidefirstLinearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eeeeee"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/myBal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="MyBalance"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="$ 0"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/myBalicon"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:src="@drawable/swipe_icon" />
+        </LinearLayout>
+
+        
+
+            <View
+                android:id="@+id/lightSeprater1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/secondinsidefirst"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/addFunds"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:text="Add Funds" />
+
+            <View
+                android:id="@+id/lightSeprater2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#bbbbbb" />
+
+            <TextView
+                android:id="@+id/withdrawFunds"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:text="Withdraw Funds" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/firstMainSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/secondLinear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_size_14"
+                android:text="Actions"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/secondMainSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/thirdLinear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/train_with"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:text="Train With" />
+
+            <ImageView
+                android:id="@+id/secondIcon"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                  android:layout_gravity="center_vertical"
+                android:src="@drawable/swipe_icon" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/firstlightSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/fourthLinear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cancel_session"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:text="Cancel Sessions" />
+
+            <ImageView
+                android:id="@+id/thirdIcon"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                  android:layout_gravity="center_vertical"
+                android:src="@drawable/swipe_icon" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/thirdMainSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/fifthLinear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/trainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="Trainers"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/fourthMainSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#bbbbbb" />
+
+        <LinearLayout
+            android:id="@+id/sixthLinear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal" >
+
+            
+
+            <TextView
+                android:id="@+id/total_clients"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:text="Total Clients" />
+
+            <ImageView
+                android:id="@+id/fourthhicon"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                  android:layout_gravity="center_vertical"
+                android:src="@drawable/swipe_icon"  />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/secondlightSeprater"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb" />
+        
+        
+        <!-- <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" 
+                android:visibility="invisible">
+
+                <requestFocus />
+            </EditText> -->
+    </LinearLayout>
+
+</ScrollView>

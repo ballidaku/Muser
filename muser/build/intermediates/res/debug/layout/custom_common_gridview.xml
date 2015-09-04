@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    
+       <!--    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay"
+        ptr:ptrAnimationStyle="flip"
+        android:fillViewport="true"
+        ptr:ptrMode="both" > -->
+   <!-- <ScrollView 
+       android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true"> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/temp_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_logo"
+             android:layout_gravity="center"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="visible" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            android:id="@+id/gridView"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="150dp"
+            android:drawSelectorOnTop="true"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:scrollbarStyle="outsideOverlay"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            android:visibility="visible"
+            android:padding="2dp"
+             ptr:ptrMode="both" />
+        
+        
+        
+    </LinearLayout>
+    
+   <!--  </ScrollView> -->
+
+   <!--  </com.handmark.pulltorefresh.library.PullToRefreshScrollView> -->
+
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/custom_common_gridview.xml -->

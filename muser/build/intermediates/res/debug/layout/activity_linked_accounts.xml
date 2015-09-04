@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/left_arrow"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="Back"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:src="@drawable/right_btn"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/optional_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Optional Info"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/optional_fb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/fb_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Use Your Facebook Info"
+                        android:textColor="#000"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <EditText
+                    android:id="@+id/optional_fb_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/name_icon"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/optional_fb_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/phn_no"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/optional_tw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/twitter_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Use Your Twitter Info"
+                        android:textColor="#000"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <EditText
+                    android:id="@+id/optional_tw_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/name_icon"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/optional_tw_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/phn_no"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/optional_ig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/insta_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Use Your Instagram Info"
+                        android:textColor="#000"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider_line_color" />
+
+                <EditText
+                    android:id="@+id/optional_ig_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/name_icon"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:inputType="textCapSentences"
+                    android:maxLength="20"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/optional_ig_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/phn_no"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:textSize="@dimen/text_size_14" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/activity_linked_accounts.xml -->

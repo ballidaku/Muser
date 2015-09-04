@@ -1,0 +1,90 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.0'
+
+    defaultConfig {
+        applicationId "com.ameba.muser"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        jumboMode true
+        incremental true
+        preDexLibraries false
+        javaMaxHeapSize "4g"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+  configurations
+        {
+            all*.exclude module: 'picasso'
+            //exclude module:'support-v4'
+           // all*.exclude group: ':aviaryAndroidSDKmaster', module: 'support-v4'
+
+        }
+    packagingOptions
+        {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/NOTICE'
+        }
+}
+
+
+
+
+
+dependencies
+        {
+            compile files('libs/twitter4j-core-4.0.2.jar')
+            compile files('libs/twitter4j-media-support-3.0.5.jar')
+            compile project(':simplecropimagelib')
+            compile project(':pull_To_Refresh_Llibrary')
+            compile files('libs/httpmime-4.1.3.jar')
+            compile files('libs/PayPalAndroidSDK-2.9.5.jar')
+            compile('com.twitter.sdk.android:twitter:1.6.1@aar') {
+                transitive = true;
+            }
+
+            compile 'com.google.android.gms:play-services:7.0.0'
+            compile files('libs/universal-image-loader-1.9.0.jar')
+            compile files('libs/ftp4j-1.7.2.jar')
+            compile files('libs/gcm.jar')
+            compile project(':facebook')
+           // compile project(':aviaryAndroidSDKmaster')
+            compile project(':actionbarsherlock')
+            compile 'com.android.support:multidex:1.0.0'
+        }
+
+
+
+
+

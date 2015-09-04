@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73e3dcd1c6363340af17e78967e6ed27d585d52d">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-22a87fcd5d6d6d9c7504020ca8a5128d57112633.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\libs\httpmime-4.1.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d97e400d31bbeb36c1c60d2c3a9bbf2cdccf85a8">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\httpmime-4.1.3-eceb6d1e6bb55a91bdd6e372a5397e7102ce6ff8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-d7e857d03d163d6c3310b9071eb91f50987d9f17.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\annotations-10.0.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="58b262ff50129466ebdf920ffc393ba6f1a5bcff">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\annotations-10.0.2-1bcd7c6216e26512810a4d0167d51543ad160ab5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\okhttp-1.2.1-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="bb54543ab6effc7af755ce8a28566e6d563fb7bf">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\okhttp-1.2.1-jar-with-dependencies-040dd483261d150825fbb93549ebd631cf375a6f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2bd26de12f5ea29d4cabc6e84045de04cb615680">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-c4cb4cecb59bd7eaa3e3245d9b2b4eb0bb82d58b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-59191f6362863942dc70b7b255e3a6525bc7aebc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\picasso.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c2ce4c3719c44b9e3828a2c60e1aed4334e5c8ae">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\picasso-c4bea1521b4cd7ccd7be03f3f3bfae858df82576.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-cds-library.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="654b828524127b0d5daf803c3c730aa431a4ad99">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-cds-library-3e09764b3eb06660af1f8d5cfdeb0e7c9f4398a2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-455876e8e34938169b3790ec9954a17e3f6022be.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-sdk-library.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ea48678d117bdae1bfcd814752ad183536ec1db8">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-sdk-library-8cd211c19ab494f24ac59c4ba1b8cd3d392c277a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\horizontallistview.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2b8b719aaaa799403a7cef7a5be3addbae2e58de">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\horizontallistview-8efa5dae4b2634c11af47267c8cd0b441b4b4426.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\pull_To_Refresh_Llibrary\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a6145bf1012d0f8cecddba783f0283a26df72a1a">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-3c184205ff2995c2dd86bb8ed9b37d283d84e8fe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-a066442fdfccbc3227f8e8fc171a7900e6811d44.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.4\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f7dc6b43d7c7f3d94e98531aef88269f9ed2a37b">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-d56180441f1098ac74290e37a805b7ac89c25a8f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-c218b87a369bf8c49f295036bfd32e0b25e1d999.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-receipt-library.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a5ef85c47931169d5c10b4eeaf35bbed78933ee9">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-receipt-library-55afd6349b67c4291e75cb6312c3f58c98c5c6ec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\facebookSDK\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="614de5e1109e4af51a88f495014f9c2e980f7b40">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-f4d4f088dba7da6b38aafb06484b0157efd5fbf4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-0951b2b19fd7bdf71198a29cc439d033c46bad5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\abtest.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="39cf82b941ae8811fb03bee5b1098177e75a8abb">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\abtest-b33284874baaf56bce377bf2456e91a587c9e820.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\horizontallistview.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2b8b719aaaa799403a7cef7a5be3addbae2e58de">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\horizontallistview-19d4f33ab154828a7fd34fab02ea47e5726ab2b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\actionbarsherlock\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="757b4cddad38bebf81707b19ba528a2dbd0aac89">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-6c9bf9f2edc9853d2d97c35b1ee9d985be416e6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\picasso-2.5.2-529c08a42fdaa82b6f62dae0f8c6547df6b0f0f7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9c2a70488aa361d662b7af7f51419485a3108b5c">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-0614488ef4209f9fd7fe35cfa7de5cafcabf535e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-common-library.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="bc4f3bbb12e610d09ceb3ae8bbfd627cf26d5d90">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-common-library-9ac96927854568121306ac7448d9ac3f257f9b24.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-56f8be664502d61f52421ba2ff38d3b1a0ee3729.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-8df06f9cbf6d1b34bcb6fb6588a82c9ed605f59a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-138d8349cd7e4d05e44f9eb2683c243a4b26316a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\facebookSDK\unspecified\jars\libs\bolts-android-1.1.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\bolts-android-1.1.2-794be1e16aef5e4cc639df5ac0eb8c259f80f3a0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\gson-2.2.4-2649a5f2d67a5cac6eff87de306436a6affa223d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-5f241af9ca7067275378e330527fc9bc198df924.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-b7e52ac80cd1ef0e2fcf9e2a250058183230623f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-771e01a79bd7dda5c13a96a2b1d67772af7793e3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\simplecropimagelib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="092b16e0adce96458c596135e896fa9bab922b8f">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-1a830297c9e5f9f0cf800ebcda477aa521528c49.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-2ee46f812e14c2a278c4bf1872aca0119b61a417.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-cds-library.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="654b828524127b0d5daf803c3c730aa431a4ad99">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-cds-library-1dc128be3277a72d0e9e07afddb9e2ddc6b010c1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-5937eba4d2f0cbb9857a4b1347f9ecc66c6ebbf2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\abtest.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="39cf82b941ae8811fb03bee5b1098177e75a8abb">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\abtest-8974614e84ee85376c4c2dd8337f3963a4bc6d84.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-6ba4954a0434919c060144f89ba01bc6781a15e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a9f5c30c22dc9a623078f85000c787cd191aa35f">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-1dd0614acc45f89c3e04f21521f91b9f44ea8fc3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-tracking.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ccf95437a2b7a4c78c71350d8e6a189532e802ad">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-tracking-8854403d6610f20ad20db900f36c493865731172.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-454b3904bfed50c967dfc5b98a77f4d864d0f639.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\okhttp-1.2.1-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bb54543ab6effc7af755ce8a28566e6d563fb7bf">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\okhttp-1.2.1-jar-with-dependencies-4f248f734b639318bb20bfc446d6622cb0bfb3ec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\libs\PayPalAndroidSDK-2.9.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f0a3e3f3fda51ced78404438b0cde634407c826">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\PayPalAndroidSDK-2.9.5-9aeed57a09c5085fbece4371a73df8ce98104c6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-b47530b521ddb8af79588f888f7befdd48b1b431.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\listviewanimations.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="386d9ab9cc569daeaf46b863d10bc5b22bb74893">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\listviewanimations-daae99f5898f1c832c7f209406cd8f3003031a7e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-tracking.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="ccf95437a2b7a4c78c71350d8e6a189532e802ad">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-tracking-6f7529f66526d1b7212d17f69a5cd306e0c4220a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-common-library.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bc4f3bbb12e610d09ceb3ae8bbfd627cf26d5d90">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-common-library-975d90181d74ad76e6f37fb4ba3421aa0c5e9f5e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-fba3dd4f73f7ee45bf56d79203adbadc851455dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-headless-library.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="ffaaae3465aec19c4158ee4c5391a19a1a1b5c9c">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-headless-library-9742ca34464f2be75e6785a1e8e94d1c369c8566.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\libs\twitter4j-core-4.0.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="381cf31e9200c2902782f17248d2af18e2ab4c56">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\twitter4j-core-4.0.2-cc205d7e707fdaab1bd79b08952e485d6ecdd71b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\stickylistheaders_lib.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\stickylistheaders_lib-99007d1fe567ef13cf5d153e6a498837a13b473b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\imageviewtouch.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="44fdb2139ba92f9d444959da22158b05895cc48a">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\imageviewtouch-4ec295fbbb6d1f55d7375f88d3e682e590090813.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\0.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="157015930713d0411b69a76606f306c9a2c11af3">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-2a341b2dd37eb99f2a50d47e914d31c5196be10e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-b3f6ff38ab878627336c5144701f94404a443cec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\classes-2ab98ef0666e87aebae8a00418256b78812f4c77.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.6.1\efb0a36546aa8857ab8df358b106c1817e03cbee\retrofit-1.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="efb0a36546aa8857ab8df358b106c1817e03cbee">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\retrofit-1.6.1-bb9f0ce5ecec530f7fb040ed6e820a59d51a3bfd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-23b208d149b63adf70727e817178fb8366a5fd81.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-06b4acd9edf55c346a40810493c1970c5fc3d232.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\imageviewtouch.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="44fdb2139ba92f9d444959da22158b05895cc48a">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\imageviewtouch-1d965574da4d309cf1043ce3096a489135e097be.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-headless-library.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ffaaae3465aec19c4158ee4c5391a19a1a1b5c9c">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\aviary-headless-library-bbf13b888132a953ae0b191cda84aa5f8a0f9d7f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-sdk-library.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="ea48678d117bdae1bfcd814752ad183536ec1db8">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-sdk-library-e4bc88fdfc79d9982e04bbaadaafcebc1649cd1a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="60f028b9ff5917977b5fad2667af0e25ac3b5782">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\classes-32aba1cab60e36db746bbd97ff514b81c42d594c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\picasso.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c2ce4c3719c44b9e3828a2c60e1aed4334e5c8ae">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\picasso-df991300cac2468042678bc32c951b022ff1ae2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\annotations-10.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="58b262ff50129466ebdf920ffc393ba6f1a5bcff">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\annotations-10.0.2-28fde10cc24d5518cdd59bb6f58998ff9a1aa9be.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\aviary-receipt-library.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a5ef85c47931169d5c10b4eeaf35bbed78933ee9">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\aviary-receipt-library-a9a089f1da8b0e311bd62488199440e19f838df0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-a3f2cccf2fee8dd7db9cfa7609f13c32400922ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-cefc1e788967e3b92b3acdaaefe6c3b6e085b00e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85dbcb10f2e04aa08bcd7b4405e4a7fec615760d">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\classes-a07c88eebf529f167b646ea458edff31b0a667a3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\libs\gcm.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\gcm-d6b575c7c58e1da7489cff5defabc291b1a05855.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\stickylistheaders_lib.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\stickylistheaders_lib-f94032cffd48c78513892f8eefd68c2eb926a42c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\Muser\aviaryAndroidSDKmaster\unspecified\jars\libs\listviewanimations.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="386d9ab9cc569daeaf46b863d10bc5b22bb74893">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\listviewanimations-86e4215df50d34c60493b3baf5ea1078b17cb64c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-093c6ea87eac0cc2cd3a4f5fa7252f3f345b2344.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\libs\twitter4j-media-support-3.0.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a27df0a4a56427058f39e50edc4c16d47c31cb30">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\pre-dexed\debug\twitter4j-media-support-3.0.5-10bcf9ac5c68753e41c12337bad0d51b9b9f0e2f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sharanpal\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Sharanpal\AndroidStudioProjects\Muser\android_App_Aviary\build\intermediates\pre-dexed\debug\support-v4-19.1.0-2bfd726f3d381d7707606a54a1377e7e67c2952d.jar" />
+    </item>
+
+</items>

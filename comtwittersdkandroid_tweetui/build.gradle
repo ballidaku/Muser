@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "23.0.0 rc1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':comtwittercobalt_performancemetrics')
+  
+    compile files('libs/com-squareup-picasso_picasso.jar')
+    compile files('libs/com-twitter-sdk-android_tweet-ui-classes.jar')
+}

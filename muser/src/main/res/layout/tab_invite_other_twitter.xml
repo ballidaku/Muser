@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical" >
+
+    <!-- <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="#C8C8C8" >
+
+          <EditText
+              android:id="@+id/search_editText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="8dp"
+              android:drawablePadding="10dp"
+              android:drawableRight="@drawable/search_icon"
+              android:gravity="center_vertical"
+              android:hint="search your friend"
+              android:paddingLeft="10dp"
+              android:textSize="@dimen/text_size_14"
+              android:singleLine="true"
+              android:background="@drawable/rounded_corner"
+              android:imeOptions="actionSearch"
+              android:inputType="textCapSentences"
+              android:maxLength="30" >
+          </EditText>
+      </LinearLayout> -->
+
+    <TextView
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_corner_theme_color"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#fff"
+        android:text="Invite twitter friends"
+        android:visibility="gone"/>
+
+
+    <com.example.classes.CannonballTwitterLoginButton
+        android:id="@+id/twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/total_contacts"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/invite_selected"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Invite Selected"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical|center_horizontal"
+                android:text="Invite all"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/uncheck_box" >
+            </ImageView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider" />
+
+        <com.example.classes.EndlessListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+      <corners android:radius="5dp"/>
+    
+      <solid android:color="#4f606a"/>
+
+</shape>
+<!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/drawable/round_corner_theme_color.xml -->

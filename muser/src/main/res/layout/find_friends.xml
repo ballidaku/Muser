@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!-- First Row -->
+
+    <!-- <LinearLayout
+        android:id="@+id/firstLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/facebookIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/facebook_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fbMainTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connected to Facebook"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fbSubTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Facebook Friends"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout> -->
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider" /> -->
+
+    <!-- Second Row -->
+
+    <!-- <LinearLayout
+        android:id="@+id/secLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/instagramIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/instagram_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/instagramMainTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connected to Instagram"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/instagramSubTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35 instagram friends"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout> -->
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider" /> -->
+    <!-- Third Row -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/recommendTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended Friends"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider" />
+    <!-- Four Row -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical" >
+
+        
+          <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#000"
+        android:text="No data found."
+        android:gravity="center"
+        android:visibility="gone"/>
+          
+          
+        <ListView
+            android:id="@+id/find_friends_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider"
+            android:dividerHeight="1dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

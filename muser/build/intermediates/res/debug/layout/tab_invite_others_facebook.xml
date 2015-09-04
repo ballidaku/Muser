@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+  <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#C8C8C8" >
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/search_icon"
+            android:gravity="center_vertical"
+            android:hint="search your friend"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/text_size_14"
+            android:singleLine="true"
+            android:background="@drawable/rounded_corner"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapSentences"
+            android:maxLength="30" >
+        </EditText>
+    </LinearLayout> -->
+
+   <!--  <LinearLayout 
+        android:id="@+id/data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/totalContactsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2"
+            android:text="123 contacts"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/inviteTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical|center_horizontal"
+            android:text="Invite all"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/inviteCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uncheck_box" >
+        </ImageView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider" />
+
+    <ListView
+        android:id="@+id/facebook_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp" />
+    
+    
+    </LinearLayout> -->
+
+    <TextView
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_corner_theme_color"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#fff"
+        android:text="Invite facebook friends" />
+    
+    
+    <!--<com.facebook.widget.LoginButton
+                            android:id="@+id/facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="invisible" />-->
+
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/tab_invite_others_facebook.xml -->

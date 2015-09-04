@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" >
+        
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:gravity="center"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            android:id="@+id/text"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:textSize="@dimen/text_size_14"
+		            android:textColor="@color/Black" />
+		
+		 	</LinearLayout>
+		 
+		 
+	</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:orientation="horizontal"
+        android:background="#33b5e5">
+         <Button
+	        android:id="@+id/ok"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	         android:background="@drawable/button_blinker"
+	        android:textColor="#000"
+	        android:textStyle="bold"
+	        android:textSize="@dimen/text_size_14"
+	        android:layout_marginTop="2dp"
+	        android:text="OK" />
+
+	    <!-- <Button
+	        android:id="@+id/cancel"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:background="#494949"
+	        android:textColor="#fff"
+	        android:layout_marginTop="2dp"
+	        android:text="@string/cancel_field" /> -->
+    </LinearLayout>
+
+    
+
+</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/dialog_global.xml -->

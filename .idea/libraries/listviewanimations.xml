@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="listviewanimations">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/aviaryAndroidSDKmaster/libs/listviewanimations.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

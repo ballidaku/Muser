@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Blue">#2980b9</color>
+    <color name="White">#ffffff</color>
+    <color name="Black">#000000</color>
+    <color name="Gray">#939393</color>
+    <color name="GrayLight">#ededee</color>
+    <color name="GrayHot">#272727</color>
+    <color name="checkbox_active">#143D55</color>
+    <color name="checkbox_inactive">#ffffff</color>
+
+    <color name="app_color">#112b46</color>
+    <color name="view_color">#bbbbbb</color>
+
+
+    <color name="login_edit_text_bg">#0b0b1d</color>
+    <color name="bottom_bar_color">#455661</color>
+    <color name="bottom_bar_selected_color">#2a343b</color>
+
+
+    <color name="sherlock_blue">#33b5e5</color>
+
+    <color name="stroke_gray">#bebebe</color>
+
+
+    <color name="word_bar">#FF0000</color>
+    <color name="number_bar">#00FF00</color>
+
+    <color name="drawer_list_color">#1e282f</color>
+
+    <color name="divider_line_color">#828282</color>
+
+
+    <color name="horizontal_divider">#8f8f8f</color>
+    <color name="horizontal_vertical">#8f8f8f</color>
+
+</resources>

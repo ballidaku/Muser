@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/White"
+  android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#000"
+        android:text="No data found."
+        android:gravity="center"
+        android:visibility="gone"/>
+
+ 		<GridView
+             android:id="@+id/pictures_gridView"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:columnWidth="150dp"
+             android:drawSelectorOnTop="true"
+             android:gravity="center"
+             android:numColumns="2"
+             android:verticalSpacing="5dp"
+             android:horizontalSpacing="5dp"
+             android:padding="5dp"
+             android:stretchMode="columnWidth"
+             android:scrollbarStyle="outsideOverlay"
+              android:visibility="visible">
+         </GridView>
+
+</LinearLayout>
