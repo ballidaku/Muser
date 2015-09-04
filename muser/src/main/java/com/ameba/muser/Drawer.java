@@ -88,6 +88,7 @@ class Drawer extends FragmentActivity
 
     MyBroadcastReceiver refresh_adapter_Receiver;
     private boolean mIsReceiverRegistered = false;
+    TextView txtv_menu_bubble;
 
 
     @Override
@@ -108,21 +109,21 @@ class Drawer extends FragmentActivity
         try
         {
             String action = intent.getAction();
-            Log.e("Hello","0");
+            Log.e("Hello", "0");
 
             if(action != null)
             {
 
-                Log.e("action",action);
+                Log.e("action", action);
 
                 if(action.equals("Messages"))
                 {
-                    rem_pref.edit().putString("current_frag","Messages").commit();
-                    Log.e("Hello","1");
+                    rem_pref.edit().putString("current_frag", "Messages").commit();
+                    Log.e("Hello", "1");
                 }
                 if(action.equals("Notification"))
                 {
-                    rem_pref.edit().putString("current_frag","Notification").commit();
+                    rem_pref.edit().putString("current_frag", "Notification").commit();
                     Log.e("Hello", "2");
                 }
             }
@@ -131,9 +132,6 @@ class Drawer extends FragmentActivity
         {
             e.printStackTrace();
         }
-
-
-
 
 
         if(savedInstanceState == null)
@@ -150,8 +148,7 @@ class Drawer extends FragmentActivity
 
             upload = (ImageView) findViewById(R.id.upload);
 
-
-
+            txtv_menu_bubble = (TextView) findViewById(R.id.txtv_menu_bubble);
 
 
             //title_header = (TextView) findViewById(R.id.title_header);
@@ -238,6 +235,8 @@ class Drawer extends FragmentActivity
     void onResume()
     {
         super.onResume();
+        refresh_menu_logo();
+
 
         Log.e("Drawer", "onResume");
         if(!mIsReceiverRegistered)
@@ -263,6 +262,12 @@ class Drawer extends FragmentActivity
         void onReceive(Context context, Intent intent)
         {
             adapter.notifyDataSetInvalidated();
+
+            refresh_menu_logo();
+
+
+
+
            /* TextView badge = (TextView) drawer_list.getChildAt(5).findViewById(R.id.badge);
 
             if(rem_pref.getInt("message_count", 0) == 0)
@@ -277,6 +282,26 @@ class Drawer extends FragmentActivity
             }*/
 
 
+        }
+    }
+
+
+    public
+    void refresh_menu_logo()
+    {
+        int msg_count = rem_pref.getInt("message_count", 0);
+        int noti_count = rem_pref.getInt("notification_count", 0);
+
+        if(msg_count != 0 || noti_count != 0)
+        {
+            txtv_menu_bubble.setVisibility(View.VISIBLE);
+
+            String msg = ((msg_count != 0 ? msg_count + " Message(s)" : "") + "\n" + (noti_count != 0 ? noti_count + " Notification(s)" : "")).trim();
+            txtv_menu_bubble.setText(msg);
+        }
+        else
+        {
+            txtv_menu_bubble.setVisibility(View.GONE);
         }
     }
 
@@ -302,7 +327,7 @@ class Drawer extends FragmentActivity
 
         // Do nothing if selectedItem is currentItem
         /*if(selectedItem.compareTo(selectedItem) == 0)
-		{
+        {
 			slidingmenu_layout.toggleMenu();
 			return;
 		}*/
@@ -396,7 +421,7 @@ class Drawer extends FragmentActivity
 
 
 	/*private void replaceFragment (Fragment fragment){
-		String backStateName = fragment.getClass().getName();
+        String backStateName = fragment.getClass().getName();
 
 		FragmentManager manager = getSupportFragmentManager();
 		boolean fragmentPopped = manager.popBackStackImmediate (backStateName, 0);

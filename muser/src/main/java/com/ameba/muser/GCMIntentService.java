@@ -81,7 +81,7 @@ class GCMIntentService extends GCMBaseIntentService
             final JSONObject jsonNoTi = new JSONObject(message);
             flag = Integer.valueOf(jsonNoTi.getString("flag"));   //1 for message
 
-            String type = jsonNoTi.getString("type");
+
 
 
             if(rem_pref.getBoolean("is_notification_on", true))
@@ -94,12 +94,12 @@ class GCMIntentService extends GCMBaseIntentService
                     if(rem_pref.getInt("message_count", 0) == 0)
                     {
                         notication_message = Util_Class.emoji_decode(jsonNoTi.getString("message"));
-                        rem_pref.edit().putInt("message_count", 1).commit();
+                        rem_pref.edit().putInt("message_count", 1).apply();
                     }
                     else
                     {
                         int message_count = rem_pref.getInt("message_count", 0) + 1;
-                        rem_pref.edit().putInt("message_count", message_count).commit();
+                        rem_pref.edit().putInt("message_count", message_count).apply();
 
                     }
 
@@ -108,18 +108,18 @@ class GCMIntentService extends GCMBaseIntentService
                 }
                 else if(flag == 3)   //for notifications
                 {
-                    //Log.e("flag","2");
+                    String type = jsonNoTi.getString("type");
 
 
                     if(rem_pref.getInt("notification_count", 0) == 0)
                     {
                         notication_message = jsonNoTi.getString("message");
-                        rem_pref.edit().putInt("notification_count", 1).commit();
+                        rem_pref.edit().putInt("notification_count", 1).apply();
                     }
                     else
                     {
                         int message_count = rem_pref.getInt("notification_count", 0) + 1;
-                        rem_pref.edit().putInt("notification_count", message_count).commit();
+                        rem_pref.edit().putInt("notification_count", message_count).apply();
 
                         notication_message = " " + message_count + " Notifications";
                     }
@@ -128,17 +128,22 @@ class GCMIntentService extends GCMBaseIntentService
                     if(type.equals("S"))
                     {
                         int message_count = rem_pref.getInt("S", 0) + 1;
-                        rem_pref.edit().putInt("S", message_count).commit();
+                        rem_pref.edit().putInt("S", message_count).apply();
                     }
                     else if(type.equals("L"))
                     {
                         int message_count = rem_pref.getInt("L", 0) + 1;
-                        rem_pref.edit().putInt("L", message_count).commit();
+                        rem_pref.edit().putInt("L", message_count).apply();
                     }
                     else if(type.equals("C"))
                     {
                         int message_count = rem_pref.getInt("C", 0) + 1;
-                        rem_pref.edit().putInt("C", message_count).commit();
+                        rem_pref.edit().putInt("C", message_count).apply();
+                    }
+                    else if(type.equals("FC"))
+                    {
+                        int message_count = rem_pref.getInt("FC", 0) + 1;
+                        rem_pref.edit().putInt("FC", message_count).apply();
                     }
                 }
 

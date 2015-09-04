@@ -58,7 +58,9 @@ public class Messages  extends Fragment
 	
 	public void add_list(ArrayList<HashMap<String, String>> list)
 	{
-		rem_pref.edit().putInt("message_count", 0).commit();
+		rem_pref.edit().putInt("message_count", 0).apply();
+		((Drawer)con).refresh_menu_logo();
+
 		this.list = list;
 		adapter = new Messages_Adapter(con, list);
 		messages_list.setAdapter(adapter);

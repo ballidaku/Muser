@@ -96,7 +96,7 @@
             android:name="com.ameba.muser.View_All_Comments"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustPan" >
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="com.ameba.muser.View_All_Likes"

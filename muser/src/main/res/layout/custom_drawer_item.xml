@@ -27,14 +27,14 @@
 
         <TextView
             android:id="@+id/badge"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/badge_bg"
             android:gravity="center"
             android:textColor="#fff"
-            android:textSize="@dimen/text_size_14"
-            android:visibility="gone"/>
+            android:textSize="10sp"
+            android:visibility="visible"/>
 
 
     </LinearLayout>
@@ -43,8 +43,9 @@
         android:id="@+id/lay_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
         android:visibility="gone">
 
 
@@ -68,7 +69,7 @@
                 android:layout_marginLeft="3dp"
                 android:background="@drawable/badge_bg"
                 android:textColor="#fff"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:text=""/>
 
         </LinearLayout>
@@ -93,7 +94,7 @@
                 android:layout_marginLeft="3dp"
                 android:background="@drawable/badge_bg"
                 android:textColor="#fff"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:text=""/>
 
         </LinearLayout>
@@ -118,11 +119,11 @@
                 android:layout_marginLeft="3dp"
                 android:background="@drawable/badge_bg"
                 android:textColor="#fff"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:text=""/>
 
         </LinearLayout>
-     <!--   <LinearLayout
+        <LinearLayout
             android:id="@+id/lay_connection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,10 +144,10 @@
                 android:layout_marginLeft="3dp"
                 android:background="@drawable/badge_bg"
                 android:textColor="#fff"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:text=""/>
 
-        </LinearLayout>-->
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -99,8 +99,13 @@ public class Notification extends Fragment implements TabHost.OnTabChangeListene
 
 		}
 
+		rem_pref.edit().putInt("notification_count", 0).apply();
+		rem_pref.edit().putInt("S", 0).apply();
+		rem_pref.edit().putInt("L", 0).apply();
+		rem_pref.edit().putInt("C", 0).apply();
+		rem_pref.edit().putInt("FC", 0).apply();
 
-		rem_pref.edit().putInt("notification_count", 0).commit();
+		((Drawer)con).refresh_menu_logo();
 		
 		return rootView;
 	}

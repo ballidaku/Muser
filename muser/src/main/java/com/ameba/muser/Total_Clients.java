@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,6 +31,7 @@ public class Total_Clients extends Activity implements OnClickListener
 	SharedPreferences rem_pref;
 	LinearLayout logo_lay;
 	TextView message;
+	TextView tv1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -48,9 +50,12 @@ public class Total_Clients extends Activity implements OnClickListener
 		LinearLayout lay=(LinearLayout)findViewById(R.id.dynamic_lay);
 
 
-		TextView tv1 = new TextView(this);
+		tv1 = new TextView(this);
 		tv1.setTextSize(10);
-		tv1.setText("LAST");
+
+		tv1.setTextColor(Color.BLACK);
+		tv1.setBackgroundColor(Color.LTGRAY);
+		tv1.setPadding(20,20,20,20);
 
 		lay.addView(tv1);
 		
@@ -76,6 +81,8 @@ public class Total_Clients extends Activity implements OnClickListener
 			this.list=list;
 			adapter.notifyDataSetChanged();
 		}
+
+		tv1.setText("You have a total of "+list.size()+" Clients.");
 		
 	}
 	
@@ -108,7 +115,7 @@ public class Total_Clients extends Activity implements OnClickListener
 	
 	public void on_Failure()
 	{
-		
+		tv1.setText("You have a total of 0 Clients.");
 		show_temp_logo();
 		message.setText(con.getResources().getString(R.string.no_data_found));
 	}
