@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/values-v11/styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values-v11/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-v11/values-v11.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Digits_default" parent="@android:style/Theme.Holo.Light">
         <item name="dgts__accentColor">@color/dgts__default_accent</item>
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values-v11/values-v11.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Sherlock.__Theme" parent="android:Theme.Holo">
         <item name="android:windowNoTitle">true</item>

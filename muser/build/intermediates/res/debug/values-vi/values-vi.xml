@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1 giờ</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1 giây</item>
         <item quantity="other">%d giây</item>
     </plurals>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Lỗi bất ngờ khi tải ảnh xuống.</string>
     <string name="com_facebook_internet_permission_error_message">Đăng nhập WebView yêu cầu INTERNET cho phép</string>
@@ -32,7 +32,7 @@
     <string name="com_facebook_send_button_text">Gửi</string>
     <string name="com_facebook_share_button_text">Chia sẻ</string>
     <string name="com_facebook_tooltip_default">Mới! Bạn đang có quyền kiểm soát - hãy chọn thông tin bạn muốn chia sẻ với các ứng dụng.</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-vi/common_strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-vi/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Ứng dụng yêu cầu cập nhật lên ứng dụng Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Ứng dụng này chỉ chạy khi bạn cập nhật ứng dụng Android Wear."</string>
@@ -65,7 +65,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Đăng nhập"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Đăng nhập bằng Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Ứng dụng này yêu cầu một hoặc nhiều dịch vụ của Google Play hiện không sẵn có. Vui lòng liên hệ với nhà phát triển để được hỗ trợ."</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Hủy bỏ</string>
     <string name="dgts__communication_error">Lỗi Liên lạc</string>
@@ -111,28 +111,28 @@
     <string name="dgts_pin_code_terms">Trước đây bạn đã lập một mã xác nhận 2 bước trên digits.com</string>
     <string name="dgts_verify">Xác nhận</string>
     <string name="dgts_verifying">Đang xác nhận</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Gửi</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Cho phép</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Đang tải Tweet</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Đăng nhập vào Twitter</string>
     <string name="tw__not_now_btn_txt">Không phải bây giờ</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__retweeted_by_format">Được Tweet lại bởi %1$s</string>
     <string name="tw__share_content_format">Hãy xem Tweet của \@%1$s: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Nhận cập nhật và các thông tin khác từ %1$s khi bạn cho phép họ truy cập email của bạn trên tài khoản Twitter của bạn \@%2$s</string>
     <string name="tw__share_email_title">Chia sẻ địa chỉ email của bạn</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet từ %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Chia sẻ Tweet</string>

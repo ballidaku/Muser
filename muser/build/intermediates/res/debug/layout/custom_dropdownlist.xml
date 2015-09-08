@@ -7,4 +7,4 @@
     android:textSize="14dp"
     android:singleLine="false"
     android:background="#fff"
-    android:layout_height="wrap_content"/><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/layout/custom_dropdownlist.xml -->
+    android:layout_height="wrap_content"/><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/layout/custom_dropdownlist.xml -->

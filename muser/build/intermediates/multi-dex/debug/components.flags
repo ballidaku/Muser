@@ -1,14 +1,14 @@
--injars 'C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\multi-dex\debug\allclasses.jar'
--outjars 'C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars /home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/multi-dex/debug/allclasses.jar
+-outjars /home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars 'C:\Users\Sharanpal\AppData\Local\Android\sdk\build-tools\21.1.0\multidex\shrinkedAndroid.jar'
+-libraryjars /home/sharan/Android/Sdk/build-tools/21.1.0/multidex/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration 'C:\Users\Sharanpal\AndroidStudioProjects\Muser\muser\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration /home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/multi-dex/debug/components.flags
 
 
 -keep class null {

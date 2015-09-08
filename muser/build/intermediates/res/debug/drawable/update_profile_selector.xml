@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/update_profile_selected" android:state_pressed="true"></item>
     <item android:drawable="@drawable/update_profile_unselected"></item>
 
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/drawable/update_profile_selector.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/drawable/update_profile_selector.xml -->

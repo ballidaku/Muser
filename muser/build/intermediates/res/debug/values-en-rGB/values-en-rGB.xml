@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1h</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1s</item>
         <item quantity="other">%ds</item>
     </plurals>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rGB/common_strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rGB/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"An application requires an update to the Android Wear app."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"This app won\'t run unless you update the Android Wear app."</string>
@@ -47,7 +47,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Sign in"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Sign in with Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"This app requires one or more Google Play services that are not currently available. Please contact the developer for assistance."</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Cancel</string>
     <string name="dgts__communication_error">Communication Error</string>
@@ -95,27 +95,27 @@
     <string name="dgts_pin_code_terms">You have previously set a 2-step verification code on digits.com</string>
     <string name="dgts_verify">Verify</string>
     <string name="dgts_verifying">Verifying</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Allow</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Loading Tweet</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Log in with Twitter</string>
     <string name="tw__not_now_btn_txt"> Not now </string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">dd/MM/y</string>
     <string name="tw__relative_date_format_short">d MMM</string>
     <string name="tw__retweeted_by_format">Retweeted by %1$s</string>
     <string name="tw__share_content_format">Check out \@%1$s\'s Tweet: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Get updates and other information from %1$s when you allow them access to your email on yourTwitter account \@%2$s</string>
     <string name="tw__share_email_title">Share your email address</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-en-rGB/values-en-rGB.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet from %1$s (\@%2$s)</string>
     <string name="tw__tweet_content_description">%1$s. %2$s. %3$s.</string>

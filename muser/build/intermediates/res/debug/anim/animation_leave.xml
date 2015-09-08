@@ -3,4 +3,4 @@
   <translate android:fromXDelta="-100%" android:toXDelta="0%"
              android:fromYDelta="0%" android:toYDelta="0%"
              android:duration="700"/>
-</set><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/anim/animation_leave.xml -->
+</set><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/anim/animation_leave.xml -->

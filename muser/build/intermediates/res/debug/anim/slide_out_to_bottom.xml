@@ -19,4 +19,4 @@
     android:duration="@android:integer/config_longAnimTime"
     android:fromYDelta="0"
     android:toYDelta="100%p" />
-<!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/pull_To_Refresh_Llibrary/src/main/res/anim/slide_out_to_bottom.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/anim/slide_out_to_bottom.xml -->
+<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/pull_To_Refresh_Llibrary/src/main/res/anim/slide_out_to_bottom.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/anim/slide_out_to_bottom.xml -->

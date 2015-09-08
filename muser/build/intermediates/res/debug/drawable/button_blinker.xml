@@ -5,4 +5,4 @@
     <item android:drawable="@color/sherlock_blue" android:state_pressed="true"></item>
     <item android:drawable="@color/White"></item>
 
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/drawable/button_blinker.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/drawable/button_blinker.xml -->

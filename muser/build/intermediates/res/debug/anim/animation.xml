@@ -2,4 +2,4 @@
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
     android:fromXDelta="100%p"
     android:toXDelta="0"
-    android:duration="800"/><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/anim/animation.xml -->
+    android:duration="800"/><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/anim/animation.xml -->

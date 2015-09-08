@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
   <item android:drawable="@drawable/on_btn" android:state_checked="true"/>
   <item android:drawable="@drawable/off_btn" android:state_checked="false"/>
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/drawable/switch_selector.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/drawable/switch_selector.xml -->

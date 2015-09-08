@@ -21,4 +21,4 @@
 	<item
 		android:state_pressed="true"
 		android:drawable="@drawable/tab_pressed" />
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/muser/src/main/res/drawable/tab_selector.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/drawable/tab_selector.xml -->
