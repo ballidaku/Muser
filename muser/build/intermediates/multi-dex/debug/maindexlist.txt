@@ -51,9 +51,9 @@ io/fabric/sdk/android/services/concurrency/DelegateProvider.class
 com/facebook/share/model/ShareModelBuilder.class
 android/support/v4/app/LoaderManager.class
 retrofit/http/Multipart.class
-com/actionbarsherlock/internal/ResourcesCompat.class
 io/card/payment/DetectionInfo.class
 com/facebook/ProfileTracker.class
+com/actionbarsherlock/internal/ResourcesCompat.class
 com/example/Adapter/Comments_Adapter.class
 com/twitter/sdk/android/core/R$id.class
 com/example/Tabs/Tab_Invite_Others_Twitter.class
@@ -120,12 +120,12 @@ io/card/payment/h.class
 com/facebook/Profile.class
 com/digits/sdk/android/ContactsUploadService$1.class
 eu/janmuller/android/simplecropimage/BitmapManager$1.class
+com/ameba/muser/Total_Clients$Total_clients_Adapter.class
 com/example/classes/RoundedCornersGaganImg.class
 com/paypal/android/sdk/payments/bA.class
 com/google/gson/annotations/Until.class
 io/card/payment/r.class
 com/paypal/android/sdk/payments/m.class
-com/ameba/muser/Login$13.class
 com/paypal/android/sdk/cG.class
 com/ameba/muser/Trainers$2.class
 com/rockerhieu/emojicon/EmojiconsFragment.class
@@ -346,13 +346,13 @@ android/support/annotation/StyleableRes.class
 com/example/Adapter/DrawerList_Adapter.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
 io/fabric/sdk/android/services/concurrency/UnmetDependencyException.class
-com/ameba/muser/Cancel_Sessions$1$1.class
 android/support/annotation/InterpolatorRes.class
 com/ameba/muser/Splash.class
 com/paypal/android/sdk/bI.class
 com/paypal/android/sdk/payments/aG.class
 android/support/v4/widget/MaterialProgressDrawable$Ring.class
 com/paypal/android/sdk/bD.class
+com/ameba/muser/Cancel_Sessions$Cancel_Session_Adapter.class
 com/paypal/android/sdk/payments/bj.class
 com/actionbarsherlock/view/MenuItem.class
 com/twitter/sdk/android/core/AuthenticatedClient.class
@@ -553,8 +553,8 @@ com/paypal/android/sdk/bk.class
 com/paypal/android/sdk/payments/S.class
 retrofit/http/DELETE.class
 com/example/Tabs/Tab_My_Profile_Pictures.class
-com/twitter/sdk/android/core/identity/OAuthController$Listener.class
 io/fabric/sdk/android/services/concurrency/internal/RetryPolicy.class
+com/twitter/sdk/android/core/identity/OAuthController$Listener.class
 com/digits/sdk/android/ContactsUploadResult.class
 com/facebook/internal/NativeAppCallAttachmentStore.class
 com/paypal/android/sdk/payments/aF.class
@@ -828,7 +828,6 @@ com/ameba/muser/Update_Profile$7.class
 io/fabric/sdk/android/ActivityLifecycleManager.class
 com/paypal/android/sdk/payments/ao.class
 com/example/ProgressTask/Get_Fitness_Goal_Thread.class
-com/ameba/muser/Total_Clients$1$1.class
 android/support/v4/view/PagerAdapter.class
 com/actionbarsherlock/R$styleable.class
 com/ameba/muser/Tag_People$5.class

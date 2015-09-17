@@ -101,7 +101,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     public static ArrayList<HashMap<String, String>> fitness_goal_list;
     //String[] fitness_goal_list = { "Build Endurance", "Build muscle", "Burn Fat", "Eat right", "Improve Flexibility", "Improve Lifestyle", "Joint Therapy", "Lose weight", "Reduce Stress", "Stability", "Stamina", "Tone", "Run a mile under 5 mins", "Lower body fat" };
 
-    TextView location_name, tag_people_textview, title;
+    TextView  tag_people_textview, title;
     ToggleButton location_toggle;
     boolean is_location_on = false;
 
@@ -119,7 +119,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     //	InstagramApp										mApp;
     FrameLayout emojicons;
     ImageView smilly;
-    EditText tag_people;
+    EditText tag_people,location_name;
 
     String video_duration = "";
 
@@ -230,12 +230,12 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         im.setImageBitmap(bit);
 
         (findViewById(R.id.updoad)).setOnClickListener(this);
-    /*	edit_image = (LinearLayout) findViewById(R.id.edit_image);
-        edit_image.setOnClickListener(this);*/
+    	edit_image = (LinearLayout) findViewById(R.id.edit_image);
+        edit_image.setOnClickListener(this);
 
 
         (findViewById(R.id.back)).setOnClickListener(this);
-        location_name = (TextView) findViewById(R.id.location_name);
+        location_name = (EditText) findViewById(R.id.location_name);
 
         captions = (EmojiconEditText) findViewById(R.id.captions);
 

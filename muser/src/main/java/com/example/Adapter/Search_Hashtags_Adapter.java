@@ -75,4 +75,9 @@ public class Search_Hashtags_Adapter extends BaseAdapter
 		return row;
 	}
 
+	public void add_data(ArrayList<String> list)
+	{
+		hashtags_list=list;
+	}
+
 }

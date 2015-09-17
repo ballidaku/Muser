@@ -3,7 +3,10 @@ package com.example.Tabs;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -24,6 +27,7 @@ import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
 import com.example.ProgressTask.Get_Subscribed_Trainer_Session_ProgressTask;
 import com.example.classes.Global;
 import com.ameba.muser.R;
+import com.example.classes.Util_Class;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshGridView;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
@@ -42,6 +46,10 @@ public class Tab_My_Profile_Sessions extends Fragment
 	ArrayList<HashMap<String, String>>	list	= new ArrayList<HashMap<String, String>>();
 
 	PullToRefreshGridView mPullRefreshGridView;
+
+	MyBroadcastReceiverSession mReceiver;
+	private boolean mIsReceiverRegistered = false;
+
 	//GridView mGridView;
 	ImageView temp_logo;
 	View rootView;
@@ -65,6 +73,7 @@ public class Tab_My_Profile_Sessions extends Fragment
 			error_message = (TextView) rootView.findViewById(R.id.error_message);
 			temp_logo = (ImageView) rootView.findViewById(R.id.temp_logo);
 			//		gridView = mPullRefreshGridView.getRefreshableView();
+			error_message.setText("Training session are available for subscribed users. To view your selected trainer(s) sessions chose the “train with” option from their profile.");
 
 		}
 
@@ -98,6 +107,18 @@ public class Tab_My_Profile_Sessions extends Fragment
 	{
 		super.onResume();
 
+
+
+		if (!mIsReceiverRegistered)
+		{
+			if (mReceiver == null)
+			{
+				mReceiver = new MyBroadcastReceiverSession();
+			}
+			getActivity().registerReceiver(mReceiver, new IntentFilter(Util_Class.BROADCAST_UPDATE_MYProfileSession));
+			mIsReceiverRegistered = true;
+		}
+
 		Log.e("onResume:Tab_MyProfile_Session", rem_pref.getString("current_frag", ""));
 		if (rem_pref.getString("current_frag","").equals("My Profile") ||rem_pref.getString("current_frag","").equals("Home") || getActivity().getLocalClassName().equals("Other_Profile"))
 		{
@@ -105,13 +126,42 @@ public class Tab_My_Profile_Sessions extends Fragment
 		}
 
 	}
+
+
+
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+		if (mIsReceiverRegistered)
+		{
+			getActivity().unregisterReceiver(mReceiver);
+			mReceiver = null;
+			mIsReceiverRegistered = false;
+		}
+
+	}
+
+
+	private
+	class MyBroadcastReceiverSession extends BroadcastReceiver
+	{
+
+		@Override
+		public
+		void onReceive(Context context, Intent intent)
+		{
+			refresh();
+		}
+	}
+
 	public void refresh()
 	{
 		if(list.size()==0)
 		{
 			show_temp_logo();
 			//error_message.setText(con.getResources().getString(R.string.please_wait));
-			error_message.setText("This screen shows you latest training videos feed from your trainers.");
+			error_message.setText("Training session are available for subscribed users. To view your selected trainer(s) sessions chose the “train with” option from their profile.");
 		}
 		
 		Log.e("Where", "MyProfile Sessions");

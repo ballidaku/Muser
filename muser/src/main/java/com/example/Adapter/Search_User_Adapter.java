@@ -108,4 +108,10 @@ public class Search_User_Adapter extends BaseAdapter
 		return row;
 	}
 
+
+	public void add_data(ArrayList<HashMap<String, String>> list)
+	{
+		user_list=list;
+	}
+
 }

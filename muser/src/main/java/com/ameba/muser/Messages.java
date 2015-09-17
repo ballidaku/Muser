@@ -14,55 +14,83 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
-public class Messages  extends Fragment 
+public class Messages extends Fragment
 {
-	Messages messages;
-	ListView messages_list;
-	Context con;
-	Messages con2;
-	ArrayList<HashMap<String, String>> list;
-	Messages_Adapter adapter;
-	SharedPreferences rem_pref;
-	View v;
-  @Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-	{
+    Messages messages;
+    ListView messages_list;
+    Context  con;
+    Messages con2;
+    ArrayList<HashMap<String, String>> list = new ArrayList<>();
+    Messages_Adapter  adapter;
+    SharedPreferences rem_pref;
+    TextView          error_message;
+    ImageView         temp_logo;
 
-		if(savedInstanceState==null)
-		{
+    View v;
 
-			v = inflater.inflate(R.layout.messages, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
 
-			con = getActivity();
-			con2 = this;
-			messages = this;
-			rem_pref	 		= con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
-			messages_list = (ListView) v.findViewById(R.id.messages_list);
+        if (savedInstanceState == null)
+        {
 
-		}
+            v = inflater.inflate(R.layout.messages, container, false);
 
-		return v;
-	}
-  
-  
-	@Override
-	public void onResume()
-	{
-		super.onResume();
-		
-		new Get_Messages_Contacts_Thread(con,con2);
-	}
-	
-	
-	public void add_list(ArrayList<HashMap<String, String>> list)
-	{
-		rem_pref.edit().putInt("message_count", 0).apply();
-		((Drawer)con).refresh_menu_logo();
+            con = getActivity();
+            con2 = this;
+            messages = this;
+            rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+            messages_list = (ListView) v.findViewById(R.id.messages_list);
+            error_message = (TextView) v.findViewById(R.id.error_message);
+            temp_logo = (ImageView) v.findViewById(R.id.temp_logo);
 
-		this.list = list;
-		adapter = new Messages_Adapter(con, list);
-		messages_list.setAdapter(adapter);
-	}
+        }
+
+        return v;
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        show_temp_logo();
+        error_message.setText(con.getResources().getString(R.string.please_wait));
+
+        new Get_Messages_Contacts_Thread(con, con2);
+    }
+
+    public void add_list(ArrayList<HashMap<String, String>> list)
+    {
+        rem_pref.edit().putInt("message_count", 0).apply();
+        ((Drawer) con).refresh_menu_logo();
+
+        hide_temp_logo();
+
+        this.list = list;
+        adapter = new Messages_Adapter(con, list);
+        messages_list.setAdapter(adapter);
+
+    }
+
+    private void show_temp_logo()
+    {
+        temp_logo.setVisibility(View.VISIBLE);
+        error_message.setVisibility(View.VISIBLE);
+        messages_list.setVisibility(View.GONE);
+
+    }
+
+    private void hide_temp_logo()
+    {
+        temp_logo.setVisibility(View.GONE);
+        error_message.setVisibility(View.GONE);
+        messages_list.setVisibility(View.VISIBLE);
+    }
+
 }

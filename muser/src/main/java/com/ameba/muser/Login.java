@@ -375,7 +375,7 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
                         Log.e("onSuccess", "2" + loginResult.getRecentlyDeniedPermissions());
                         Log.e("onSuccess", "3" + loginResult.getRecentlyGrantedPermissions());
 
-                        if( Profile.getCurrentProfile() != null)
+                       /* if( Profile.getCurrentProfile() != null)
                         {
                             Log.e("onSuccess", "4" + Profile.getCurrentProfile().getName()) ;
                             Log.e("onSuccess", "5" + Profile.getCurrentProfile().getId()) ;
@@ -391,9 +391,63 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
                         else
                         {
                             profileTracker.startTracking();
+                        }*/
+
+                        try
+                        {
+                            Log.e("onSuccess", "4" + Profile.getCurrentProfile().getName()) ;
+                            Log.e("onSuccess", "5" + Profile.getCurrentProfile().getId()) ;
+                            Log.e("onSuccess", "6" + Profile.getCurrentProfile().getProfilePictureUri(500, 500)) ;
+
+                            HashMap<String,String>map=new HashMap<>();
+                            map.put("id", Profile.getCurrentProfile().getId());
+                            map.put("image", Profile.getCurrentProfile().getProfilePictureUri(500, 500).toString());
+                            map.put("name", Profile.getCurrentProfile().getName());
+
+                            login_through_fb(map);
                         }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
 
 
+                            profileTracker = new ProfileTracker()
+                            {
+                                @Override
+                                protected
+                                void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile)
+                                {
+                                    Log.e("AAAAAAAAAAAAAA", "Hello");
+
+                                    if (Profile.getCurrentProfile() != null)
+                                    {
+                                        // Log.e("currentProfile", "Hello" + currentProfile.getName() + "...." + currentProfile.getProfilePictureUri(100, 100) + "...." + currentProfile.getId());
+
+
+
+                                        Log.e("onSuccess", "7" + currentProfile.getName()) ;
+                                        Log.e("onSuccess", "8" + currentProfile.getId()) ;
+                                        Log.e("onSuccess", "9" + currentProfile.getProfilePictureUri(500, 500).toString()) ;
+
+
+                                        HashMap<String,String>map=new HashMap<>();
+                                        map.put("id", currentProfile.getId());
+                                        map.put("image", currentProfile.getProfilePictureUri(500, 500).toString());
+                                        map.put("name", currentProfile.getName());
+
+                                        login_through_fb(map);
+
+                                    }
+                                    else
+                                    {
+                                        stop_fb();
+                                    }
+                                }
+                            };
+
+
+                            profileTracker.startTracking();
+                        }
 
                     }
 
@@ -412,89 +466,7 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
                     }
                 });
 
-      /*  accessTokenTracker = new AccessTokenTracker()
-        {
-            @Override
-            protected
-            void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken)
-            {
-                // Set the access token using
-                // currentAccessToken when it's loaded or set.
 
-            }
-        };*/
-
-
-        profileTracker = new ProfileTracker()
-        {
-            @Override
-            protected
-            void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile)
-            {
-                Log.e("AAAAAAAAAAAAAA", "Hello");
-
-                if (Profile.getCurrentProfile() != null)
-                {
-                   // Log.e("currentProfile", "Hello" + currentProfile.getName() + "...." + currentProfile.getProfilePictureUri(100, 100) + "...." + currentProfile.getId());
-
-
-
-                    Log.e("onSuccess", "7" + currentProfile.getName()) ;
-                    Log.e("onSuccess", "8" + currentProfile.getId()) ;
-                    Log.e("onSuccess", "9" + currentProfile.getProfilePictureUri(500, 500).toString()) ;
-
-
-                    HashMap<String,String>map=new HashMap<>();
-                    map.put("id", currentProfile.getId());
-                    map.put("image", currentProfile.getProfilePictureUri(500, 500).toString());
-                    map.put("name", currentProfile.getName());
-
-                    login_through_fb(map);
-
-                   /* if (rem_pref.contains("GCM_Reg_id"))
-                    {
-
-                        new Login_ProgressTask(con, currentProfile.getId(), "", "F", currentProfile.getProfilePictureUri(500, 500).toString(), currentProfile.getName().replace(" ", ""), currentProfile.getName()).execute();
-
-                    }
-                    else
-                    {
-                        registerInBackground();
-                        System.out.println("Attention" + "Registration Id not found");
-                    }*/
-                }
-                else
-                {
-                    stop_fb();
-                }
-            }
-        };
-
-
-
-	/*	facebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>()
-		{
-			@Override
-			public
-			void onSuccess(LoginResult loginResult)
-			{
-				// App code
-			}
-
-			@Override
-			public
-			void onCancel()
-			{
-				// App code
-			}
-
-			@Override
-			public
-			void onError(FacebookException exception)
-			{
-				// App code
-			}
-		});*/
     }
 
 

@@ -15,26 +15,32 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.example.Adapter.Search_Hashtags_Adapter;
+import com.example.Adapter.Search_User_Adapter;
 import com.example.ProgressTask.Get_Home_Pictures_Videos_ProgressTask;
 import com.example.ProgressTask.Search_Hashtags_User_ProgressTask;
 import com.example.classes.Global;
 import com.example.classes.Util_Class;
 import com.ameba.muser.R;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Tab_Search_Hashtags extends Fragment
 {
 
 	EditText search_editText;
-	public static ListView hashtags_listView;
-	public static TextView error_message;
+	 ListView hashtags_listView;
+	 TextView error_message;
 
 	Context con;
 	View rootView;
+	ImageView temp_logo;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
@@ -46,7 +52,10 @@ public class Tab_Search_Hashtags extends Fragment
 			search_editText = (EditText) rootView.findViewById(R.id.search_editText);
 			hashtags_listView = (ListView) rootView.findViewById(R.id.hashtags_listView);
 			error_message = (TextView) rootView.findViewById(R.id.error_message);
+			temp_logo = (ImageView) rootView.findViewById(R.id.temp_logo);
 
+			show_temp_logo();
+			error_message.setText("Search for Hashtags.");
 		}
 
 		search_editText.setOnEditorActionListener(new OnEditorActionListener()
@@ -98,19 +107,21 @@ public class Tab_Search_Hashtags extends Fragment
 
 		if(value.length() > 0)
 		{
-			hashtags_listView.setVisibility(View.VISIBLE);
-			error_message.setVisibility(View.GONE);
+//			hashtags_listView.setVisibility(View.VISIBLE);
+//			error_message.setVisibility(View.GONE);
 
+			show_temp_logo();
+			error_message.setText(con.getResources().getString(R.string.please_wait));
 		//	new Search_Hashtags_User_ProgressTask(con, value, "T","Search").execute();
 
 
 			if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
 			{
-				new Search_Hashtags_User_ProgressTask(con, value, "T","Search").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+				new Search_Hashtags_User_ProgressTask(con,Tab_Search_Hashtags.this, value, "T","Search").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 			}
 			else
 			{
-				new Search_Hashtags_User_ProgressTask(con, value, "T","Search").execute();
+				new Search_Hashtags_User_ProgressTask(con,Tab_Search_Hashtags.this, value, "T","Search").execute();
 			}
 
 			InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -120,6 +131,52 @@ public class Tab_Search_Hashtags extends Fragment
 		{
 			Util_Class.show_Toast("Please enter search value.", con);
 		}
+	}
+
+	Search_Hashtags_Adapter adapter;
+	ArrayList<String> list = new ArrayList<>();
+
+	public void set_data( ArrayList<String> list)
+	{
+
+		hide_temp_logo();
+		if (this.list.size() == 0)
+		{
+
+			this.list = list;
+			adapter = new Search_Hashtags_Adapter(con, this.list);
+			hashtags_listView.setAdapter(adapter);
+
+		}
+		else
+		{
+			this.list = list;
+			adapter.add_data(this.list);
+			adapter.notifyDataSetChanged();
+		}
+
+	}
+
+	public void on_Failure()
+	{
+
+		show_temp_logo();
+		error_message.setText(con.getResources().getString(R.string.no_data_found));
+	}
+
+	private void show_temp_logo()
+	{
+		temp_logo.setVisibility(View.VISIBLE);
+		error_message.setVisibility(View.VISIBLE);
+		hashtags_listView.setVisibility(View.GONE);
+
+	}
+
+	private void hide_temp_logo()
+	{
+		temp_logo.setVisibility(View.GONE);
+		error_message.setVisibility(View.GONE);
+		hashtags_listView.setVisibility(View.VISIBLE);
 	}
 
 }

@@ -24,11 +24,13 @@ public class Find_Friends_Adapter extends BaseAdapter
 {
 	
 	Context con;
+	Fragment fragment;
 	ArrayList<HashMap<String, String>> list;
 
-	public Find_Friends_Adapter(Context con,ArrayList<HashMap<String, String>> list) 
+	public Find_Friends_Adapter(Context con,Fragment fragment ,ArrayList<HashMap<String, String>> list)
 	{
 		this.con = con;
+		this.fragment=fragment;
 		this.list=list;
 	}
 	
@@ -77,7 +79,7 @@ public class Find_Friends_Adapter extends BaseAdapter
 			@Override
 			public void onClick(View arg0)
 			{
-				new Set_Block_Follow_Users_ProgressTask(con, list.get(position),"F","Find_Friends").execute();
+				new Set_Block_Follow_Users_ProgressTask(con,fragment, list.get(position),"F","Find_Friends").execute();
 			
 			}
 		});

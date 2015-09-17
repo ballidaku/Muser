@@ -39,6 +39,7 @@ import android.widget.Toast;
 
 import com.example.Adapter.DrawerList_Adapter;
 import com.example.ProgressTask.Add_Funds_Thread;
+import com.example.ProgressTask.Logout_ProgressTask;
 import com.example.Tabs.Tab_Invite_Others_Twitter;
 import com.example.classes.Global;
 import com.example.classes.RoundedCornersGaganImg;
@@ -47,6 +48,7 @@ import com.example.classes.Util_Class;
 import com.example.classes.Video_Thumbnails;
 import com.facebook.AccessToken;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
@@ -463,41 +465,50 @@ class Drawer extends FragmentActivity
             void onClick(View v)
             {
                 Util_Class.super_dialog.dismiss();
-                try
-                {
 
-
-                    Twitter.getInstance();
-                    Twitter.getSessionManager().clearActiveSession();
-                    Twitter.logOut();
-
-                    //	callFacebookLogout(con);
-
-
-                    if(AccessToken.getCurrentAccessToken() != null && com.facebook.Profile.getCurrentProfile() != null)
-                    {
-                        Log.e("Drawer", "IN FB LOGOUT");
-                        LoginManager.getInstance().logOut();
-                    }
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-
-
-                rem_pref.edit().remove("user_id").commit();
-                Intent i = new Intent(con, Login.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(i);
-
-                Drawer.this.finish();
+                new Logout_ProgressTask(con).execute();
 
 
             }
         };
         Util_Class.show_super_dialog(con, logout, "");
 
+    }
+
+    public void logout()
+    {
+        try
+        {
+
+
+            Twitter.getInstance();
+            Twitter.getSessionManager().clearActiveSession();
+            Twitter.logOut();
+
+            //	callFacebookLogout(con);
+
+
+            if(AccessToken.getCurrentAccessToken() != null && com.facebook.Profile.getCurrentProfile() != null)
+            {
+                Log.e("Drawer", "IN FB LOGOUT");
+                LoginManager.getInstance().logOut();
+
+                AccessToken.setCurrentAccessToken(null);
+                Profile.setCurrentProfile(null);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+
+        rem_pref.edit().remove("user_id").commit();
+        Intent i = new Intent(con, Login.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+
+        Drawer.this.finish();
     }
 
 	/*public static void callFacebookLogout(Context context)

@@ -9,12 +9,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -32,6 +36,10 @@ public class Total_Clients extends Activity implements OnClickListener
 	LinearLayout logo_lay;
 	TextView message;
 	TextView tv1;
+	LinearLayout lay_search;
+	EditText search_editText;
+
+	Total_clients_Adapter adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -47,7 +55,13 @@ public class Total_Clients extends Activity implements OnClickListener
 		logo_lay=(LinearLayout)findViewById(R.id.logo_lay);
 		message=(TextView) findViewById(R.id.error_message);
 
+		lay_search=(LinearLayout)findViewById(R.id.lay_search);
 		LinearLayout lay=(LinearLayout)findViewById(R.id.dynamic_lay);
+
+		lay_search.setVisibility(View.VISIBLE);
+
+		search_editText=(EditText)findViewById(R.id.search_editText);
+
 
 
 		tv1 = new TextView(this);
@@ -55,7 +69,7 @@ public class Total_Clients extends Activity implements OnClickListener
 
 		tv1.setTextColor(Color.BLACK);
 		tv1.setBackgroundColor(Color.LTGRAY);
-		tv1.setPadding(20,20,20,20);
+		tv1.setPadding(20, 15, 20, 15);
 
 		lay.addView(tv1);
 		
@@ -63,10 +77,65 @@ public class Total_Clients extends Activity implements OnClickListener
 		common_listview = (ListView) findViewById(R.id.common_listview);
 
 		refresh();
+
+
+		search_editText.addTextChangedListener(new TextWatcher()
+		{
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after)
+			{
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count)
+			{
+
+				Log.e("count", "" + count);
+
+				ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
+
+				for (HashMap<String, String> data : list)
+				{
+
+					try
+					{
+						if ((data.get("user_name").toLowerCase()).contains(s.toString().toLowerCase()))
+						{
+							tempList.add(data);
+						}
+					}
+					catch (Exception e)
+					{
+						Log.e("user_name", "" + data.get("user_name"));
+						e.printStackTrace();
+					}
+
+				}
+
+				if (count > 0)
+				{
+					adapter.add_data(tempList);
+					adapter.notifyDataSetChanged();
+				}
+				else
+				{
+					adapter.add_data(list);
+					adapter.notifyDataSetChanged();
+				}
+
+			}
+
+			@Override
+			public void afterTextChanged(Editable s)
+			{
+
+			}
+		});
+
 	}
 	
 	
-	ArrayList<HashMap<String, String>> list=new ArrayList<HashMap<String, String>>();
+	ArrayList<HashMap<String, String>> list=new ArrayList<>();
 	public void set_data(ArrayList<HashMap<String, String>> list)
 	{
 		hide_temp_logo();
@@ -74,6 +143,7 @@ public class Total_Clients extends Activity implements OnClickListener
 		if(this.list.size()==0)
 		{
 			this.list=list;
+			adapter=new Total_clients_Adapter(this.list);
 			common_listview.setAdapter(adapter);
 		}
 		else
@@ -125,8 +195,15 @@ public class Total_Clients extends Activity implements OnClickListener
 
 	
 	
-	BaseAdapter adapter =new BaseAdapter()
+	class Total_clients_Adapter extends BaseAdapter
 	{
+
+		ArrayList<HashMap<String, String>> local_list;
+
+		Total_clients_Adapter(ArrayList<HashMap<String, String>> list)
+		{
+			local_list=list;
+		}
 		
 		@Override
 		public View getView(final int position, View row, ViewGroup parent)
@@ -141,8 +218,8 @@ public class Total_Clients extends Activity implements OnClickListener
 			
 			//train_with.setVisibility(View.VISIBLE);
 			
-			trainer_image.setImageUrl(con, list.get(position).get("profile_image"));
-			trainer_name.setText(list.get(position).get("user_name"));
+			trainer_image.setImageUrl(con, local_list.get(position).get("profile_image"));
+			trainer_name.setText(local_list.get(position).get("user_name"));
 			
 			
 			
@@ -153,7 +230,7 @@ public class Total_Clients extends Activity implements OnClickListener
 				@Override
 				public void onClick(View arg0)
 				{
-					Global.set_user_id(list.get(position).get("user_id"));
+					Global.set_user_id(local_list.get(position).get("user_id"));
 					Global.set_friend_id(rem_pref.getString("user_id", ""));
 					
 					Intent i=new Intent(con,Other_Profile.class);
@@ -182,8 +259,14 @@ public class Total_Clients extends Activity implements OnClickListener
 		public int getCount()
 		{
 			// TODO Auto-generated method stub
-			return list.size();
+			return local_list.size();
 		}
+
+		public void add_data(ArrayList<HashMap<String, String>> list)
+		{
+			local_list=list;
+		}
+
 	};
 	
 	

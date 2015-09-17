@@ -76,6 +76,7 @@ public class Util_Class
 
 	public static String		registration						= main + "/user.php?muser=register";
 	public static String		login								= main + "/user.php?muser=login";
+	public static String		logout								= main + "/user.php?muser=logout";
 	public static String		forgot_password						= main + "/user.php?muser=forgot";
 	public static String		get_pictures_videos					= main + "/user.php?muser=getimagevideo";
 	public static String		update_profile						= main + "/user.php?muser=update";
@@ -135,6 +136,13 @@ public class Util_Class
 
 
 	public static final String BROADCAST_REFRESH_DRAWER="com.balli.refresh_drawer";
+
+	public static final String BROADCAST_UPDATE_MYProfilePictures="com.balli.refresh_myporfilepictures";
+
+	public static final String BROADCAST_UPDATE_MYProfileVideos="com.balli.refresh_myporfilevideos";
+
+	public static final String BROADCAST_UPDATE_MYProfileSession="com.balli.refresh_myporfilesession";
+
 
 	//My
 //	private static final String TWITTER_KEY = "JO07kjMCimwgsTPwrDsnWwgj4";

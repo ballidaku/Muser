@@ -194,8 +194,9 @@ public class Trainers extends Activity implements OnClickListener
 		}
 		else
 		{
-			adapter.add_data(this.list);
+			adapter.add_data(list);
 			adapter.notifyDataSetChanged();
+			//common_listview.setAdapter(adapter);
 		}
 		
 	}

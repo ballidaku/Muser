@@ -129,7 +129,7 @@ public class Tag_People extends Activity
 			users_listView.setVisibility(View.VISIBLE);
 			error_message.setVisibility(View.GONE);
 
-			new Search_Hashtags_User_ProgressTask(con,con2, search_editText.getText().toString(), "U","Tag_People").execute();
+			new Search_Hashtags_User_ProgressTask(con, search_editText.getText().toString(), "U","Tag_People").execute();
 			
 			
 			InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -215,7 +215,7 @@ public class Tag_People extends Activity
 			
 			user_name.setText(user_list.get(position).get("user_name"));
 
-			check.setOnClickListener(new OnClickListener()
+			row.setOnClickListener(new OnClickListener()
 			{
 				
 				@Override

@@ -23,6 +23,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -47,10 +48,12 @@ public class Get_Find_Friends_ProgressTask extends AsyncTask<String, Void, Void>
 	String message = null, msg_json;
 	SharedPreferences rem_pref;
 	ArrayList<HashMap<String, String>> list;
+	Fragment fragment;
 
-	public Get_Find_Friends_ProgressTask(Context con)
+	public Get_Find_Friends_ProgressTask(Context con, Fragment fragment)
 	{
 		this.con = con;
+		this.fragment=fragment;
 		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 	}
 
@@ -156,7 +159,7 @@ public class Get_Find_Friends_ProgressTask extends AsyncTask<String, Void, Void>
 			public void onClick(View v)
 			{
 				Util_Class.internet_dialog.dismiss();
-				new Get_Find_Friends_ProgressTask(con).execute();
+				new Get_Find_Friends_ProgressTask(con,fragment).execute();
 			}
 		};
 		System.out.println("message-->" + message);
@@ -173,14 +176,17 @@ public class Get_Find_Friends_ProgressTask extends AsyncTask<String, Void, Void>
 		else if(message.equals("Success"))
 		{
 		
-			Find_Friends_Adapter adapter=new Find_Friends_Adapter(con,list);
-			Find_Friends.find_friends_listView.setAdapter(adapter);
+
+
+			((Find_Friends)fragment).set_data(list);
 			
 		}
 		else if(message.equals("Failure"))
 		{
-			Find_Friends.find_friends_listView.setVisibility(View.GONE);
-			Find_Friends.error_message.setVisibility(View.VISIBLE);
+
+			((Find_Friends)fragment).on_Failure();
+			/*Find_Friends.find_friends_listView.setVisibility(View.GONE);
+			Find_Friends.error_message.setVisibility(View.VISIBLE);*/
 			//Util_Class.show_global_dialog(con, con.getResources().getString(R.string.no_data_found));
 		}
 		/*else if(message.equals("Failure"))

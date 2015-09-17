@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.TextUtils.TruncateAt;
 import android.util.Log;
@@ -14,67 +16,65 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.ameba.muser.Other_Profile;
 import com.ameba.muser.R;
+import com.example.classes.Global;
 import com.example.classes.RoundedCornersGaganImg;
 import com.example.classes.Util_Class;
 import com.rockerhieu.emojicon.EmojiconTextView;
 
 public class Comments_Adapter extends BaseAdapter/*ArrayAdapter<HashMap<String,String>> */
 {
-	
-	private ArrayList<HashMap<String,String>> list;
-	private Context con;
-	String from_where;
-	
-	 
-	public  static ArrayList<Boolean> is_selected;
-	 View result;
-	
-	public Comments_Adapter(Context ctx, ArrayList<HashMap<String,String>> comment_list,String from_where) 
+
+	private ArrayList<HashMap<String, String>> list;
+	private Context                            con;
+	String            from_where;
+	SharedPreferences rem_pref;
+
+	public static ArrayList<Boolean> is_selected;
+	View result;
+
+	public Comments_Adapter(Context ctx, ArrayList<HashMap<String, String>> comment_list, String from_where)
 	{
 		list = comment_list;
 		con = ctx;
-		this.from_where=from_where;
-		
-		Log.e("comment_list", ""+comment_list);
-		
+		this.from_where = from_where;
+
+		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+
+		Log.e("comment_list", "" + comment_list);
+
 	}
 
-
-
-
 	@Override
-	public int getCount() 
-	{		
-		return list.size() ;
+	public int getCount()
+	{
+		return list.size();
 	}
 
 	@Override
 	public Object getItem(int position)
-	{		
+	{
 		return list;
 	}
 
 	@Override
-	public long getItemId(int position) 
-	{		
+	public long getItemId(int position)
+	{
 		return list.get(position).hashCode();
 	}
 
 	@Override
-	public View getView(final int position, View result, ViewGroup parent) 
+	public View getView(final int position, View result, ViewGroup parent)
 	{
-		
-		
-		if (result == null) 
+
+		if (result == null)
 		{
 			LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			result = inflater.inflate(R.layout.custom_listview_comment, parent, false);
 		}
-		
-		
-		
-		RoundedCornersGaganImg image=(RoundedCornersGaganImg)result.findViewById(R.id.image);
+
+		RoundedCornersGaganImg image = (RoundedCornersGaganImg)result.findViewById(R.id.image);
 		final EmojiconTextView data = (EmojiconTextView) result.findViewById(R.id.data);
 		TextView time = (TextView) result.findViewById(R.id.time);
 		
@@ -100,6 +100,28 @@ public class Comments_Adapter extends BaseAdapter/*ArrayAdapter<HashMap<String,S
 				e.printStackTrace();
 			}
 			time.setText(util.get_time2(list.get(position).get("date")));
+
+
+			result.setOnClickListener(new View.OnClickListener()
+			{
+				@Override
+				public void onClick(View v)
+				{
+					if (list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
+					{
+						//((Drawer) con).click();
+					}
+					else
+					{
+						Global.set_user_id(list.get(position).get("user_id"));
+						Global.set_friend_id(rem_pref.getString("user_id", ""));
+
+						Intent ij = new Intent(con, Other_Profile.class);
+						//i.putExtra("user_id", list.get(position).get("user_id"));
+						con.startActivity(ij);
+					}
+				}
+			});
 		}
 		else if(from_where.equals("Image_Details") || from_where.equals("Image_Video_Details_bypostid"))
 		{
@@ -127,12 +149,34 @@ public class Comments_Adapter extends BaseAdapter/*ArrayAdapter<HashMap<String,S
 			}
 			
 		}
-		else
+		else   // View_All_Likes
 		{
 			time.setVisibility(View.GONE);
 			image.setImageUrl(con, list.get(position).get("profile_image"));
 			//Drawer.imageLoader.displayImage(list.get(position).get("profile_image"), image, Drawer.options);
 			data.setText(list.get(position).get("user_name"));
+
+
+			result.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v)
+				{
+					if(list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
+					{
+						//((Drawer) con).click();
+					}
+					else
+					{
+						Global.set_user_id(list.get(position).get("user_id"));
+						Global.set_friend_id(rem_pref.getString("user_id", ""));
+
+						Intent ij=new Intent(con,Other_Profile.class);
+						//i.putExtra("user_id", list.get(position).get("user_id"));
+						con.startActivity(ij);
+					}
+				}
+			});
+
 		}
 		
 		//Log.e(""+position,""+result.getHeight());

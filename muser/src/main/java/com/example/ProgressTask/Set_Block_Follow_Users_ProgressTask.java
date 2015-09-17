@@ -23,6 +23,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,6 +39,7 @@ public class Set_Block_Follow_Users_ProgressTask extends AsyncTask<String, Void,
 	HashMap<String, String> map; 
 
 	String message = null, msg_json,status,from_where,msg="";
+	Fragment fragment;
 
 	ProgressDialog dialog;
 	public Set_Block_Follow_Users_ProgressTask(Context con,HashMap<String, String> map,String status,String from_where)
@@ -46,6 +48,18 @@ public class Set_Block_Follow_Users_ProgressTask extends AsyncTask<String, Void,
 		this.map = map;
 		this.status=status;
 		this.from_where=from_where;
+		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+	}
+
+
+	// this constructor is for Find Friends only
+	public Set_Block_Follow_Users_ProgressTask(Context con,Fragment fragment,HashMap<String, String> map,String status,String from_where)
+	{
+		this.con = con;
+		this.map = map;
+		this.status=status;
+		this.from_where=from_where;
+		this.fragment=fragment;
 		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 	}
 
@@ -131,7 +145,7 @@ public class Set_Block_Follow_Users_ProgressTask extends AsyncTask<String, Void,
 		{
 			if(from_where.equals("Find_Friends"))
 			{
-				new Get_Find_Friends_ProgressTask(con).execute();
+				new Get_Find_Friends_ProgressTask(con,fragment).execute();
 			}
 			
 			if(status.matches("F|U") && from_where.equals("Other_Profile"))
@@ -196,7 +210,7 @@ public class Set_Block_Follow_Users_ProgressTask extends AsyncTask<String, Void,
 		else if(from_where.equals("Find_Friends") && message.equals("requested"))
 		{
 			Util_Class.show_Toast(msg, con);
-			new Get_Find_Friends_ProgressTask(con).execute();
+			new Get_Find_Friends_ProgressTask(con,fragment).execute();
 		}	
 		else if(message.equals("requested"))
 		{

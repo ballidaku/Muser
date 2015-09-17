@@ -28,6 +28,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -37,11 +38,13 @@ import android.media.MediaPlayer;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.classes.Global;
 import com.example.classes.Util_Class;
 import com.ameba.muser.R;
 
@@ -87,7 +90,7 @@ public class Upload_Image_ProgressTask extends AsyncTask<String, Void, Void>
 	protected Void doInBackground(String... params)
 	{
 		String response = upload();
-		Log.e("response",""+response);
+		Log.e("response", "" + response);
 		try
 		{
 			if(response != null)
@@ -154,8 +157,24 @@ public class Upload_Image_ProgressTask extends AsyncTask<String, Void, Void>
 
 			rem_pref.edit().putString("current_frag","My_Profile").commit();
 			Util_Class.show_Toast(con.getResources().getString(R.string.data_uploaded_successfull), con);
-			
-			//
+
+
+			if(map.get("type").equals("I"))
+			{
+				Intent i=new Intent(Util_Class.BROADCAST_UPDATE_MYProfilePictures);
+				con.sendBroadcast(i);
+			}
+			else
+			{
+				Intent i=new Intent(Util_Class.BROADCAST_UPDATE_MYProfileVideos);
+				con.sendBroadcast(i);
+
+				Intent i2=new Intent(Util_Class.BROADCAST_UPDATE_MYProfileSession);
+				con.sendBroadcast(i2);
+
+			}
+
+
 			
 		}
 		else if(message.equals("Failure"))

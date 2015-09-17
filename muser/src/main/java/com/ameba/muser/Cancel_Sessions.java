@@ -13,11 +13,15 @@ import com.example.classes.Util_Class;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -29,6 +33,9 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 	Context con;
 	LinearLayout logo_lay;
 	TextView message;
+	LinearLayout lay_search;
+	EditText search_editText;
+	Cancel_Session_Adapter  adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -43,8 +50,69 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 		message=(TextView) findViewById(R.id.error_message);
 
 		common_listview = (ListView) findViewById(R.id.common_listview);
+
+
+		lay_search=(LinearLayout)findViewById(R.id.lay_search);
+		lay_search.setVisibility(View.VISIBLE);
+
+		search_editText=(EditText)findViewById(R.id.search_editText);
 		
 		refresh();
+
+
+		search_editText.addTextChangedListener(new TextWatcher()
+		{
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after)
+			{
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count)
+			{
+
+				Log.e("count", "" + count);
+
+				ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
+
+				for (HashMap<String, String> data : list)
+				{
+
+					try
+					{
+						if ((data.get("user_name").toLowerCase()).contains(s.toString().toLowerCase()))
+						{
+							tempList.add(data);
+						}
+					}
+					catch (Exception e)
+					{
+						Log.e("user_name", "" + data.get("user_name"));
+						e.printStackTrace();
+					}
+
+				}
+
+				if (count > 0)
+				{
+					adapter.add_data(tempList);
+					adapter.notifyDataSetChanged();
+				}
+				else
+				{
+					adapter.add_data(list);
+					adapter.notifyDataSetChanged();
+				}
+
+			}
+
+			@Override
+			public void afterTextChanged(Editable s)
+			{
+
+			}
+		});
+
 
 	}
 	
@@ -79,6 +147,7 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 		if(this.list.size()==0)
 		{
 			this.list=list;
+			adapter=new Cancel_Session_Adapter(this.list);
 			common_listview.setAdapter(adapter);
 		}
 		else
@@ -105,8 +174,14 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 
 	
 	
-	BaseAdapter adapter =new BaseAdapter()
+	class Cancel_Session_Adapter extends BaseAdapter
 	{
+		ArrayList<HashMap<String, String>> local_list;
+
+		Cancel_Session_Adapter(ArrayList<HashMap<String, String>> list)
+		{
+			local_list=list;
+		}
 		
 		@Override
 		public View getView(final int position, View row, ViewGroup parent)
@@ -121,8 +196,8 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 			
 			unsubscribe.setVisibility(View.VISIBLE);
 			
-			trainer_image.setImageUrl(con, list.get(position).get("profile_image"));
-			trainer_name.setText(list.get(position).get("user_name"));
+			trainer_image.setImageUrl(con, local_list.get(position).get("profile_image"));
+			trainer_name.setText(local_list.get(position).get("user_name"));
 			
 			
 			
@@ -133,7 +208,7 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 				@Override
 				public void onClick(View arg0)
 				{
-					new Subscribe_Unsubscribe_Trainer_ProgressTask(con, list.get(position).get("user_id"), "U").execute();
+					new Subscribe_Unsubscribe_Trainer_ProgressTask(con, local_list.get(position).get("user_id"), "U").execute();
 
 
 				}
@@ -160,7 +235,12 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 		public int getCount()
 		{
 			// TODO Auto-generated method stub
-			return list.size();
+			return local_list.size();
+		}
+
+		public void add_data(ArrayList<HashMap<String, String>> list)
+		{
+			local_list=list;
 		}
 	};
 	

@@ -43,12 +43,44 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/lay_search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#C8C8C8"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/search_icon"
+            android:gravity="center_vertical"
+            android:hint="search"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_14"
+            android:background="@drawable/rounded_corner"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionSearch"
+            android:maxLength="30" >
+        </EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/dynamic_lay"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/logo_lay"

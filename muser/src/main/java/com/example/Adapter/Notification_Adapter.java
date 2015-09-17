@@ -372,29 +372,38 @@ public class Notification_Adapter extends BaseAdapter
 			
 			row.setOnClickListener(new OnClickListener()
 			{
-				
+
 				@Override
 				public void onClick(View v)
 				{
-					
-					if(list.get(position).get("activity").contains("likes"))
+
+					if (list.get(position).get("activity").contains("likes"))
 					{
-						Intent i=new Intent(con,Image_Video_Details.class);
-						i.putExtra("post_id",list.get(position).get("post_id"));
-						i.putExtra("user_id",list.get(position).get("user_id"));
+						Intent i = new Intent(con, Image_Video_Details.class);
+						i.putExtra("post_id", list.get(position).get("post_id"));
+						i.putExtra("user_id", list.get(position).get("user_id"));
 						i.putExtra("from_where", "Notification");
 						i.putExtra("which", "");
 						con.startActivity(i);
 					}
-					else if(list.get(position).get("activity").contains("followed") || list.get(position).get("activity").contains("training with") )
+					else if (list.get(position).get("activity").contains("followed") || list.get(position).get("activity").contains("training with"))
 					{
 						Global.set_user_id(list.get(position).get("friend_id"));
 						Global.set_friend_id(rem_pref.getString("user_id", ""));
-						
-						Intent i=new Intent(con,Other_Profile.class);
+
+						Intent i = new Intent(con, Other_Profile.class);
 						con.startActivity(i);
 					}
-					
+					else if (list.get(position).get("activity").contains("commented"))// actually this is for under trending under friends
+					{
+						Intent i=new Intent(con,Image_Video_Details.class);
+						i.putExtra("post_id",list.get(position).get("post_id"));
+						i.putExtra("user_id",rem_pref.getString("user_id", ""));
+						i.putExtra("from_where", "Notification");
+						i.putExtra("which", "IV");
+						con.startActivity(i);
+					}
+
 				}
 			});
 			

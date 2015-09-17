@@ -3,7 +3,10 @@ package com.example.Tabs;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -23,6 +26,7 @@ import com.example.ProgressTask.Get_Home_Pictures_Videos_ProgressTask;
 import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
 import com.example.classes.Global;
 import com.ameba.muser.R;
+import com.example.classes.Util_Class;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
 import com.handmark.pulltorefresh.library.PullToRefreshGridView;
@@ -38,6 +42,9 @@ public class Tab_My_Profile_Pictures extends Fragment
 	ArrayList<HashMap<String, String>>	list	= new ArrayList<HashMap<String, String>>();
 	PullToRefreshGridView				mPullRefreshGridView;
 	SharedPreferences rem_pref;
+	MyBroadcastReceiver mReceiver;
+	private boolean mIsReceiverRegistered = false;
+
 
 	ImageView							temp_logo;
 	View rootView;
@@ -87,6 +94,17 @@ public class Tab_My_Profile_Pictures extends Fragment
 	{
 		super.onResume();
 
+		if (!mIsReceiverRegistered)
+		{
+			if (mReceiver == null)
+			{
+				mReceiver = new MyBroadcastReceiver();
+			}
+			getActivity().registerReceiver(mReceiver, new IntentFilter(Util_Class.BROADCAST_UPDATE_MYProfilePictures));
+			mIsReceiverRegistered = true;
+		}
+
+
 		Log.e("onResume:Tab_MyProfile_Pictures", rem_pref.getString("current_frag", "")+"......;"+getActivity().getLocalClassName());
 		if (rem_pref.getString("current_frag","").equals("My Profile")   || getActivity().getLocalClassName().equals("Other_Profile"))
 		{
@@ -94,6 +112,33 @@ public class Tab_My_Profile_Pictures extends Fragment
 		}
 
 	}
+
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+		if (mIsReceiverRegistered)
+		{
+			getActivity().unregisterReceiver(mReceiver);
+			mReceiver = null;
+			mIsReceiverRegistered = false;
+		}
+
+	}
+
+
+	private
+	class MyBroadcastReceiver extends BroadcastReceiver
+	{
+
+		@Override
+		public
+		void onReceive(Context context, Intent intent)
+		{
+			refresh();
+		}
+	}
+
 	public void refresh()
 	{
 
@@ -186,5 +231,8 @@ public class Tab_My_Profile_Pictures extends Fragment
 		error_message.setVisibility(View.GONE);
 		mPullRefreshGridView.setVisibility(View.VISIBLE);
 	}
+
+
+
 
 }

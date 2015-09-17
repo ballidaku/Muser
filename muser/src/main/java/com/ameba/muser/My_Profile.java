@@ -1,11 +1,5 @@
 package com.ameba.muser;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Vector;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,7 +15,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TabHost;
@@ -41,6 +34,11 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.rockerhieu.emojicon.EmojiconTextView;
 
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Vector;
+
 public class My_Profile extends Fragment implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener, OnClickListener
 {
 	static Context						con;
@@ -58,7 +56,7 @@ public class My_Profile extends Fragment implements TabHost.OnTabChangeListener,
 	public EmojiconTextView				description;
 	SharedPreferences					rem_pref;
 	public PullToRefreshScrollView		mPullRefreshScrollView;
-	ScrollView							mScrollView;
+	//ScrollView							mScrollView;
 	TextView							update_profile;
 	My_Profile							con2;
 

@@ -3,7 +3,10 @@ package com.example.Tabs;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.AsyncTask;
@@ -28,6 +31,7 @@ import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
 import com.example.classes.Global;
 import com.ameba.muser.My_Profile;
 import com.ameba.muser.R;
+import com.example.classes.Util_Class;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshGridView;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
@@ -46,6 +50,9 @@ public class Tab_My_Profile_Videos extends Fragment
 	
 	PullToRefreshGridView mPullRefreshGridView;
 	SharedPreferences rem_pref;
+
+	MyBroadcastReceiverVideos mReceiver;
+	private boolean mIsReceiverRegistered = false;
 //	GridView mGridView;
 	
 	ImageView temp_logo;
@@ -66,6 +73,8 @@ public class Tab_My_Profile_Videos extends Fragment
 			temp_logo = (ImageView) rootView.findViewById(R.id.temp_logo);
 
 
+
+			error_message.setText("You got 15 seconds! Promote your session, share your fitness story, show us who you are! ");
 		}
 	
 
@@ -97,12 +106,49 @@ public class Tab_My_Profile_Videos extends Fragment
 	{
 		super.onResume();
 
+		if (!mIsReceiverRegistered)
+		{
+			if (mReceiver == null)
+			{
+				mReceiver = new MyBroadcastReceiverVideos();
+			}
+			getActivity().registerReceiver(mReceiver, new IntentFilter(Util_Class.BROADCAST_UPDATE_MYProfileVideos));
+			mIsReceiverRegistered = true;
+		}
+
+
 		Log.e("onResume:Tab_MyProfile_Videos", rem_pref.getString("current_frag", ""));
 		if (rem_pref.getString("current_frag","").equals("My Profile")  || getActivity().getLocalClassName().equals("Other_Profile"))
 		{
 			refresh();
 		}
 
+	}
+
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+		if (mIsReceiverRegistered)
+		{
+			getActivity().unregisterReceiver(mReceiver);
+			mReceiver = null;
+			mIsReceiverRegistered = false;
+		}
+
+	}
+
+
+	private
+	class MyBroadcastReceiverVideos extends BroadcastReceiver
+	{
+
+		@Override
+		public
+		void onReceive(Context context, Intent intent)
+		{
+			refresh();
+		}
 	}
 	
 	public void refresh()
@@ -111,7 +157,7 @@ public class Tab_My_Profile_Videos extends Fragment
 		if(list.size()==0)
 		{
 			show_temp_logo();
-			error_message.setText(con.getResources().getString(R.string.please_wait));
+			error_message.setText("You got 15 seconds! Promote your session, share your fitness story, show us who you are! ");
 		}
 		
 		Log.e("Where", "Tab_My_Profile_Videos");
@@ -178,8 +224,9 @@ public class Tab_My_Profile_Videos extends Fragment
 	{
 
 		show_temp_logo();
-		error_message.setText(con.getResources().getString(R.string.no_data_found));
+		error_message.setText("You got 15 seconds! Promote your session, share your fitness story, show us who you are! ");
 	}
+
 	public void refresh_complete()
 	{
 		if(mPullRefreshGridView.isRefreshing())

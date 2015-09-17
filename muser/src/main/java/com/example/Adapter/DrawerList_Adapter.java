@@ -34,10 +34,10 @@ public class DrawerList_Adapter extends BaseAdapter
 	public static String[]	values			= { "My Profile", "Home", "Trending", "Recommended", "Notification", "Messages", "Search", "My Favorites", "Invite Friends", "Find Friends", "Wallet",
 			"Logout"						};
 
-	public static int[]		images			= { 0, R.drawable.home_icon, R.drawable.trending, R.drawable.recomended, R.drawable.notification_icon1, R.drawable.message, R.drawable.search_icon,
+	public static int[]		images			= { 0, R.drawable.home_icon, R.drawable.trending, R.drawable.recomended, R.drawable.notification_icon, R.drawable.message, R.drawable.search_icon,
 			R.drawable.favourite_selected, R.drawable.invite_icon, R.drawable.find_friend, R.drawable.wallet, R.drawable.logout };
 
-	public static int[]		images_selected	= { 0, R.drawable.home_icon_selected, R.drawable.trending_selected, R.drawable.recomended_selected, R.drawable.notification_icon_selected1,
+	public static int[]		images_selected	= { 0, R.drawable.home_icon_selected, R.drawable.trending_selected, R.drawable.recomended_selected, R.drawable.notification_icon_selected,
 			R.drawable.message_selected, R.drawable.search_icon_selected, R.drawable.favourite, R.drawable.invite_icon_selected, R.drawable.find_friend_selected, R.drawable.wallet_selected,
 			R.drawable.logout_selected		};
 
@@ -130,7 +130,7 @@ public class DrawerList_Adapter extends BaseAdapter
 			if(position==4)  //Notification
 			{
 				lay_notification.setVisibility(View.VISIBLE);
-				lay_notification.setPadding(0,10,0,0);
+				//lay_notification.setPadding(0,10,0,0);
 
 
 				if(rem_pref.getInt("L", 0)!=0) // Likes
@@ -169,7 +169,7 @@ public class DrawerList_Adapter extends BaseAdapter
 					lay_connection.setVisibility(View.GONE);
 				}
 
-				row.setPadding(0,30,0,30);
+				//row.setPadding(0,20,0,15);
 			}
 			else if(position==5)  // messages
 			{

@@ -208,7 +208,7 @@ public class Get_Comment_Likes_ProgressTask extends AsyncTask<String, Void, Void
 					}
 				});*/
 			}
-			else
+			else   // View_All_Likes
 			{
 				View_All_Likes.list.addAll(list);
 				View_All_Likes.likes_listview.onRefreshComplete();
