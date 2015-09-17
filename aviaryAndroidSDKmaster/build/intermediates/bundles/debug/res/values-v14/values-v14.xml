@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v14/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v14/aviary_config.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_flip3d">1</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v14/aviary_themes.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v14/aviary_themes.xml -->
     <eat-comment/>
     <style name="AviaryBaseTheme" parent="android:Theme.Holo.NoActionBar">
         <item name="aviaryFontRegular">fonts/Roboto-Bold.ttf</item>

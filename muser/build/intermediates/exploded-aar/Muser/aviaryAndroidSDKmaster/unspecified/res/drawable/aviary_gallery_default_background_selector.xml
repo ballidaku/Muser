@@ -6,4 +6,4 @@
     <!-- default state -->
     <item android:drawable="@android:color/transparent"/>
 
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_gallery_default_background_selector.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_gallery_default_background_selector.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-sv/values-sv.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-sv/values-sv.xml -->
     <eat-comment/>
     <string name="confirm_quit_message">Vänta! Du har inte sparat ditt verk. Är du säker på att du vill stänga fotoredigeraren?</string>
     <string name="feather_activity_not_found">Tyvärr, det finns ingen applikation på din enhet som kan hantera ditt val. Vill du ladda ned en nu?</string>

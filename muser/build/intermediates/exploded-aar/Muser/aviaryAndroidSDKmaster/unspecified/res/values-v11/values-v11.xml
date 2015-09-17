@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v11/aviary_themes.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v11/aviary_themes.xml -->
     <eat-comment/>
     <style name="AviaryBaseTheme" parent="android:Theme.Holo.NoActionBar">
         <item name="aviaryFontRegular">fonts/Roboto-Bold.ttf</item>
@@ -64,7 +64,7 @@
         <item name="aviaryLightGrayButtonStyle">@style/AviaryWidget.Button.LightGray</item>
         <item name="aviaryToggleButtonStyle">@style/AviaryWidget.Button.Secondary.Toggle</item>          
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v11/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-v11/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryWidget.IAPDialog.ShadowBottom">
         <item name="android:minHeight">1dip</item>

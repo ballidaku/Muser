@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large-land/values-large-land.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large-land/values-large-land.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_item_weight">20</integer>
     <integer name="aviary_color_splash_item_weight">8</integer>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-de/values-de.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="border_name">Frei</string>
     <string name="confirm_quit_message">Moment! Wollen Sie den Editor wirklich ohne Speichern der Änderungen schließen?</string>

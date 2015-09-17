@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-mdpi/values-mdpi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-mdpi/values-mdpi.xml -->
     <eat-comment/>
     <dimen name="aviary_optionpanel_button_padding_bottom">9dip</dimen>
     <dimen name="aviary_optionpanel_button_padding_left">10dip</dimen>

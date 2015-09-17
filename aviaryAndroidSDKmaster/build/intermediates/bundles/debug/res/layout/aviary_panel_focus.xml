@@ -43,4 +43,4 @@
         android:focusableInTouchMode="false"
         android:text="@string/feather_shapes" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_panel_focus.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_panel_focus.xml -->

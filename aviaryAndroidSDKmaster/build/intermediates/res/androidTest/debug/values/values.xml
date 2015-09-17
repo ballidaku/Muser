@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <string-array name="aviary_crop_labels">
         <item>@string/feather_original</item>

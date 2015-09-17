@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large/aviary_dimens.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large/aviary_dimens.xml -->
     <eat-comment/>
     <dimen name="aviary_focus_button_padding_left">28dip</dimen>
     <dimen name="aviary_focus_button_padding_right">28dip</dimen>
@@ -11,7 +11,7 @@
     <dimen name="aviary_textSizeLarge">24sp</dimen>
     <dimen name="aviary_textSizeMedium">16sp</dimen>
     <dimen name="aviary_textSizeSmall">14sp</dimen>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryWidget.IAPDialog.TopGrid">
         <item name="android:background">@drawable/aviary_iap_grid_background_inverted</item>

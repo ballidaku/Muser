@@ -32,4 +32,4 @@
         android:gravity="center"
         android:text="@string/feather_try_again" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_download_error_message.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_download_error_message.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_download_error_message.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_download_error_message.xml -->

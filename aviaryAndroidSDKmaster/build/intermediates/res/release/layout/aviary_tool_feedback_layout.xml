@@ -35,4 +35,4 @@
         android:layout_marginRight="16dip"
         android:text="@string/feather_feedback" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_tool_feedback_layout.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_tool_feedback_layout.xml -->

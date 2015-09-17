@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-hu/values-hu.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-hu/values-hu.xml -->
     <eat-comment/>
     <string name="border_name">Ingyenes</string>
     <string name="confirm_quit_message">Várj! Még nem mentetted a munkád. Biztos vagy benne hogy be akarod zárni a szerkesztőt?</string>

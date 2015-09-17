@@ -100,6 +100,31 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/lay_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite"/>
+
+            <TextView
+                android:id="@+id/txtv_favorite"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:gravity="center"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/badge_bg"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/lay_session"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

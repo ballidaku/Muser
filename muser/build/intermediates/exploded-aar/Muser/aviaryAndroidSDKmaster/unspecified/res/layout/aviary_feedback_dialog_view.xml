@@ -54,4 +54,4 @@
         android:focusable="true"
         android:text="@string/feather_close" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_feedback_dialog_view.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_feedback_dialog_view.xml -->

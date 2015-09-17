@@ -7,4 +7,4 @@
     <!-- progress -->
     <item android:id="@android:id/secondaryProgress" android:drawable="@android:color/transparent"></item>
     
-</layer-list><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_seekbar_background.xml -->
+</layer-list><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_seekbar_background.xml -->

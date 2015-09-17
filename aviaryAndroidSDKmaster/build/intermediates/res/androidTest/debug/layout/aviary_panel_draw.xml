@@ -51,4 +51,4 @@
         android:orientation="horizontal"
         android:visibility="invisible" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_panel_draw.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_panel_draw.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_panel_draw.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_panel_draw.xml -->

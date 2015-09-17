@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large/values-large.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large/values-large.xml -->
     <eat-comment/>
     <dimen name="aviary_focus_button_padding_left">28dip</dimen>
     <dimen name="aviary_focus_button_padding_right">28dip</dimen>

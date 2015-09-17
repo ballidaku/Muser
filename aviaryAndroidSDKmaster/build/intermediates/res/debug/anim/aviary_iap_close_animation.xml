@@ -4,4 +4,4 @@
     android:fromAlpha="1.0"
     android:interpolator="@android:anim/accelerate_interpolator"
     android:toAlpha="0.0" />
-<!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_iap_close_animation.xml -->
+<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_iap_close_animation.xml -->

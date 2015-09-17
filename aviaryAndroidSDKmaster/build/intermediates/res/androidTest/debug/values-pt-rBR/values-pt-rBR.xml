@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-pt-rBR/values-pt-rBR.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-pt-rBR/values-pt-rBR.xml -->
     <eat-comment/>
     <string name="border_name">Livre</string>
     <string name="confirm_quit_message">Espere! Você não salvou as mudanças. Tem certeza que quer fechar este editor?</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-el/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-el/strings.xml -->
     <eat-comment/>
     <string name="border_name">Δωρεάν</string>
     <string name="confirm_quit_message">Περιμένετε! Δεν έχετε αποθηκεύσει την εργασία σας. Είστε σίγουροι ότι θέλετε να κλείσετε αυτή την επεξεργασία;</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large-port/values-large-port.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-large-port/values-large-port.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_item_weight">25</integer>
     <integer name="aviary_color_splash_item_weight">10</integer>

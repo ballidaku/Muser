@@ -3,7 +3,6 @@
     package="com.aviary.android.feather"
     android:versionCode="1"
     android:versionName="1.0" >
-
     <!--
     minimum supported version by the Aviary-SDK is android-9
     target version must be android-19

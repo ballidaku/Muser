@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-no/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-no/strings.xml -->
     <eat-comment/>
     <string name="confirm_quit_message">Vent! du har ikke lagret. Er du sikker på at du vil avslutte?</string>
     <string name="feather_adjust">Orientering</string>

@@ -361,8 +361,8 @@
 
           <meta-data
               android:name="com.aviary.android.feather.v1.API_KEY"
-              android:value="e91d87e0984449d48dccdf62f2d1c74e"/>-->
-
+              android:value="e91d87e0984449d48dccdf62f2d1c74e"/>
+-->
 
         <!--     get your Aviary API Key for free at http://aviary.com/android
              and uncomment the following section, replacing "your_api_key_here" with your api key

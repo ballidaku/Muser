@@ -23,4 +23,4 @@
         android:layout_below="@+id/text"
         android:layout_centerHorizontal="true" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_gallery_crop_item_view.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_gallery_crop_item_view.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_gallery_crop_item_view.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_gallery_crop_item_view.xml -->

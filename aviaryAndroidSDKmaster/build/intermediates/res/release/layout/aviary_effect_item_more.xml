@@ -32,4 +32,4 @@
     <include layout="@layout/aviary_thumb_divider_left" android:visibility="invisible" />
     <include layout="@layout/aviary_thumb_divider_right" android:visibility="invisible" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_effect_item_more.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_effect_item_more.xml -->

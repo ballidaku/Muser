@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large-land/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large-land/aviary_config.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_item_weight">20</integer>
     <integer name="aviary_color_splash_item_weight">8</integer>
@@ -14,7 +14,7 @@
     <integer name="aviary_iap_dialog_width_weight">70</integer>
     <integer name="aviary_seekbar_weight">70</integer>
     <integer name="aviary_wheel_weight">70</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large-land/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-large-land/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryWidget.IAPDialog.TopGrid">
         <item name="android:background">@null</item>

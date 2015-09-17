@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-vi/values-vi.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-vi/values-vi.xml -->
     <eat-comment/>
     <string name="border_name">Miễn phí</string>
     <string name="confirm_quit_message">Xin đợi! Bạn chưa lưu tác phẩm của mình. Bạn có chắc muốn đóng trình sửa ảnh này không?</string>

@@ -4,4 +4,4 @@
     <item android:state_selected="true" android:drawable="@drawable/aviary_bottombar_vline_inverted" />
     <!-- default -->
     <item android:drawable="@drawable/aviary_bottombar_vline" />
-</selector><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_bottombar_vline_selector.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/drawable/aviary_bottombar_vline_selector.xml -->
+</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/drawable/aviary_bottombar_vline_selector.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/drawable/aviary_bottombar_vline_selector.xml -->

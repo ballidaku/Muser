@@ -4,4 +4,4 @@
     android:fromAlpha="1.0"
     android:interpolator="@android:anim/accelerate_interpolator"
     android:toAlpha="0.0" >
-</alpha><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_toast_exit.xml -->
+</alpha><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_toast_exit.xml -->

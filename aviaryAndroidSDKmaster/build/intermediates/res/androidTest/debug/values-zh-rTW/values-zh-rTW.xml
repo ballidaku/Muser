@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-zh-rTW/values-zh-rTW.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-zh-rTW/values-zh-rTW.xml -->
     <eat-comment/>
     <string name="border_name">免費</string>
     <string name="confirm_quit_message">請稍等！您還沒有儲存您的修改。您確定要關閉此編輯器嗎？</string>

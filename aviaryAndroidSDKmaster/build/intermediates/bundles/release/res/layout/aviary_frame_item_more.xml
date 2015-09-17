@@ -27,4 +27,4 @@
         android:layout_centerHorizontal="true"
         android:text="@string/feather_get_more" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_frame_item_more.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_frame_item_more.xml -->

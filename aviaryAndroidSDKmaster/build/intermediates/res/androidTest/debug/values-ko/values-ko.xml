@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-ko/values-ko.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-ko/values-ko.xml -->
     <eat-comment/>
     <string name="border_name">무료</string>
     <string name="confirm_quit_message">잠시만요! 작업을 저장하지 않습니다. 이 편집기를 종료할까요?</string>

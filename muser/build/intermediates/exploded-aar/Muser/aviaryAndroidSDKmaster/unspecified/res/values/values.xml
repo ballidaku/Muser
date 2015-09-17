@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
     <eat-comment/>
     <string-array name="aviary_crop_labels">
         <item>@string/feather_original</item>
@@ -97,10 +97,10 @@
         <item>0xff545454</item>
         <item>0xffa8a8a8</item>
     </integer-array>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
     <eat-comment/>
     <string-array name="borders_list"/>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_attrs.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_attrs.xml -->
     <eat-comment/>
     <attr name="aviary_direction">
         <flag name="top_down" value="0x01"/>
@@ -133,7 +133,7 @@
     <attr format="reference" name="sephiroth_absHListViewStyle"/>
     <attr format="dimension" name="sephiroth_listPreferredItemWidth"/>
     <attr format="reference" name="sephiroth_listViewStyle"/>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_colors.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_colors.xml -->
     <eat-comment/>
     <color name="aviary_adjust_fill_color">#77000000</color>
     <color name="aviary_adjust_internal_stroke_color">#ffe1e1e1</color>
@@ -218,7 +218,7 @@
     <declare-styleable name="AviaryWorkspaceIndicator"><attr format="reference" name="aviary_indicatorId"/></declare-styleable>
     <declare-styleable name="HListView"><attr name="android:entries"/><attr name="android:divider"/><attr format="dimension" name="dividerWidth"/><attr format="boolean" name="headerDividersEnabled"/><attr format="boolean" name="footerDividersEnabled"/><attr format="reference|color" name="overScrollHeader"/><attr format="reference|color" name="overScrollFooter"/><attr format="integer" name="measureWithChild"/></declare-styleable>
     <declare-styleable name="Theme"><attr format="string" name="aviaryFontRegular"/><attr format="string" name="aviaryFontLight"/><attr format="color" name="aviaryBackgroundColor"/><attr format="reference" name="aviarySeekBarStyle"/><attr format="reference" name="aviaryWheelStyle"/><attr format="reference" name="aviaryTiltShiftViewStyle"/><attr format="reference" name="aviarySymbolMinusStyle"/><attr format="reference" name="aviarySymbolPlusStyle"/><attr format="reference" name="aviaryCropImageViewStyle"/><attr format="reference" name="aviaryCropHighlightStyle"/><attr format="reference" name="aviaryImageViewDrawableOverlayText"/><attr format="reference" name="aviaryImageViewDrawableOverlayTextHighlightStyle"/><attr format="reference" name="aviaryImageViewDrawableOverlaySticker"/><attr format="reference" name="aviaryImageViewDrawableOverlayStickerHighlightStyle"/><attr format="reference" name="aviaryAdjustImageViewStyle"/><attr format="reference" name="aviaryBottomBarViewFlipperStyle"/><attr format="dimension" name="aviaryBottomBarHeight"/><attr format="reference" name="aviaryBottomBarLogoContainerStyle"/><attr format="reference" name="aviaryBottomBarLogoImageStyle"/><attr format="reference" name="aviaryBottomBarOptionPanelStyle"/><attr format="reference" name="aviaryBottomBarToolFeedBackStyle"/><attr format="reference" name="aviaryBottomBarOptionPanelContainerStyle"/><attr format="reference" name="aviaryBottomBarOptionPanelContainerStyleNoMargin"/><attr format="reference" name="aviaryBottomBarHorizontalViewStyle"/><attr format="reference" name="aviaryEffectsHorizontalViewStyle"/><attr format="reference" name="aviaryBottomBarToolStyle"/><attr format="reference" name="aviaryBottomBarToolImageStyle"/><attr format="reference" name="aviaryBottomBarToolTextStyle"/><attr format="reference" name="aviaryNavBarStyle"/><attr format="dimension" name="aviaryNavBarHeight"/><attr format="reference" name="aviaryNavTitleStyle"/><attr format="reference" name="aviaryNavButtonStyle"/><attr format="reference" name="aviaryNavButtonApplyStyle"/><attr format="reference" name="aviaryHighlightImageButtonStyle"/><attr format="reference" name="aviaryLensViewStyle"/><attr format="reference" name="aviaryGalleryStyle"/><attr format="reference" name="aviaryOptionPanelDefaultButtonStyle"/><attr format="reference" name="aviaryOptionPanelToggleButtonStyle"/><attr format="reference" name="aviaryOptionPanelToggleLeftButtonStyle"/><attr format="reference" name="aviaryOptionPanelToggleCenterButtonStyle"/><attr format="reference" name="aviaryOptionPanelToggleRightButtonStyle"/><attr format="reference" name="aviaryAdjustOptionPanelToggleButtonStyle"/><attr format="reference" name="aviaryAdjustOptionPanelToggleLeftButtonStyle"/><attr format="reference" name="aviaryAdjustOptionPanelToggleCenterButtonStyle"/><attr format="reference" name="aviaryAdjustOptionPanelToggleRightButtonStyle"/><attr format="reference" name="aviaryEnhanceOptionPanelToggleLeftButtonStyle"/><attr format="reference" name="aviaryEnhanceOptionPanelToggleCenterButtonStyle"/><attr format="reference" name="aviaryEnhanceOptionPanelToggleRightButtonStyle"/><attr format="integer" name="aviaryEnhanceItemWeight"/><attr format="integer" name="aviarySplashItemWeight"/><attr format="integer" name="aviarySplashDividerWeight"/><attr format="integer" name="aviaryAdjustItemWeight"/><attr format="integer" name="aviaryAdjustDividerWeight"/><attr format="reference" name="aviaryFocusOptionPanelToggleLeftButtonStyle"/><attr format="reference" name="aviaryFocusOptionPanelToggleRightButtonStyle"/><attr format="reference" name="aviaryColorSplashOptionPanelToggleButtonStyle"/><attr format="reference" name="aviaryColorSplashOptionPanelToggleLeftButtonStyle"/><attr format="reference" name="aviaryColorSplashOptionPanelToggleRightButtonStyle"/><attr format="reference" name="aviaryImageRestoreViewStyle"/><attr format="reference" name="aviaryPreviewSpotDrawableStyle"/><attr format="reference" name="aviaryPreviewFillDrawableStyle"/><attr format="reference" name="aviaryPreviewSpotViewStyle"/><attr format="reference" name="aviaryOptionPanelTopIndicatorStyle"/><attr format="reference" name="aviaryOptionPanelBottomIndicatorStyle"/><attr format="reference" name="aviaryOptionPanelBottomLineStyle"/><attr format="reference" name="aviaryDefaultTextStyle"/><attr format="reference" name="aviaryPrimaryButtonStyle"/><attr format="reference" name="aviarySecondaryButtonStyle"/><attr format="reference" name="aviaryLightGrayButtonStyle"/><attr format="reference" name="aviaryNavBarRestoreButtonStyle"/><attr format="reference" name="aviaryToggleButtonStyle"/><attr format="reference" name="aviaryMemeButtonStyle"/><attr format="reference" name="aviaryMemeClearButtonStyle"/><attr format="reference" name="aviaryGalleryItemContainerStyle"/><attr format="reference" name="aviaryGalleryItemDividerStyle"/><attr format="reference" name="aviaryGalleryItemHighlightImageStyle"/><attr format="reference" name="aviaryGalleryItemCropTextNormalStyle"/><attr format="reference" name="aviaryGalleryItemCropTextCustomStyle"/><attr format="reference" name="aviaryGalleryItemCropImageViewStyle"/><attr format="reference" name="aviaryGalleryTopIndicatorStyle"/><attr format="reference" name="aviaryGalleryBottomIndicatorStyle"/><attr format="reference" name="aviaryNavDividerStyle"/><attr format="reference" name="aviaryProgressBarSmall"/><attr format="reference" name="aviaryProgressBarMedium"/><attr format="reference" name="aviaryProgressBarLarge"/><attr format="reference" name="aviaryProgressBarActionBar"/><attr format="dimension" name="aviaryProgressBarActionBarWidth"/><attr format="dimension" name="aviaryProgressBarActionBarHeight"/><attr format="reference" name="aviaryProgressBarSmallInverse"/><attr format="reference" name="aviaryProgressBarMediumInverse"/><attr format="reference" name="aviaryProgressBarLargeInverse"/><attr format="dimension" name="aviaryMainImagePadding"/><attr format="reference" name="aviaryPanelDisabledStatusBackground"/><attr format="reference" name="aviaryHiddenEditTextStyle"/><attr format="reference" name="aviaryHiddenEditTextStyleMultiline"/><attr format="reference" name="aviaryEffectThumbLayoutStyle"/><attr format="reference" name="aviaryEffectThumbLayoutExternalStyle"/><attr format="reference" name="aviaryEffectThumbHiddenSelector"/><attr format="reference" name="aviaryEffectThumbDividerRightStyle"/><attr format="reference" name="aviaryEffectThumbDividerLeftStyle"/><attr format="reference" name="aviaryEffectThumbDividerRightContainerStyle"/><attr format="reference" name="aviaryEffectThumbDividerLeftContainerStyle"/><attr format="reference" name="aviaryEffectThumbTextStyle"/><attr format="reference" name="aviaryEffectThumbDividerStyle"/><attr format="reference" name="aviaryEffectThumbDividerTextStyle"/><attr format="reference" name="aviaryIAPDialogContainerStyle"/><attr format="reference" name="aviaryIAPDialogMainLayout"/><attr format="integer" name="aviaryIAPDialogHeightWeight"/><attr format="integer" name="aviaryIAPDialogMarginTopWeight"/><attr format="integer" name="aviaryIAPDialogWidthWeight"/><attr format="reference" name="aviaryIAPDialogIcon"/><attr format="reference" name="aviaryIAPDialogTitleStyle"/><attr format="reference" name="aviaryIAPDialogTextErrorStyle"/><attr format="reference" name="aviaryIAPDialogButtonErrorStyle"/><attr format="reference" name="aviaryIAPDialogTextStyle"/><attr format="reference" name="aviaryIAPBannerTextStyle"/><attr format="reference" name="aviaryIAPDialogListItemTitleStyle"/><attr format="reference" name="aviaryIAPDialogListItemTextStyle"/><attr format="reference" name="aviaryIAPDialogWorkspaceStyle"/><attr format="reference" name="aviaryIAPDialogWorkspaceIndicatorStyle"/><attr format="reference" name="aviaryIAPDialogGridBackground"/><attr format="dimension" name="aviaryIAPDialogGridTopStyle"/><attr format="reference" name="aviaryIAPDialogShadowTop"/><attr format="reference" name="aviaryIAPDialogShadowBottom"/><attr format="reference" name="aviaryIAPDialogDownloadButtonStyle"/><attr format="reference" name="aviaryIAPDialogDownloadButtonTextStyle"/><attr format="reference" name="aviaryIAPDialogRestoreAllButtonStyle"/><attr format="reference" name="aviaryIAPDialogRestoreDialogTextStyle"/><attr format="reference" name="aviaryIAPDialogWorkspaceCellEffects"/><attr format="reference" name="aviaryIAPDialogWorkspaceCellStickers"/><attr format="reference" name="aviaryFeedbackDialogStyle"/><attr format="reference" name="aviaryFeedbackDialogTextVersionStyle"/><attr format="reference" name="aviaryFeedbackDialogDividerStyle"/><attr format="reference" name="aviaryFeedbackDialogTextMessageStyle"/><attr format="reference" name="aviaryLoaderToastStyle"/><attr format="reference" name="aviaryToastExitAnimation"/><attr format="reference" name="aviaryCustomDialogButtonStyle"/><attr format="reference" name="aviaryCustomDialogButtonSecondaryStyle"/><attr format="reference" name="aviaryEdgeEffectDefaultStyle"/><attr format="reference" name="aviaryTextAppearance"/><attr format="reference" name="aviaryTextAppearanceLarge"/><attr format="reference" name="aviaryTextAppearanceLargeNoSelection"/><attr format="reference" name="aviaryTextAppearanceMedium"/><attr format="reference" name="aviaryTextAppearanceMediumNoSelection"/><attr format="reference" name="aviaryTextAppearanceSmall"/><attr format="reference" name="aviaryTextAppearanceSmallNoSelection"/><attr format="reference" name="aviaryTextAppearanceInverted"/><attr format="reference" name="aviaryTextAppearanceLargeInverted"/><attr format="reference" name="aviaryTextAppearanceMediumInverted"/><attr format="reference" name="aviaryTextAppearanceSmallInverted"/></declare-styleable>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_dimens.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_dimens.xml -->
     <eat-comment/>
     <dimen name="aviary_adjust_button_padding_left">0dip</dimen>
     <dimen name="aviary_adjust_button_padding_right">0dip</dimen>
@@ -289,7 +289,7 @@
     <dimen name="aviary_text_overlay_padding">20dip</dimen>
     <dimen name="aviary_tool_margin">12dip</dimen>
     <dimen name="aviary_wheel_margin_horizontal">4dip</dimen>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_animationDuration">@android:integer/config_mediumAnimTime</integer>
     <integer name="aviary_adjust_animationDuration2">@android:integer/config_shortAnimTime</integer>
@@ -298,10 +298,10 @@
     <integer name="aviary_adjust_free_rotate">1</integer>
     <integer name="aviary_adjust_item_weight">30</integer>
     <integer name="aviary_asyncimagemanager_tag">100</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_dimens.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_dimens.xml -->
     <eat-comment/>
     <integer name="aviary_button_highlight_glow_size">7</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
     <eat-comment/>
     <integer name="aviary_color_splash_divider_weight">5</integer>
     <integer name="aviary_color_splash_item_weight">15</integer>
@@ -333,17 +333,17 @@
     <integer name="aviary_text_max_length">100</integer>
     <integer name="aviary_text_stroke_enabled">0</integer>
     <integer name="aviary_wheel_weight">100</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
     <eat-comment/>
     <integer name="border_version">1</integer>
     <integer name="is_border">0</integer>
     <integer name="is_filter">1</integer>
     <integer name="is_sticker">0</integer>
     <integer name="is_tool">1</integer>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_config.xml -->
     <eat-comment/>
     <string name="aviary_meme_font">meme/Impact.ttf</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="border_name">Free</string>
     <string name="confirm_quit_message">Wait! You didn\'t save your work. Are you certain that you want to close this editor?</string>
@@ -464,10 +464,10 @@
     <string name="feather_plugin_error_corrupted">The plugin seems corrupted, please try to install it again</string>
     <string name="feather_plugin_error_download">Failed to copy the plugin, please try to reinstall it</string>
     <string name="feather_plugin_error_storage_not_available">Failed to copy the plugin inside the device storage</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_plugin.xml -->
     <eat-comment/>
     <string name="feather_plugin_filter_undefined_name">Original</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="feather_powered_by_aviary">Powered by Aviary.com</string>
     <string name="feather_purchase_failed">Purchase failed. Please try again.</string>
@@ -511,13 +511,13 @@
     <string name="feather_zoom_mode">Zoom Mode</string>
     <string name="filter_name">Free</string>
     <string name="menu_premium">Store</string>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryAnimations"/>
     <style name="AviaryAnimations.AviaryToast">
         <item name="android:windowExitAnimation">?aviaryToastExitAnimation</item>
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_themes.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_themes.xml -->
     <eat-comment/>
     <style name="AviaryBaseTheme" parent="android:Theme.Black.NoTitleBar">
         <item name="aviaryFontRegular">fonts/Roboto-Bold.ttf</item>
@@ -583,7 +583,7 @@
         <item name="aviaryLightGrayButtonStyle">@style/AviaryWidget.Button.LightGray</item>
         <item name="aviaryToggleButtonStyle">@style/AviaryWidget.Button.Secondary.Toggle</item>        
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryDialog"/>
     <style name="AviaryDialog.Divider">
@@ -736,7 +736,7 @@
     <style name="AviaryTextAppearance.Small.NoSelected">
         <item name="android:textColor">@color/aviary_tool_text_color_no_selected</item>
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_themes.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_themes.xml -->
     <eat-comment/>
     <style name="AviaryTheme" parent="AviaryBaseTheme">
         <item name="aviaryProgressBarActionBarWidth">@dimen/aviary_navbar_progress_width</item>
@@ -919,7 +919,7 @@
     <style name="AviaryTheme.Dialog.Custom">
         <item name="android:windowBackground">@drawable/aviary_home_dialog_background</item>
     </style>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values/aviary_styles.xml -->
     <eat-comment/>
     <style name="AviaryWidget"/>
     <style name="AviaryWidget.AdjustImageView">

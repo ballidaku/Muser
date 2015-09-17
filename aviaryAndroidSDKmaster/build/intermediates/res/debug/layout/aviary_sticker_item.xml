@@ -24,4 +24,4 @@
         android:layout_alignParentBottom="true"
         android:text="@string/feather_blemish" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_sticker_item.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_sticker_item.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-v14/values-v14.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-v14/values-v14.xml -->
     <eat-comment/>
     <integer name="aviary_adjust_flip3d">1</integer>
     <style name="AviaryBaseTheme" parent="android:Theme.Holo.NoActionBar">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-bg/values-bg.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-bg/values-bg.xml -->
     <eat-comment/>
     <string name="border_name">Освободи</string>
     <string name="confirm_quit_message">Почакайте! Не сте записали работата си. Сигурни ли сте, че искате да затворите редактора?</string>

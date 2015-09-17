@@ -2,4 +2,4 @@
 <layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
     android:animation="@anim/aviary_slide_in_top"
     android:delay="0%" >
-</layoutAnimation><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_iap_layout_animation.xml -->
+</layoutAnimation><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_iap_layout_animation.xml -->

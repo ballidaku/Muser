@@ -38,4 +38,4 @@
         android:layout_alignParentBottom="true"
         android:text="@string/feather_blemish" />
 
-</com.aviary.android.feather.widget.EffectThumbLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_frame_item.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_frame_item.xml -->
+</com.aviary.android.feather.widget.EffectThumbLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_frame_item.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_frame_item.xml -->

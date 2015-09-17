@@ -15,9 +15,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.provider.SyncStateContract;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -41,6 +43,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+//import com.aviary.android.feather.FeatherActivity;
 import com.example.ProgressTask.Get_Area_Of_Focus_Thread;
 import com.example.ProgressTask.Get_Categories_Thread;
 import com.example.ProgressTask.Get_Fitness_Goal_Thread;
@@ -618,11 +621,10 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         switch(v.getId())
         {
 
-/*
 			case R.id.edit_image:
 
 				//startFeather(Uri.parse(image_path));
-				break;*/
+				break;
 
             case R.id.updoad:
                 //		location_s		=location.getText().toString().trim();

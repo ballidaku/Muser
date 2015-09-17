@@ -40,4 +40,4 @@
         android:layout_gravity="fill_vertical|fill_horizontal"
         android:scaleType="matrix" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_content_meme.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_content_meme.xml -->

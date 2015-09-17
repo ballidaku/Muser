@@ -13,4 +13,4 @@
         android:layout_margin="@dimen/aviary_main_loader_padding"
         layout="@layout/aviary_progress_medium" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_main_loader.xml -->
+</RelativeLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_main_loader.xml -->

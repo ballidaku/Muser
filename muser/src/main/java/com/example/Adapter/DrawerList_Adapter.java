@@ -101,10 +101,14 @@ public class DrawerList_Adapter extends BaseAdapter
 			TextView txtv_session=(TextView)row.findViewById(R.id.txtv_session);
 			TextView txtv_connection=(TextView)row.findViewById(R.id.txtv_connection);
 
+			TextView txtv_favorite=(TextView)row.findViewById(R.id.txtv_favorite);
+
 			LinearLayout lay_like=(LinearLayout)row.findViewById(R.id.lay_like);
 			LinearLayout lay_comment=(LinearLayout)row.findViewById(R.id.lay_comment);
 			LinearLayout lay_session=(LinearLayout)row.findViewById(R.id.lay_session);
 			LinearLayout lay_connection=(LinearLayout)row.findViewById(R.id.lay_connection);
+
+			LinearLayout lay_favorite=(LinearLayout)row.findViewById(R.id.lay_favorite);
 
 
 
@@ -167,6 +171,16 @@ public class DrawerList_Adapter extends BaseAdapter
 				else
 				{
 					lay_connection.setVisibility(View.GONE);
+				}
+
+
+				if(rem_pref.getInt("FAV", 0)!=0) //  Friend connection
+				{
+					txtv_favorite.setText(""+rem_pref.getInt("FAV", 0));
+				}
+				else
+				{
+					lay_favorite.setVisibility(View.GONE);
 				}
 
 				//row.setPadding(0,20,0,15);

@@ -56,4 +56,4 @@
         android:layout_height="@dimen/aviary_iap_list_divider_height"
         android:background="@color/aviary_iap_list_divider" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_list_item.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_list_item.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_list_item.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_list_item.xml -->

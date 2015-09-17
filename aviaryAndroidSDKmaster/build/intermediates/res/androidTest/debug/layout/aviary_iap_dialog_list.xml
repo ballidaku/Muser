@@ -53,4 +53,4 @@
             android:text="@string/feather_iap_restore_all" />
     </LinearLayout>
 
-</com.aviary.android.feather.widget.IAPDialogList><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_dialog_list.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_dialog_list.xml -->
+</com.aviary.android.feather.widget.IAPDialogList><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_dialog_list.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/layout/aviary_iap_dialog_list.xml -->

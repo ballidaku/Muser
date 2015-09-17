@@ -3,4 +3,4 @@
     android:duration="@android:integer/config_mediumAnimTime"
     android:interpolator="@android:anim/accelerate_decelerate_interpolator"
     android:fromXDelta="0"
-    android:toXDelta="100%p" /><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_slide_out_right.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/anim/aviary_slide_out_right.xml -->
+    android:toXDelta="100%p" /><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_slide_out_right.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/anim/aviary_slide_out_right.xml -->

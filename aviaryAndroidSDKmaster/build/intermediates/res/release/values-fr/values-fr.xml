@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-fr/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-fr/strings.xml -->
     <eat-comment/>
     <string name="border_name">Libre</string>
     <string name="confirm_quit_message">Attendez! Vous n\'avez pas enregistré votre travail. Êtes-vous certain de vouloir fermer cet éditeur ?</string>

@@ -4,4 +4,4 @@
     android:interpolator="@android:anim/accelerate_decelerate_interpolator"
     android:fromXDelta="100%p"
     android:toXDelta="0" />
-<!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_slide_in_right.xml --><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/anim/aviary_slide_in_right.xml -->
+<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/anim/aviary_slide_in_right.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/anim/aviary_slide_in_right.xml -->

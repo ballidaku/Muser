@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-nl/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-nl/strings.xml -->
     <eat-comment/>
     <string name="border_name">Gratis</string>
     <string name="confirm_quit_message">Wacht!  U heeft uw werk niet opgeslagen.  Bent u zeker dat u deze editor wil sluiten?</string>

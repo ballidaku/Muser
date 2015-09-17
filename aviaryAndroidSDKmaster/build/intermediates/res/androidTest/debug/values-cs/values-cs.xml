@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-cs/values-cs.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/build/intermediates/bundles/debug/res/values-cs/values-cs.xml -->
     <eat-comment/>
     <string name="border_name">Volný</string>
     <string name="confirm_quit_message">Počkejte! Neuložili jste svou práci. Opravdu chcete editor zavřít?</string>

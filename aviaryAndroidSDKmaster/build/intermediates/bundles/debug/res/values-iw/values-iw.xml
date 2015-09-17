@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-iw/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-iw/strings.xml -->
     <eat-comment/>
     <string name="border_name">ללא תשלום</string>
     <string name="confirm_quit_message">רגע! לא שמרת את הקובץ! האם את/ה בטוח/ה שברצונך לסגור את העורך?</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-vi/strings.xml -->
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/values-vi/strings.xml -->
     <eat-comment/>
     <string name="border_name">Miễn phí</string>
     <string name="confirm_quit_message">Xin đợi! Bạn chưa lưu tác phẩm của mình. Bạn có chắc muốn đóng trình sửa ảnh này không?</string>

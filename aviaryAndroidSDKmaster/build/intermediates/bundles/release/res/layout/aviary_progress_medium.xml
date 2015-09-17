@@ -22,4 +22,4 @@
         android:text="@string/feather_loading_title"
         android:textAppearance="?attr/aviaryTextAppearanceMedium" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_progress_medium.xml -->
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_progress_medium.xml -->

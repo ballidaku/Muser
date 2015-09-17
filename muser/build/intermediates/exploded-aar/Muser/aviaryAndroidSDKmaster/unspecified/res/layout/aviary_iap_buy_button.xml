@@ -22,4 +22,4 @@
         android:indeterminateOnly="true"
         android:layout_centerInParent="true" />
 
-</com.aviary.android.feather.widget.IAPBuyButton><!-- From: file:/C:/Users/Sharanpal/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_buy_button.xml -->
+</com.aviary.android.feather.widget.IAPBuyButton><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/aviaryAndroidSDKmaster/src/main/res/layout/aviary_iap_buy_button.xml -->

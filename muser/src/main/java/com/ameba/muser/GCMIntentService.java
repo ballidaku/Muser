@@ -124,6 +124,7 @@ class GCMIntentService extends GCMBaseIntentService
                         notication_message = " " + message_count + " Notifications";
                     }
 
+                    Log.e("type",type);
 
                     if(type.equals("S"))
                     {
@@ -144,6 +145,11 @@ class GCMIntentService extends GCMBaseIntentService
                     {
                         int message_count = rem_pref.getInt("FC", 0) + 1;
                         rem_pref.edit().putInt("FC", message_count).apply();
+                    }
+                    else if(type.equals("FAV"))
+                    {
+                        int message_count = rem_pref.getInt("FAV", 0) + 1;
+                        rem_pref.edit().putInt("FAV", message_count).apply();
                     }
                 }
 
