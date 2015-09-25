@@ -67,6 +67,9 @@ import com.rockerhieu.emojicon.EmojiconsFragment;
 import com.rockerhieu.emojicon.emoji.Emojicon;
 import com.twitter.sdk.android.tweetcomposer.TweetComposer;
 
+import org.appsroid.fxpro.PhotoActivity;
+import org.appsroid.fxpro.library.Constants;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -81,22 +84,20 @@ import java.util.HashMap;
 import com.aviary.android.feather.common.utils.StringUtils;
 import com.aviary.android.feather.library.Constants;*/
 
-public
-class Captured_Image extends FragmentActivity implements OnClickListener, EmojiconGridFragment.OnEmojiconClickedListener, EmojiconsFragment.OnEmojiconBackspaceClickedListener
+public class Captured_Image extends FragmentActivity implements OnClickListener, EmojiconGridFragment.OnEmojiconClickedListener, EmojiconsFragment.OnEmojiconBackspaceClickedListener
 {
     LinearLayout edit_image/*, instagram*/;
-    Bitmap src;
+    Bitmap       src;
 
     Context con;
     public static EmojiconEditText						/* location, */captions/* tag, *//*fitness_goal*/;
-    String location_s, captions_s, tag_s/*, fitness_goal_s*/, category_id = "", focus_id = "", fitness_goal_id = "", trainer_id = "", image_path, type,
-            latitude, longitude;
+    String location_s, captions_s, tag_s/*, fitness_goal_s*/, category_id = "", focus_id = "", fitness_goal_id = "", trainer_id = "", image_path, type, latitude, longitude;
     public static AutoCompleteTextView trained_with;
-    public static Spinner category_spinner, area_of_focus_spinner, fitness_goal_spinner;
+    public static Spinner              category_spinner, area_of_focus_spinner, fitness_goal_spinner;
     ;
 
     boolean selected = false;
-    int width;
+    int                      width;
     Get_Area_Of_Focus_Thread gaof;
 
     public static ArrayList<HashMap<String, String>> aof_list;
@@ -104,7 +105,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     public static ArrayList<HashMap<String, String>> fitness_goal_list;
     //String[] fitness_goal_list = { "Build Endurance", "Build muscle", "Burn Fat", "Eat right", "Improve Flexibility", "Improve Lifestyle", "Joint Therapy", "Lose weight", "Reduce Stress", "Stability", "Stamina", "Tone", "Run a mile under 5 mins", "Lower body fat" };
 
-    TextView  tag_people_textview, title;
+    TextView tag_people_textview, title;
     ToggleButton location_toggle;
     boolean is_location_on = false;
 
@@ -112,33 +113,33 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
     //LoginButton facebook;
     //UiLifecycleHelper									uiHelper;
-    Bitmap bit;
+    Bitmap bit = null;
     TextView facebook_lay, twitter_text;
     //boolean												is_upload_facebook	= true, is_upload_twitter = false, is_upload_instagram = false;
 
     CannonballTwitterLoginButton twitter;
 
-
     //	InstagramApp										mApp;
     FrameLayout emojicons;
-    ImageView smilly;
-    EditText tag_people,location_name;
+    ImageView   smilly;
+    EditText    tag_people, location_name;
 
     String video_duration = "";
 
     public static ArrayList<HashMap<String, String>> tag_people_list = new ArrayList<HashMap<String, String>>();
 
     SharedPreferences rem_pref;
-    ShareButton share;
-    CallbackManager callbackManager;
-    ShareDialog shareDialog;
+    ShareButton       share;
+    CallbackManager   callbackManager;
+    ShareDialog       shareDialog;
+
+    ImageView im;
+    String video_image_path="";
 
     @Override
-    public
-    void onCreate(Bundle savedInstanceState)
+    public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
@@ -147,21 +148,21 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         // this part is optional
         shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>()
         {
-            @Override public
-            void onSuccess(Sharer.Result result)
+            @Override
+            public void onSuccess(Sharer.Result result)
             {
                 Log.e("FB", "onSuccess");
                 facebook_lay.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fb_new_selected, 0, 0, 0);
             }
 
-            @Override public
-            void onCancel()
+            @Override
+            public void onCancel()
             {
                 Log.e("FB", "onCancel");
             }
 
-            @Override public
-            void onError(FacebookException error)
+            @Override
+            public void onError(FacebookException error)
             {
                 Log.e("FB", "onError");
             }
@@ -173,69 +174,51 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
         share = (ShareButton) findViewById(R.id.share);
 
-
         title = (TextView) findViewById(R.id.title);
-
 
         rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 
         tag_people_list.clear();
         Intent i = getIntent();
 
-        image_path = i.getStringExtra("image");
+
         type = i.getStringExtra("type");
 
         Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
+        Point   size    = new Point();
         display.getSize(size);
         width = size.x / 2;
 
-
-        if(type.equals("V"))
+        if (type.equals("V"))
         {
             title.setText("Loaded Video");
-            bit = ThumbnailUtils.createVideoThumbnail(image_path, MediaStore.Images.Thumbnails.MINI_KIND);
+
+          //  bit = ThumbnailUtils.createVideoThumbnail( i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND);
+            image_path = i.getStringExtra("image");
+            video_image_path=saveToInternalSorage(ThumbnailUtils.createVideoThumbnail( i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND));
 
         }
         else
         {
             title.setText("Loaded Image");
-//			BitmapFactory.Options bounds = new BitmapFactory.Options();
-//			bounds.inSampleSize = 1;
-
-            bit = BitmapFactory.decodeFile(image_path);
-
-		/*	BitmapFactory.Options opt;
-            opt = new BitmapFactory.Options();
-			opt.inTempStorage = new byte[20 * 1024];
-			opt.inSampleSize = 4;
-			
-			bit = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(image_path,opt), 150, 150);*/
+            image_path = i.getStringExtra("image");
+            //
+            //            bit = BitmapFactory.decodeFile(image_path);
         }
 
-        //***********************************facebook**********************************************
-
-        //.Bitmap image =  BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
-        SharePhoto photo = new SharePhoto.Builder().setBitmap(bit).build();
-        final SharePhotoContent content = new SharePhotoContent.Builder().addPhoto(photo).build();
-        share.setShareContent(content);
-
-
-        //******************************************************************************************
-
-        ImageView im = (ImageView) findViewById(R.id.camera_image);
+        im = (ImageView) findViewById(R.id.camera_image);
 
         LayoutParams params = im.getLayoutParams();
 
         params.height = width;
         params.width = width;
         im.setLayoutParams(params);
-        im.setImageBitmap(bit);
+
+        set_Image();
 
         (findViewById(R.id.updoad)).setOnClickListener(this);
-    	edit_image = (LinearLayout) findViewById(R.id.edit_image);
+        edit_image = (LinearLayout) findViewById(R.id.edit_image);
         edit_image.setOnClickListener(this);
-
 
         (findViewById(R.id.back)).setOnClickListener(this);
         location_name = (EditText) findViewById(R.id.location_name);
@@ -256,7 +239,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         category_spinner = (Spinner) findViewById(R.id.category_spinner);
         area_of_focus_spinner = (Spinner) findViewById(R.id.area_of_focus);
         location_toggle = (ToggleButton) findViewById(R.id.location_toggle);
-		
+
 		
 		/*uiHelper = new UiLifecycleHelper(Captured_Image.this, statusCallback);
 		uiHelper.onCreate(savedInstanceState);
@@ -265,10 +248,9 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         // facebook = (LoginButton) findViewById(R.id.facebook);
         (facebook_lay = (TextView) findViewById(R.id.facebook_lay)).setOnClickListener(this);
 
-//		twitter = (CannonballTwitterLoginButton) findViewById(R.id.twitter);
+        //		twitter = (CannonballTwitterLoginButton) findViewById(R.id.twitter);
         (twitter_text = (TextView) findViewById(R.id.twitter_text)).setOnClickListener(this);
-//		(instagram=(LinearLayout)findViewById(R.id.instagram)).setOnClickListener(this);
-
+        //		(instagram=(LinearLayout)findViewById(R.id.instagram)).setOnClickListener(this);
 
         //facebook.setApplicationId(getResources().getString(R.string.app_id));
         //facebook.setReadPermissions("email","public_profile","user_birthday", "read_friendlists");
@@ -297,7 +279,6 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         aof_list.add(map);
         area_of_focus_spinner.setAdapter(aof_adapter);
 
-
         fitness_goal_list = new ArrayList<>();
         HashMap<String, String> fg_map = new HashMap<String, String>();
         fg_map.put("fitness_id", "0");
@@ -310,14 +291,13 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         new Get_Area_Of_Focus_Thread(con);
         new Get_Fitness_Goal_Thread(con);
 
-//		ArrayAdapter goal_adapter=new ArrayAdapter(this,R.layout.textview, fitness_goal_list);
-//		fitness_goal_spinner.setAdapter(goal_adapter);
+        //		ArrayAdapter goal_adapter=new ArrayAdapter(this,R.layout.textview, fitness_goal_list);
+        //		fitness_goal_spinner.setAdapter(goal_adapter);
 
         category_spinner.setOnItemSelectedListener(new OnItemSelectedListener()
         {
             @Override
-            public
-            void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
             {
                 TextView id = (TextView) arg1.findViewById(R.id.category_id);
                 category_id = id.getText().toString().trim();
@@ -325,8 +305,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
             }
 
             @Override
-            public
-            void onNothingSelected(AdapterView<?> arg0)
+            public void onNothingSelected(AdapterView<?> arg0)
             {
                 // TODO Auto-generated method stub
             }
@@ -335,8 +314,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         area_of_focus_spinner.setOnItemSelectedListener(new OnItemSelectedListener()
         {
             @Override
-            public
-            void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
             {
                 TextView id = (TextView) arg1.findViewById(R.id.category_id);
                 focus_id = id.getText().toString().trim();
@@ -344,8 +322,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
             }
 
             @Override
-            public
-            void onNothingSelected(AdapterView<?> arg0)
+            public void onNothingSelected(AdapterView<?> arg0)
             {
                 // TODO Auto-generated method stub
             }
@@ -354,8 +331,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         fitness_goal_spinner.setOnItemSelectedListener(new OnItemSelectedListener()
         {
             @Override
-            public
-            void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
             {
                 TextView id = (TextView) arg1.findViewById(R.id.category_id);
                 fitness_goal_id = id.getText().toString().trim().equals("0") ? "" : id.getText().toString().trim();
@@ -363,13 +339,11 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
             }
 
             @Override
-            public
-            void onNothingSelected(AdapterView<?> arg0)
+            public void onNothingSelected(AdapterView<?> arg0)
             {
                 // TODO Auto-generated method stub
             }
         });
-
 
         trained_with.setThreshold(1);
 
@@ -378,41 +352,36 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         {
 
             @Override
-            public
-            void onTextChanged(CharSequence s, int start, int before, int count)
+            public void onTextChanged(CharSequence s, int start, int before, int count)
             {
             }
 
             @Override
-            public
-            void beforeTextChanged(CharSequence s, int start, int count, int after)
+            public void beforeTextChanged(CharSequence s, int start, int count, int after)
             {
             }
 
             @Override
-            public
-            void afterTextChanged(Editable s)
+            public void afterTextChanged(Editable s)
             {
-                if(trained_with.getText().toString().length() == 3 && selected == false)
+                if (trained_with.getText().toString().length() == 3 && selected == false)
                 {
                     new Get_Trainer_Thread(con, s.toString());
                     //new Get_Trainers_ProgressTask(con, s.toString()).execute();
                     //	new Get_Trainer(con,s.toString());
                 }
-                else if(trained_with.getText().toString().length() < 3 && selected == true)
+                else if (trained_with.getText().toString().length() < 3 && selected == true)
                 {
                     selected = false;
                 }
             }
         });
 
-
         trained_with.setOnItemClickListener(new OnItemClickListener()
         {
 
             @Override
-            public
-            void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 selected = true;
 
@@ -420,11 +389,11 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
                 Log.e("selection", "" + selection);
 
-                for(int i = 0; i < Get_Trainer_Thread.list.size(); i++)
+                for (int i = 0; i < Get_Trainer_Thread.list.size(); i++)
                 {
                     //Log.e("TESTING", ""+SearchTxt.list.get(i).get("NameE"));
 
-                    if(Get_Trainer_Thread.list.get(i).get("user_name").trim().equals(selection.trim()))
+                    if (Get_Trainer_Thread.list.get(i).get("user_name").trim().equals(selection.trim()))
                     {
                         Log.e("FINAL", "" + Get_Trainer_Thread.list.get(i));
 
@@ -442,14 +411,13 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         location_toggle.setOnCheckedChangeListener(new OnCheckedChangeListener()
         {
             @Override
-            public
-            void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked)
+                if (isChecked)
                 {
                     try
                     {
-                        if(util.check_gps(con))
+                        if (util.check_gps(con))
                         {
                             is_location_on = true;
                             Log.e("weqrwerw", "werwqer");
@@ -467,7 +435,6 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
                         location_toggle.setChecked(false);
                         e.printStackTrace();
                     }
-
 
                 }
                 else
@@ -521,38 +488,67 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 			}
 		});*/
 
-        if(type.equals("V"))
+        if (type.equals("V"))
         {
-            File file = new File(image_path);
+            File file = new File(i.getStringExtra("image"));
             MediaPlayer mp = MediaPlayer.create(con.getApplicationContext(), Uri.parse(file.getAbsolutePath()));
             video_duration = String.valueOf(mp.getDuration() / 1000);
             mp.release();
 
         }
 
-
         setEmojiconFragment();
-
 
     }
 
+    public void set_Image( )
+    {
+        if (bit != null)
+        {
+            bit.recycle();
+        }
 
-    private
-    String saveToInternalSorage(Bitmap bitmapImage)
+        if (type.equals("V"))
+        {
+            //bit = ThumbnailUtils.createVideoThumbnail(video_image_path, MediaStore.Images.Thumbnails.MINI_KIND);
+
+           // video_image_path=saveToInternalSorage(bit);
+            bit = BitmapFactory.decodeFile(video_image_path);
+
+        }
+        else
+        {
+
+            bit = BitmapFactory.decodeFile(image_path);
+        }
+
+        im.setImageBitmap(bit);
+
+        //***********************************facebook**********************************************
+
+        //.Bitmap image =  BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+        SharePhoto              photo   = new SharePhoto.Builder().setBitmap(bit).build();
+        final SharePhotoContent content = new SharePhotoContent.Builder().addPhoto(photo).build();
+        share.setShareContent(content);
+
+        //******************************************************************************************
+    }
+
+    private String saveToInternalSorage(Bitmap bitmapImage)
     {
 
-        Calendar c = Calendar.getInstance();
-        int day = c.get(Calendar.DAY_OF_MONTH);
-        int month = c.get(Calendar.MONTH) + 1;
-        int year = c.get(Calendar.YEAR);
-        int hour = c.get(Calendar.HOUR_OF_DAY);
-        int minute = c.get(Calendar.MINUTE);
-        int second = c.get(Calendar.SECOND);
-        String n = day + "" + month + "" + year + "_" + hour + "" + minute + "" + second;
-        String image_name = n + ".jpg";
+        Calendar c          = Calendar.getInstance();
+        int      day        = c.get(Calendar.DAY_OF_MONTH);
+        int      month      = c.get(Calendar.MONTH) + 1;
+        int      year       = c.get(Calendar.YEAR);
+        int      hour       = c.get(Calendar.HOUR_OF_DAY);
+        int      minute     = c.get(Calendar.MINUTE);
+        int      second     = c.get(Calendar.SECOND);
+        String   n          = day + "" + month + "" + year + "_" + hour + "" + minute + "" + second;
+        String   image_name = n + ".jpg";
 
         File filepath = Environment.getExternalStorageDirectory();
-        if(!Util_Class.checkFolder(filepath, "Muser"))
+        if (!Util_Class.checkFolder(filepath, "Muser"))
         {
             File dir = new File(filepath.getAbsolutePath() + "/Muser/");
             dir.mkdirs();
@@ -562,13 +558,11 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
         File file = new File(dir, image_name);
 
-
         FileOutputStream fos = null;
         try
         {
 
             fos = new FileOutputStream(file);
-
 
             bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
             fos.close();
@@ -583,15 +577,14 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     String tagged_peoples_ids = "";
 
     @Override
-    protected
-    void onResumeFragments()
+    protected void onResumeFragments()
     {
         super.onResumeFragments();
 
-        if(tag_people_list.size() > 0)
+        if (tag_people_list.size() > 0)
         {
             String names = "";
-            for(int i = 0; i < tag_people_list.size(); i++)
+            for (int i = 0; i < tag_people_list.size(); i++)
             {
                 names += i == 0 ? "@" + tag_people_list.get(i).get("user_name") : ", @" + tag_people_list.get(i).get("user_name");
                 tagged_peoples_ids += i == 0 ? tag_people_list.get(i).get("user_id") : "," + tag_people_list.get(i).get("user_id");
@@ -602,8 +595,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         }
     }
 
-    private
-    void setEmojiconFragment()
+    private void setEmojiconFragment()
     {
         boolean useSystemDefault = false;
         getSupportFragmentManager().beginTransaction().replace(R.id.emojicons, EmojiconsFragment.newInstance(useSystemDefault)).commit();
@@ -613,18 +605,25 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     private static final int TWEET_COMPOSER_REQUEST_CODE = 100;
 
     @Override
-    public
-    void onClick(View v)
+    public void onClick(View v)
     {
         InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(con.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        switch(v.getId())
+        switch (v.getId())
         {
 
-			case R.id.edit_image:
+            case R.id.edit_image:
 
-				//startFeather(Uri.parse(image_path));
-				break;
+                //startFeather(Uri.parse(image_path));
+
+                Intent cal = new Intent(con, PhotoActivity.class);
+                cal.putExtra(Constants.EXTRA_KEY_IMAGE_SOURCE, 2);
+                Uri uri = Uri.parse(type.equals("I")? image_path : video_image_path);
+
+                cal.setData(uri);
+                startActivityForResult(cal, 3);
+
+                break;
 
             case R.id.updoad:
                 //		location_s		=location.getText().toString().trim();
@@ -632,17 +631,16 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
                 Log.e("captions_s", captions_s);
                 //		tag_s			=tag.getText().toString().trim();
-                //				fitness_goal_s = fitness_goal_spinner.getSelectedItem().toString();
+                //		fitness_goal_s = fitness_goal_spinner.getSelectedItem().toString();
 
-                if(get_Check())
+                if (get_Check())
                 {
-
 
                     HashMap<String, String> map = new HashMap<>();
                     map.put("image_path", image_path);
                     map.put("type", type);
 
-                    if(type.equals("V"))
+                    if (type.equals("V"))
                     {
                         map.put("video_duration", video_duration);
                     }
@@ -677,11 +675,11 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 						//post_to_facebook();
 					}*/
 
-                    if(type.equals("V"))
+                    if (type.equals("V"))
                     {
                         map.put("type", "V");
                         //new Upload_Video_FTP_ProgressTask(con,map).execute();
-                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
                         {
                             new Upload_Video_FTP_ProgressTask(con, map).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
@@ -695,7 +693,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
                     {
                         map.put("type", "I");
                         //new Upload_Image_ProgressTask(con, map).execute();
-                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
                         {
                             new Upload_Image_ProgressTask(con, map).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
@@ -705,7 +703,6 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
                         }
 
                     }
-
 
                 }
 
@@ -723,7 +720,6 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
                 break;
 
             case R.id.facebook_lay:
-
 
                 share.performClick();
 
@@ -754,16 +750,14 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
             case R.id.twitter_text:
 
-                if(type.equals("V"))
+                if (type.equals("V"))
                 {
 
-                    File myImageFile = new File(saveToInternalSorage(bit));
-                    Uri myImageUri = Uri.fromFile(myImageFile);
+//                 File myImageFile = new File(saveToInternalSorage(bit));
+//                    File myImageFile = new File(image_path);
+                    Uri myImageUri = Uri.fromFile(new File(video_image_path));
 
-                    Intent intent = new TweetComposer.Builder(this)
-                            .text(rem_pref.getString("user_name", "") + " posted video on #Muser")
-                            .image(myImageUri)
-                            .createIntent();
+                    Intent intent = new TweetComposer.Builder(this).text(rem_pref.getString("user_name", "") + " posted video on #Muser").image(myImageUri).createIntent();
 
                     startActivityForResult(intent, TWEET_COMPOSER_REQUEST_CODE);
                 }
@@ -778,10 +772,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
                     builder.show();*/
 
-                    Intent intent = new TweetComposer.Builder(this)
-                            .text(rem_pref.getString("user_name", "") + " posted image on #Muser")
-                            .image(myImageUri)
-                            .createIntent();
+                    Intent intent = new TweetComposer.Builder(this).text(rem_pref.getString("user_name", "") + " posted image on #Muser").image(myImageUri).createIntent();
                     startActivityForResult(intent, TWEET_COMPOSER_REQUEST_CODE);
 
                 }
@@ -865,11 +856,10 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
     }
 
-
     //TwitterSession session;
 
-//	GAGAN AVAIRY END//	TODO:AAAAH CHAK AVAIRY
-//	GAGAN AVAIRY
+    //	GAGAN AVAIRY END//	TODO:AAAAH CHAK AVAIRY
+    //	GAGAN AVAIRY
 /*private void startFeather(Uri uri) {
 
 	Intent newIntent = new Intent(this, FeatherActivity.class);
@@ -1318,10 +1308,9 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 	
 	*/
 
-    public
-    void post_to_facebook()
+    public void post_to_facebook()
     {
-        Uri uri = Uri.fromFile(new File(image_path));
+        Uri         uri = Uri.fromFile(new File(image_path));
         InputStream iStream;
         try
         {
@@ -1336,7 +1325,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
             //params.putString("link", "http://www.google.com");
             //params.putString("picture", "http://www.hdwallpapersinn.com/wp-content/uploads/2015/02/flowers-660x330.jpg");
 
-			
+
 			/*  final List<String> PERMISSIONS = Arrays.asList("publish_stream");
 
 			  if (Session.getActiveSession() != null)
@@ -1370,24 +1359,21 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 
     }
 
-    public
-    byte[] getBytes(InputStream inputStream) throws IOException
+    public byte[] getBytes(InputStream inputStream) throws IOException
     {
         ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
-        int bufferSize = 1024;
-        byte[] buffer = new byte[bufferSize];
+        int                   bufferSize = 1024;
+        byte[]                buffer     = new byte[bufferSize];
 
         int len = 0;
-        while((len = inputStream.read(buffer)) != -1)
+        while ((len = inputStream.read(buffer)) != -1)
         {
             byteBuffer.write(buffer, 0, len);
         }
         return byteBuffer.toByteArray();
     }
 
-
-    private
-    boolean get_Check()
+    private boolean get_Check()
     {
 
 		/* if(Util_Class.latitude == 0.0 && Util_Class.longitude == 0.0) { new Get_Location_ProgressTask(con).execute(); } */
@@ -1395,7 +1381,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 		/* if(captions_s.isEmpty() ) { Util_Class.show_Toast("Please enter captions.", con); } else if(tag_s.isEmpty() ) { Util_Class.show_Toast("Please enter tag .", con); } else
 		 * if(trainer_id.isEmpty() ) { Util_Class.show_Toast("Please enter trained with .", con); } else if(fitness_goal_s.isEmpty()) { Util_Class.show_Toast("Please enter fitness goal.", con); } else
 		 * if(category_id.isEmpty()) { new Get_Categories_ProgressTask(con).execute(); Util_Class.show_Toast("Category should not be null.", con); } else */
-        if(is_location_on)
+        if (is_location_on)
         {
             latitude = String.valueOf(Util_Class.latitude);
             longitude = String.valueOf(Util_Class.longitude);
@@ -1406,11 +1392,11 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
             longitude = "";
         }
 
-        if(type.equals("V") && category_id.equals("0") && Integer.parseInt(video_duration) > 15)
+        if (type.equals("V") && category_id.equals("0") && Integer.parseInt(video_duration) > 15)
         {
             Util_Class.show_Toast("Please select category.", con);
         }
-        else if(!Util_Class.checknetwork(con))
+        else if (!Util_Class.checknetwork(con))
         {
             Util_Class.show_Toast("Internet is not available", con);
         }
@@ -1425,15 +1411,14 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     BaseAdapter aof_adapter = new BaseAdapter()
     {
         @Override
-        public
-        View getView(int position, View row, ViewGroup arg2)
+        public View getView(int position, View row, ViewGroup arg2)
         {
             LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             row = inflater.inflate(R.layout.custom_category_textview, arg2, false);
 
             TextView text = (TextView) row.findViewById(R.id.category_text);
-            TextView id = (TextView) row.findViewById(R.id.category_id);
+            TextView id   = (TextView) row.findViewById(R.id.category_id);
 
             text.setText(aof_list.get(position).get("focus_name"));
             id.setText(aof_list.get(position).get("focus_id"));
@@ -1441,24 +1426,21 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         }
 
         @Override
-        public
-        long getItemId(int arg0)
+        public long getItemId(int arg0)
         {
             // TODO Auto-generated method stub
             return 0;
         }
 
         @Override
-        public
-        Object getItem(int arg0)
+        public Object getItem(int arg0)
         {
             // TODO Auto-generated method stub
             return null;
         }
 
         @Override
-        public
-        int getCount()
+        public int getCount()
         {
             // TODO Auto-generated method stub
             return aof_list.size();
@@ -1468,15 +1450,14 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     BaseAdapter categories_adapter = new BaseAdapter()
     {
         @Override
-        public
-        View getView(int position, View row, ViewGroup arg2)
+        public View getView(int position, View row, ViewGroup arg2)
         {
             LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             row = inflater.inflate(R.layout.custom_category_textview, arg2, false);
 
             TextView text = (TextView) row.findViewById(R.id.category_text);
-            TextView id = (TextView) row.findViewById(R.id.category_id);
+            TextView id   = (TextView) row.findViewById(R.id.category_id);
 
             text.setText(categories_list.get(position).get("category_name"));
             id.setText(categories_list.get(position).get("category_id"));
@@ -1484,43 +1465,38 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         }
 
         @Override
-        public
-        long getItemId(int arg0)
+        public long getItemId(int arg0)
         {
             // TODO Auto-generated method stub
             return 0;
         }
 
         @Override
-        public
-        Object getItem(int arg0)
+        public Object getItem(int arg0)
         {
             // TODO Auto-generated method stub
             return null;
         }
 
         @Override
-        public
-        int getCount()
+        public int getCount()
         {
             // TODO Auto-generated method stub
             return categories_list.size();
         }
     };
 
-
     BaseAdapter fitness_goal_adapter = new BaseAdapter()
     {
         @Override
-        public
-        View getView(int position, View row, ViewGroup arg2)
+        public View getView(int position, View row, ViewGroup arg2)
         {
             LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             row = inflater.inflate(R.layout.custom_category_textview, arg2, false);
 
             TextView text = (TextView) row.findViewById(R.id.category_text);
-            TextView id = (TextView) row.findViewById(R.id.category_id);
+            TextView id   = (TextView) row.findViewById(R.id.category_id);
 
             text.setText(fitness_goal_list.get(position).get("fitness_name"));
             id.setText(fitness_goal_list.get(position).get("fitness_id"));
@@ -1528,24 +1504,21 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
         }
 
         @Override
-        public
-        long getItemId(int arg0)
+        public long getItemId(int arg0)
         {
             // TODO Auto-generated method stub
             return 0;
         }
 
         @Override
-        public
-        Object getItem(int arg0)
+        public Object getItem(int arg0)
         {
             // TODO Auto-generated method stub
             return null;
         }
 
         @Override
-        public
-        int getCount()
+        public int getCount()
         {
             // TODO Auto-generated method stub
             return fitness_goal_list.size();
@@ -1580,8 +1553,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
 	};*/
 
     @Override
-    public
-    void onResume()
+    public void onResume()
     {
 
         //uiHelper.onResume();
@@ -1589,24 +1561,21 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     }
 
     @Override
-    public
-    void onPause()
+    public void onPause()
     {
         super.onPause();
         //	uiHelper.onPause();
     }
 
     @Override
-    public
-    void onDestroy()
+    public void onDestroy()
     {
         super.onDestroy();
         //uiHelper.onDestroy();
     }
 
     @Override
-    public
-    void onSaveInstanceState(Bundle savedState)
+    public void onSaveInstanceState(Bundle savedState)
 
     {
         super.onSaveInstanceState(savedState);
@@ -1614,8 +1583,7 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
     }
 
     @Override
-    public
-    void onActivityResult(int requestCode, int resultCode, Intent data)
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         System.out.println("sharan :" + requestCode + "......" + resultCode);
         super.onActivityResult(requestCode, resultCode, data);
@@ -1623,52 +1591,61 @@ class Captured_Image extends FragmentActivity implements OnClickListener, Emojic
        /* Bundle bun = data.getExtras();
         Log.e("sharan :", "" + bun.);*/
 
-        if(requestCode == 64207)
+        if (requestCode == 64207)
         {
 
             callbackManager.onActivityResult(requestCode, resultCode, data);
             //uiHelper.onActivityResult(requestCode, resultCode, data);
             //Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
         }
-        else if(requestCode == 140)
+        else if (requestCode == 140)
         {
-
-
 
             Log.e("onActivityResult", "onActivityResult");
 
             twitter.onActivityResult(requestCode, resultCode, data);
 
         }
-        else if(requestCode == 100)
+        else if (requestCode == 100)
         {
-            if(resultCode == -1)
+            if (resultCode == -1)
             {
                 twitter_text.setCompoundDrawablesWithIntrinsicBounds(R.drawable.twitter_new_selected, 0, 0, 0);
             }
+        }
+        else if (requestCode == 3)
+        {
+            if(type.equals("I"))
+            {
+                image_path = data.getStringExtra("url");
+            }
+            else
+            {
+                video_image_path = data.getStringExtra("url");
+            }
+
+
+
+            set_Image();
         }
 
     }
 
     @Override
-    public
-    void onEmojiconClicked(Emojicon emojicon)
+    public void onEmojiconClicked(Emojicon emojicon)
     {
         EmojiconsFragment.input(captions, emojicon);
     }
 
     @Override
-    public
-    void onEmojiconBackspaceClicked(View v)
+    public void onEmojiconBackspaceClicked(View v)
     {
         EmojiconsFragment.backspace(captions);
     }
 
-    public
-    void HideEmoji()
+    public void HideEmoji()
     {
         emojicons.setVisibility(View.GONE);
     }
-
 
 }

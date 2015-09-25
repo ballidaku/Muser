@@ -184,6 +184,15 @@ public class Get_Recommended_ProgressTask extends AsyncTask<String, Void, Void>
 			
 			Expandable_list_adapter adapter=new Expandable_list_adapter(con, expandable_list);
 			Recomended.listView.setAdapter(adapter);
+
+			for (int i = 0; i <expandable_list.size() ; i++)
+			{
+				if(expandable_list.get(i).get_child_list().size()>0)
+				{
+					Recomended.listView.expandGroup(i);
+				}
+			}
+
 			
 		}
 		else if(message.equals("Failure"))

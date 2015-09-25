@@ -45,7 +45,7 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 	String					jsonStr	= "";
 
 	Data_list				dataList;
-	List<Chat_data>			list;
+	ArrayList<Chat_data>			list;
 
 	public Get_unreadChat(Handler replyTo, String userID, Context con, String frndID, String type)
 	{
@@ -147,6 +147,8 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 		try
 		{
 
+			Log.e("result nav",""+result);
+
 			if(message.equalsIgnoreCase("Success"))
 			{
 
@@ -162,7 +164,7 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 
 						JSONObject inner = arraymsg.getJSONObject(jArray);
 
-						Chat_data ChatData = new Chat_data(inner.getString("receiver_id"), inner.getString("message"), inner.getString("added_date"));
+						Chat_data ChatData = new Chat_data(inner.getString("receiver_id"), inner.getString("message"),inner.getString("message_id"), inner.getString("added_date"));
 						list.add(ChatData);
 					}
 

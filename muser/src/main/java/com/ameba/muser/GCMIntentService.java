@@ -75,12 +75,13 @@ class GCMIntentService extends GCMBaseIntentService
         {
 
             bun = intent.getExtras();
-            final String message = intent.getStringExtra("message");
-            Log.e("+++++++GCM message+++", message);
+            final String response = intent.getStringExtra("message");
+            Log.e("+++++++GCM message+++", response);
 
-            final JSONObject jsonNoTi = new JSONObject(message);
+            final JSONObject jsonNoTi = new JSONObject(response);
             flag = Integer.valueOf(jsonNoTi.getString("flag"));   //1 for message
 
+            String message=jsonNoTi.getString("message");
 
 
 
@@ -151,6 +152,32 @@ class GCMIntentService extends GCMBaseIntentService
                         int message_count = rem_pref.getInt("FAV", 0) + 1;
                         rem_pref.edit().putInt("FAV", message_count).apply();
                     }
+
+
+
+                    if(message.contains("Image"))
+                    {
+                        int message_count = rem_pref.getInt("Picture_count", 0) + 1;
+                        rem_pref.edit().putInt("Picture_count", message_count).apply();
+                    }
+                    else  if(message.contains("Video"))
+                    {
+                        int message_count = rem_pref.getInt("Video_count", 0) + 1;
+                        rem_pref.edit().putInt("Video_count", message_count).apply();
+                    }
+                    else  if(message.contains("subscribed") || message.contains("Session"))
+                    {
+                        int message_count = rem_pref.getInt("Session_count", 0) + 1;
+                        rem_pref.edit().putInt("Session_count", message_count).apply();
+                    }
+                    else  if(message.contains("followed"))
+                    {
+                        int message_count = rem_pref.getInt("Connect_count", 0) + 1;
+                        rem_pref.edit().putInt("Connect_count", message_count).apply();
+                    }
+
+
+
                 }
 
                 Intent i = new Intent(Util_Class.BROADCAST_REFRESH_DRAWER);

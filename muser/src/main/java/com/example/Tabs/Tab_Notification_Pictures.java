@@ -133,6 +133,8 @@ public class Tab_Notification_Pictures extends Fragment
 			adapter.add_data(list);
 			adapter.notifyDataSetChanged();
 		}
+
+		rem_pref.edit().putInt("Picture_count", 0).apply();
 		
 	}
 	

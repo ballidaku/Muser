@@ -248,6 +248,13 @@
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="app_color">#112b46</color>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="appthemeblue_color">#33b5e5</color>
+    <color name="appthemecolorize_color">#e51a51</color>
+    <color name="appthemegreen_color">#99cc00</color>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/color.xml -->
+    <eat-comment/>
     <color name="bottom_bar_color">#455661</color>
     <color name="bottom_bar_selected_color">#2a343b</color>
     <color name="checkbox_active">#143D55</color>
@@ -569,12 +576,24 @@
     <string name="aof">Select area of focus...</string>
     <string name="app_id">1415276218797627</string>
     <string name="app_name">Muser</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="app_name_pro">Effects</string>
+    <string name="app_name_track">Pro</string>
+    <string name="blue">Blue: :value:</string>
+    <string name="blueL">Blue</string>
+    <string name="blueP">Blue: :value:%</string>
+    <string name="brightness">Brightness: :value:%</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/simplecropimagelib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="cancel">Cancel</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="categories">Select categories...</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="cdepth">Color Depth: :value:</string>
+    <string name="choose_from_gallery">Choose image</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values/values.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
@@ -627,6 +646,9 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="commono_google_play_services_api_unavailable_text">This app requires one or more Google Play services that are not currently
 available. Please contact the developer for assistance.</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="contrast">Contrast: :value:</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
@@ -689,28 +711,79 @@ available. Please contact the developer for assistance.</string>
     <string name="dgts_pin_code_terms">You have previously set a 2-step verification code on digits.com</string>
     <string name="dgts_verify">Verify</string>
     <string name="dgts_verifying">Verifying</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="effect1">Brightness</string>
+    <string name="effect10">Gau. Blur</string>
+    <string name="effect11">C. Filter</string>
+    <string name="effect12">C. Depth</string>
+    <string name="effect13">Emboss</string>
+    <string name="effect14">Boost</string>
+    <string name="effect15">Noise</string>
+    <string name="effect16">Sketch</string>
+    <string name="effect17">Vignette</string>
+    <string name="effect18">Saturation</string>
+    <string name="effect19">Contrast</string>
+    <string name="effect2">Flip</string>
+    <string name="effect3">Hue</string>
+    <string name="effect4">Tint</string>
+    <string name="effect5">Gamma</string>
+    <string name="effect6">Invert</string>
+    <string name="effect7">Grayscale</string>
+    <string name="effect8">Sepia</string>
+    <string name="effect9">Sharpen</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="email_error">Email does not exists.</string>
     <string name="email_not_exists">This email does not exists.</string>
     <string name="email_password_error">Email and password did not match.</string>
     <string name="enter_email">Please enter email.</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="error_apply_effect">Oops! please try again.</string>
+    <string name="error_img_not_found">Oops! please try again.</string>
+    <string name="exit_prompt">Are you sure that you want to close editor?</string>
+    <string name="flip_h">Vertical</string>
+    <string name="flip_v">Horizon.</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="forgot_password_sent">Password successfully sent on your email.</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="green">Green: :value:</string>
+    <string name="greenL">Green</string>
+    <string name="greenP">Green: :value:%</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="hello_world">Hello world!</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="hue">Hue: :value:\u00B0</string>
+    <string name="img_desc">Images</string>
+    <string name="internal_storage">Internal storage</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values/values.xml -->
     <eat-comment/>
     <string name="kit_name">Twitter</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values/values.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Send</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="no">No</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="no_data_found">No data found.</string>
     <string name="no_internet_connection">No internet connection.</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="no_media">Error: your SD-Card is not available.</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/simplecropimagelib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="no_storage_card">No storage card</string>
     <string name="not_enough_space">Not enough space</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="or">or</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="password_confirm_password_not_match">Password &amp; confirm password did not match.</string>
@@ -729,9 +802,22 @@ available. Please contact the developer for assistance.</string>
     <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
     <string name="pull_to_refresh_refreshing_label">Loading…</string>
     <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="red">Red: :value:</string>
+    <string name="redL">Red</string>
+    <string name="redP">Red: :value:%</string>
+    <string name="rotate">Angle: :value:\u00B0</string>
+    <string name="sat">Saturation: :value:%</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/simplecropimagelib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="save">Save</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="save_failed">Oops! please try again.</string>
+    <string name="saved">Please find your image at:\n:url:"</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/simplecropimagelib/unspecified/res/values/values.xml -->
+    <eat-comment/>
     <string name="saving_image">Saving image</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
     <eat-comment/>
@@ -745,6 +831,11 @@ available. Please contact the developer for assistance.</string>
     <string name="tab_pictures">Pictures</string>
     <string name="tab_sessions">Session</string>
     <string name="tab_videos">Videos</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="take_photo_camera">Take photo</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="title_activity_cancel_uploading_video">Cancel Uploading Video</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values/values.xml -->
     <eat-comment/>
@@ -783,6 +874,9 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="yes">Yes</string>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
@@ -795,6 +889,35 @@ available. Please contact the developer for assistance.</string>
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <style name="AppThemeBlack" parent="@android:style/Theme.Translucent.NoTitleBar">
+    </style>
+    <style name="AppThemeBlue" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeBlue</item>
+
+  </style>
+    <style name="AppThemeColorize" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:buttonStyle">@style/ButtonAppThemeColorize</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonAppThemeColorize</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeColorize</item>
+
+  </style>
+    <style name="AppThemeGreen" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeGreen</item>
+
+  </style>
+    <style name="ButtonAppThemeColorize" parent="android:Widget.Button">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+	  <item name="android:minHeight">48dip</item>
+	  <item name="android:minWidth">64dip</item>
+	  <item name="android:textColor">#ffffff</item>
+  </style>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/simplecropimagelib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <style name="CropButton">
@@ -817,6 +940,11 @@ available. Please contact the developer for assistance.</string>
     <style name="Digits_default" parent="@android:style/Theme.Light">
         <item name="dgts__accentColor">@color/dgts__default_accent</item>
     </style>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <style name="ImageButtonAppThemeColorize" parent="android:Widget.ImageButton">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+  </style>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values/values.xml -->
     <eat-comment/>
     <style name="MessengerButton">
@@ -876,6 +1004,38 @@ available. Please contact the developer for assistance.</string>
   </style>
     <style name="MessengerButtonText.White.Small">
     <item name="android:drawableLeft">@drawable/messenger_bubble_small_blue</item>
+  </style>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <style name="SeekBarAppThemeBlue" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/appthemeblue_scrubber_control_selector_holo_dark</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
+  </style>
+    <style name="SeekBarAppThemeColorize" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/appthemecolorize_scrubber_control_selector_holo_dark</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
+  </style>
+    <style name="SeekBarAppThemeGreen" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/appthemegreen_scrubber_control_selector_holo_dark</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
   </style>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values/values.xml -->
     <eat-comment/>

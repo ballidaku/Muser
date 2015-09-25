@@ -100,6 +100,8 @@ public class Get_Messages_Contacts_Thread
 
 				String response = msg.getData().getString("message");
 
+				Log.e("Msg response",""+response);
+
 				if((null != response))
 				{
 					try
@@ -130,6 +132,10 @@ public class Get_Messages_Contacts_Thread
 							con2.add_list(list);
 
 
+						}
+						else
+						{
+							((Messages)con2).on_Failure();
 						}
 					}
 					catch(JSONException e)

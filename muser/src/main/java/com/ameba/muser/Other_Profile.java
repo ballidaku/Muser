@@ -250,7 +250,7 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 						break;
 					case 4:
 						
-						Intent i=new Intent(con,Chats.class);
+						Intent i=new Intent(con,Chat_sharan.class);
 						i.putExtra("img",Get_Profile_ProgressTask.profile_image_url);
 						i.putExtra("id",Global.user_id  );
 						con.startActivity(i);

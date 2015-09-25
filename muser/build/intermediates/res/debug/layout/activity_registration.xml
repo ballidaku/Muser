@@ -110,6 +110,7 @@
                     android:inputType="textCapSentences"
                     android:maxLength="30"
                     android:paddingLeft="10dp"
+                    android:singleLine="true"
                     android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_"
                     android:textSize="@dimen/text_size_14" >
                 </EditText>

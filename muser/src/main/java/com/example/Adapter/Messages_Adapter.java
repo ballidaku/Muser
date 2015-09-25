@@ -19,6 +19,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ameba.muser.Chat_sharan;
 import com.example.classes.RoundedCornersGaganImg;
 import com.example.classes.Util_Class;
 import com.ameba.muser.Chats;
@@ -105,20 +106,22 @@ public class Messages_Adapter extends BaseAdapter
 		});
 		
 		
-		row.setOnClickListener(new OnClickListener() 
+		row.setOnClickListener(new OnClickListener()
 		{
-			
+
 			@Override
-			public void onClick(View arg0) 
+			public void onClick(View arg0)
 			{
-				
-				Intent i=new Intent(con,Chats.class);
+
+				Intent i = new Intent(con, Chat_sharan.class);
 				i.putExtra("img", list.get(position).get("other_profile_image"));
 				i.putExtra("id", list.get(position).get("other_user_id"));
 				con.startActivity(i);
-				
+
 			}
 		});
+
+
 		
 		
 		

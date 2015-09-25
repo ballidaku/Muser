@@ -71,6 +71,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars" />
@@ -158,5 +159,6 @@
     <orderEntry type="module" module-name="simplecropimagelib" exported="" />
     <orderEntry type="module" module-name="actionbarsherlock" exported="" />
     <orderEntry type="module" module-name="pull_To_Refresh_Llibrary" exported="" />
+    <orderEntry type="module" module-name="cameraPro" exported="" />
   </component>
 </module>

@@ -133,5 +133,7 @@ public class Tab_Notification_Videos extends Fragment
 			adapter.notifyDataSetChanged();
 		}
 
+		rem_pref.edit().putInt("Video_count", 0).apply();
+
 	}
 }

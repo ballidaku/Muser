@@ -93,45 +93,45 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
             {
 
                 Log.e("count", "" + count);
-
-                ArrayList<MyArray> tempList = new ArrayList<>();
-
-                for (MyArray data : list)
+                if(list.size()>0)
                 {
 
-                    try
+                    ArrayList<MyArray> tempList = new ArrayList<>();
+
+                    for (MyArray data : list)
                     {
-                        if ((data.getName().toLowerCase()).contains(s.toString().toLowerCase()))
+
+                        try
                         {
-                            tempList.add(data);
+                            if ((data.getName().toLowerCase()).startsWith(s.toString().toLowerCase()))
+                            {
+                                tempList.add(data);
+                            }
                         }
+                        catch (Exception e)
+                        {
+                            Log.e("user_name", "" + data.getName());
+                            e.printStackTrace();
+                        }
+
                     }
-                    catch (Exception e)
+
+                    if (count > 0)
                     {
-                        Log.e("user_name", "" + data.getName());
-                        e.printStackTrace();
+
+                        show_logo_or_not(tempList.size());
+
+                        adapter.add_data(tempList);
+                        adapter.notifyDataSetChanged();
+
                     }
+                    else
+                    {
+                        show_logo_or_not(list.size());
+                        adapter.add_data(list);
+                        adapter.notifyDataSetChanged();
 
-                }
-
-                if (count > 0)
-                {
-
-                    show_logo_or_not(tempList.size());
-
-                    adapter.add_data(tempList);
-                    adapter.notifyDataSetChanged();
-
-
-                }
-                else
-                {
-                    show_logo_or_not(list.size());
-                    adapter.add_data(list);
-                    adapter.notifyDataSetChanged();
-
-
-
+                    }
                 }
 
 

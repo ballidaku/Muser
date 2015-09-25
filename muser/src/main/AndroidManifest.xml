@@ -1,200 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ameba.muser"
-          android:versionCode="1"
-          android:versionName="1.0" >
+<manifest
+    package = "com.ameba.muser"
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:versionCode = "1"
+    android:versionName = "1.0">
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
+        android:minSdkVersion = "16"
+        android:targetSdkVersion = "21"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name = "android.permission.INTERNET"/>
+    <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name = "android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name = "android.permission.CAMERA"/>
+    <uses-permission android:name = "android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name = "android.permission.VIBRATE"/>
+    <uses-permission android:name = "android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name = "com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name = "android.permission.WAKE_LOCK"/>
+    <uses-permission android:name = "android.permission.READ_CONTACTS"/>
 
     <permission
-        android:name="com.example.muser.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
+        android:name = "com.example.muser.permission.C2D_MESSAGE"
+        android:protectionLevel = "signature"/>
 
-    <uses-permission android:name="com.example.muser.permission.C2D_MESSAGE" />
+    <uses-permission android:name = "com.example.muser.permission.C2D_MESSAGE"/>
 
     <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
+        android:name = "android.hardware.camera"
+        android:required = "true"/>
     <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="true" />
-    <uses-feature android:name="android.hardware.camera.front" />
-    <uses-feature android:name="android.hardware.microphone" />
+        android:name = "android.hardware.camera.flash"
+        android:required = "true"/>
+    <uses-feature android:name = "android.hardware.camera.front"/>
+    <uses-feature android:name = "android.hardware.microphone"/>
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name = "android.permission.READ_PHONE_STATE"/>
 
     <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="21" />
+        android:name = "android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion = "21"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/app_logo"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:allowBackup = "true"
+        android:icon = "@drawable/app_logo"
+        android:label = "@string/app_name"
+        android:theme = "@style/AppTheme">
         <activity
-            android:name=".Splash"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Splash"
+            android:label = "@string/app_name"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name = "android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name = "android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Login"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Registration"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Registration"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name="eu.janmuller.android.simplecropimage.CropImage"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = "eu.janmuller.android.simplecropimage.CropImage"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Drawer"
-            android:configChanges="keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan" >
+            android:name = ".Drawer"
+            android:configChanges = "keyboardHidden"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "adjustPan">
         </activity>
         <activity
-            android:name=".Update_Profile"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Update_Profile"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Image_Video_Details"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Image_Video_Details"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".View_All_Comments"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".View_All_Comments"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".View_All_Likes"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".View_All_Likes"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Other_Profile"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Other_Profile"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Search_Hashtags_Child"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Search_Hashtags_Child"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Followers"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Followers"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Following"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Following"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Blocks"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Blocks"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Captured_Image"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Captured_Image"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Tag_People"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Tag_People"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Camera"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
+            android:name = ".Camera"
+            android:configChanges = "keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Chats"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden"  >
+            android:name = ".Chats"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name=".Global_WebView"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity
-            android:name=".Linked_Accounts"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity
-            android:name=".Trainers"
-            android:configChanges="keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
-        <activity
-            android:name=".Cancel_Sessions"
-            android:configChanges="keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
-        <activity
-            android:name=".Total_Clients"
-            android:configChanges="keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan" >
+            android:name = ".Chat_sharan"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
         </activity>
 
+        <activity
+            android:name = ".Global_WebView"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
+        </activity>
+        <activity
+            android:name = ".Linked_Accounts"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "stateHidden">
+        </activity>
+        <activity
+            android:name = ".Trainers"
+            android:configChanges = "keyboardHidden"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "adjustPan">
+        </activity>
+        <activity
+            android:name = ".Cancel_Sessions"
+            android:configChanges = "keyboardHidden"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "adjustPan">
+        </activity>
+        <activity
+            android:name = ".Total_Clients"
+            android:configChanges = "keyboardHidden"
+            android:screenOrientation = "portrait"
+            android:theme = "@style/Theme.Sherlock.Light.NoActionBar"
+            android:windowSoftInputMode = "adjustPan">
+        </activity>
 
+        <activity android:name = "org.appsroid.fxpro.PhotoActivity"/>
 
 
         <!--<activity
@@ -204,27 +213,26 @@
 
         //****************************************************Fb************************************
         <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:label="@string/app_name" />
+            android:name = "com.facebook.FacebookActivity"
+            android:configChanges = "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label = "@string/app_name"
+            android:theme = "@android:style/Theme.Translucent.NoTitleBar"/>
 
         <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/app_id" />
+            android:name = "com.facebook.sdk.ApplicationId"
+            android:value = "@string/app_id"/>
 
         // this section is for share
         <provider
-            android:authorities="com.facebook.app.FacebookContentProvider1415276218797627"
-            android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
-
+            android:name = "com.facebook.FacebookContentProvider"
+            android:authorities = "com.facebook.app.FacebookContentProvider1415276218797627"
+            android:exported = "true"/>
 
 
         //****************************************************twitter*******************************
         <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="e6b4a4d99ac6912c9e79ff557f64d2602349d2af" />
+            android:name = "com.crashlytics.ApiKey"
+            android:value = "e6b4a4d99ac6912c9e79ff557f64d2602349d2af"/>
 
         <!--
                <meta-data
@@ -251,37 +259,37 @@
             android:value="@integer/google_play_services_version" /
         -->
 
-        <service android:name=".GCMIntentService" />
+        <service android:name = ".GCMIntentService"/>
 
         <receiver
-            android:name="com.google.android.gcm.GCMBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:name = "com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission = "com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name = "com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name = "com.google.android.c2dm.intent.REGISTRATION"/>
 
-                <category android:name="com.ameba.muser" />
+                <category android:name = "com.ameba.muser"/>
             </intent-filter>
         </receiver>
 
         <service
-            android:name="com.paypal.android.sdk.payments.PayPalService"
-            android:exported="false" />
+            android:name = "com.paypal.android.sdk.payments.PayPalService"
+            android:exported = "false"/>
 
-        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name = "com.paypal.android.sdk.payments.PaymentActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.LoginActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.PaymentMethodActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.PaymentConfirmActivity"/>
         <!-- <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity"/> -->
-        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+        <activity android:name = "com.paypal.android.sdk.payments.PayPalFuturePaymentActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.FuturePaymentConsentActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.FuturePaymentInfoActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.PayPalProfileSharingActivity"/>
+        <activity android:name = "com.paypal.android.sdk.payments.ProfileSharingConsentActivity"/>
         <activity
-            android:name="io.card.payment.CardIOActivity"
-            android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="io.card.payment.DataEntryActivity" />
+            android:name = "io.card.payment.CardIOActivity"
+            android:configChanges = "keyboardHidden|orientation"/>
+        <activity android:name = "io.card.payment.DataEntryActivity"/>
 
         <!--
                 ======================================================================
@@ -378,22 +386,22 @@
         -->
 
         <activity
-            android:name=".CancelUploadingVideo"
-            android:label= "@string/title_activity_cancel_uploading_video"
-            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
+            android:name = ".CancelUploadingVideo"
+            android:label = "@string/title_activity_cancel_uploading_video"
+            android:theme = "@android:style/Theme.DeviceDefault.Light.Dialog">
         </activity>
 
 
         <!--Broadcast Reciever-->
 
         <receiver
-            android:name="com.google.android.gcm.GCMBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:name = "com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission = "com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name = "com.google.android.c2dm.intent.REGISTRATION"/>
+                <action android:name = "com.google.android.c2dm.intent.RECEIVE"/>
 
-                <category android:name="com.ameba.muser" />
+                <category android:name = "com.ameba.muser"/>
             </intent-filter>
         </receiver>
     </application>

@@ -243,8 +243,13 @@ public class Search_Hashtags_User_ProgressTask extends AsyncTask<String, Void, V
 
                 ((Tab_Search_Users) fragment).on_Failure();
             }
+            else if (type.equals("U") && from_where.equals("Tag_People"))
+            {
 
-            //Util_Class.show_global_dialog(con, con.getResources().getString(R.string.no_data_found));
+                ((Tag_People) con).on_Failure();
+
+            }
+
         }
     }
 

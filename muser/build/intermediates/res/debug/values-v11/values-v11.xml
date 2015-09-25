@@ -5,11 +5,55 @@
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values-v11/values-v11.xml -->
+    <eat-comment/>
+    <style name="AppThemeBlue" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeBlue</item>
+
+  </style>
+    <style name="AppThemeColorize" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:buttonStyle">@style/ButtonAppThemeColorize</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonAppThemeColorize</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeColorize</item>
+
+  </style>
+    <style name="AppThemeGreen" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeGreen</item>
+
+  </style>
+    <style name="ButtonAppThemeColorize" parent="android:Widget.Holo.Button">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+  </style>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Digits_default" parent="@android:style/Theme.Holo.Light">
         <item name="dgts__accentColor">@color/dgts__default_accent</item>
     </style>
+    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values-v11/values-v11.xml -->
+    <eat-comment/>
+    <style name="ImageButtonAppThemeColorize" parent="android:Widget.Holo.ImageButton">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+  </style>
+    <style name="SeekBarAppThemeBlue" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemeblue_scrubber_control_selector_holo_dark</item>
+  </style>
+    <style name="SeekBarAppThemeColorize" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemecolorize_scrubber_control_selector_holo_dark</item>
+  </style>
+    <style name="SeekBarAppThemeGreen" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemegreen_scrubber_control_selector_holo_dark</item>
+  </style>
     <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Sherlock.__Theme" parent="android:Theme.Holo">

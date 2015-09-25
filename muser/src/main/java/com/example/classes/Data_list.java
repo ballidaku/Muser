@@ -1,14 +1,15 @@
 package com.example.classes;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Data_list implements Serializable
 {
 
-	List<Chat_data> list;
+	ArrayList<Chat_data> list;
 
-	public Data_list(List<Chat_data> listData)
+	public Data_list(ArrayList<Chat_data> listData)
 	{
 
 		super();
@@ -17,7 +18,7 @@ public class Data_list implements Serializable
 
 	}
 
-	public List<Chat_data> getList()
+	public ArrayList<Chat_data> getList()
 	{
 		return list;
 	}

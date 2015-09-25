@@ -140,6 +140,8 @@ public class Tab_Notification_Connects extends Fragment
 			adapter.add_data(list);
 			adapter.notifyDataSetChanged();
 		}
+
+		rem_pref.edit().putInt("Connect_count", 0).apply();
 		
 	}
 }

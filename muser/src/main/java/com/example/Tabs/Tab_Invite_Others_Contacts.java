@@ -97,39 +97,43 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
 
                 Log.e("count", "" + count);
 
-                ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
-
-                for (HashMap<String, String> data : list)
+                if(list.size()>0)
                 {
+                    ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
 
-                    try
+                    for (HashMap<String, String> data : list)
                     {
-                        if ((data.get("name").toLowerCase()).contains(s.toString().toLowerCase()))
+
+                        try
                         {
-                            tempList.add(data);
+                            if ((data.get("name").toLowerCase()).startsWith(s.toString().toLowerCase()))
+                            {
+                                tempList.add(data);
+                            }
                         }
+                        catch (Exception e)
+                        {
+                            Log.e("user_name", "" + data.get("name"));
+                            e.printStackTrace();
+                        }
+
                     }
-                    catch (Exception e)
+
+                    if (count > 0)
                     {
-                        Log.e("user_name", "" + data.get("name"));
-                        e.printStackTrace();
+
+                        show_logo_or_not(tempList.size());
+                        adapter.add_data(tempList);
+                        adapter.notifyDataSetChanged();
+                    }
+                    else
+                    {
+                        show_logo_or_not(list.size());
+
+                        adapter.add_data(list);
+                        adapter.notifyDataSetChanged();
                     }
 
-                }
-
-                if (count > 0)
-                {
-
-                    show_logo_or_not(tempList.size());
-                    adapter.add_data(tempList);
-                    adapter.notifyDataSetChanged();
-                }
-                else
-                {
-                    show_logo_or_not(list.size());
-
-                    adapter.add_data(list);
-                    adapter.notifyDataSetChanged();
                 }
 
             }

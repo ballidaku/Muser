@@ -491,10 +491,16 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
     {
         Log.e("Logout", "Logout");
 
-
-        if(profileTracker.isTracking())
+        try
         {
-            profileTracker.stopTracking();
+            if(profileTracker.isTracking())
+            {
+                profileTracker.stopTracking();
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
         }
 
       /*  if(accessTokenTracker.isTracking())

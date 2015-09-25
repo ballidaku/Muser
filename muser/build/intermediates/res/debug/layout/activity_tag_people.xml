@@ -1,95 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:orientation = "vertical">
 
-    
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/top_bar"
-        android:orientation="horizontal" >
+        android:layout_width = "match_parent"
+        android:layout_height = "50dp"
+        android:background = "@drawable/top_bar"
+        android:orientation = "horizontal">
 
         <TextView
-            android:id="@+id/back"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/left_arrow"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            android:padding="5dp"
-            android:text="Back"
-            android:textColor="#fff"
-            android:textStyle="bold" />
+            android:id = "@+id/back"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_gravity = "center"
+            android:layout_weight = "1"
+            android:drawableLeft = "@drawable/left_arrow"
+            android:drawablePadding = "5dp"
+            android:gravity = "center_vertical"
+            android:padding = "5dp"
+            android:text = "Back"
+            android:textColor = "#fff"
+            android:textStyle = "bold"/>
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="Tag People"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/White"
-            android:textStyle="bold" />
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "3"
+            android:gravity = "center"
+            android:text = "Tag People"
+            android:textAppearance = "?android:attr/textAppearanceMedium"
+            android:textColor = "@color/White"
+            android:textStyle = "bold"/>
 
         <ImageView
-            android:id="@+id/done"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:src="@drawable/right_btn"
-            android:visibility="visible"/>
+            android:id = "@+id/done"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:padding = "15dp"
+            android:src = "@drawable/right_btn"
+            android:visibility = "visible"/>
     </LinearLayout>
-    
-    
-     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#C8C8C8" >
+
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "45dp"
+        android:background = "#C8C8C8">
 
         <EditText
-            android:id="@+id/search_editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:drawablePadding="10dp"
-            android:drawableRight="@drawable/search_icon"
-            android:gravity="center_vertical"
-            android:hint="search"
-            android:paddingLeft="10dp"
-            android:singleLine="true"
-            android:textSize="@dimen/text_size_14"
-            android:background="@drawable/rounded_corner"
-            android:inputType="textCapSentences"
-            android:imeOptions="actionSearch"
-            android:maxLength="30" >
+            android:id = "@+id/search_editText"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_margin = "8dp"
+            android:background = "@drawable/rounded_corner"
+            android:drawablePadding = "10dp"
+            android:drawableRight = "@drawable/search_icon"
+            android:gravity = "center_vertical"
+            android:hint = "search"
+            android:imeOptions = "actionSearch"
+            android:inputType = "textCapSentences"
+            android:maxLength = "30"
+            android:paddingLeft = "10dp"
+            android:singleLine = "true"
+            android:textSize = "@dimen/text_size_14">
         </EditText>
     </LinearLayout>
-    
-       <TextView
-        android:id="@+id/error_message"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="@dimen/text_size_14"
-        android:textColor="#000"
-        android:text="No data found."
-        android:gravity="center"
-        android:visibility="gone"/>
-    
-    <ListView
-        android:id="@+id/users_listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
-    
-    
-    
+
+
+    <FrameLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:layout_weight = "1">
+
+        <ListView
+            android:id = "@+id/users_listView"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content">
+        </ListView>
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:gravity = "center"
+            android:orientation = "vertical">
+
+            <ImageView
+                android:id = "@+id/temp_logo"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center"
+                android:src = "@drawable/temp_logo"
+                android:visibility = "visible"/>
+
+            <TextView
+                android:id = "@+id/error_message"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "10dp"
+                android:gravity = "center"
+                android:textColor = "#000"
+                android:textSize = "@dimen/text_size_14"
+                android:visibility = "visible"/>
+        </LinearLayout>
+    </FrameLayout>
+
 
 </LinearLayout>
 <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/layout/activity_tag_people.xml -->

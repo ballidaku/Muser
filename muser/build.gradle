@@ -20,7 +20,7 @@ android {
 
     defaultConfig {
         applicationId "com.ameba.muser"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -73,24 +73,20 @@ dependencies
             compile('com.twitter.sdk.android:twitter:1.6.1@aar') {
                 transitive = true;
             }
-           // compile project(':aviaryAndroidSDKmaster')
+            // compile project(':aviaryAndroidSDKmaster')
             /*compile ('com.aviary.android.feather.sdk:aviary-sdk:3.6.5') {
-                exclude module: 'hlistview'
-                exclude module: 'support-v4'
-                exclude module: 'commons-io'
-            }*/
-
-
-
+                            exclude module: 'hlistview'
+                            exclude module: 'support-v4'
+                            exclude module: 'commons-io'
+                        }*/
             compile 'com.google.android.gms:play-services:7.0.0'
             compile files('libs/universal-image-loader-1.9.0.jar')
             compile files('libs/ftp4j-1.7.2.jar')
             compile files('libs/gcm.jar')
             compile project(':facebook')
-
             compile project(':actionbarsherlock')
             compile 'com.android.support:multidex:1.0.1'
-
+            compile project(':cameraPro')
         }
 
 

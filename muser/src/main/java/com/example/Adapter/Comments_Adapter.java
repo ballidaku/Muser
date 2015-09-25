@@ -26,165 +26,164 @@ import com.rockerhieu.emojicon.EmojiconTextView;
 public class Comments_Adapter extends BaseAdapter/*ArrayAdapter<HashMap<String,String>> */
 {
 
-	private ArrayList<HashMap<String, String>> list;
-	private Context                            con;
-	String            from_where;
-	SharedPreferences rem_pref;
+    private ArrayList<HashMap<String, String>> list;
+    private Context                            con;
+    String            from_where;
+    SharedPreferences rem_pref;
 
-	public static ArrayList<Boolean> is_selected;
-	View result;
+    public static ArrayList<Boolean> is_selected;
+    View result;
 
-	public Comments_Adapter(Context ctx, ArrayList<HashMap<String, String>> comment_list, String from_where)
-	{
-		list = comment_list;
-		con = ctx;
-		this.from_where = from_where;
+    public Comments_Adapter(Context ctx, ArrayList<HashMap<String, String>> comment_list, String from_where)
+    {
+        list = comment_list;
+        con = ctx;
+        this.from_where = from_where;
 
-		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+        rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 
-		Log.e("comment_list", "" + comment_list);
+        Log.e("comment_list", "" + comment_list);
 
-	}
+    }
 
-	@Override
-	public int getCount()
-	{
-		return list.size();
-	}
+    @Override
+    public int getCount()
+    {
+        return list.size();
+    }
 
-	@Override
-	public Object getItem(int position)
-	{
-		return list;
-	}
+    @Override
+    public Object getItem(int position)
+    {
+        return list;
+    }
 
-	@Override
-	public long getItemId(int position)
-	{
-		return list.get(position).hashCode();
-	}
+    @Override
+    public long getItemId(int position)
+    {
+        return list.get(position).hashCode();
+    }
 
-	@Override
-	public View getView(final int position, View result, ViewGroup parent)
-	{
+    @Override
+    public View getView(final int position, View result, ViewGroup parent)
+    {
 
-		if (result == null)
-		{
-			LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			result = inflater.inflate(R.layout.custom_listview_comment, parent, false);
-		}
+        if (result == null)
+        {
+            LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            result = inflater.inflate(R.layout.custom_listview_comment, parent, false);
+        }
 
-		RoundedCornersGaganImg image = (RoundedCornersGaganImg)result.findViewById(R.id.image);
-		final EmojiconTextView data = (EmojiconTextView) result.findViewById(R.id.data);
-		TextView time = (TextView) result.findViewById(R.id.time);
-		
-		
-		
-		if(from_where.equals("View_All_Comments"))
-		{
+        RoundedCornersGaganImg image = (RoundedCornersGaganImg) result.findViewById(R.id.image);
+        final EmojiconTextView data  = (EmojiconTextView) result.findViewById(R.id.data);
+        TextView               time  = (TextView) result.findViewById(R.id.time);
 
-			image.setImageUrl(con, list.get(position).get("profile_image"));
-			//Drawer.imageLoader.displayImage(list.get(position).get("profile_image"), image, Drawer.options);
-			Util_Class util = new Util_Class();
-			String styledText = "<font color='#4F606A'><b>" + list.get(position).get("user_name") + " </b> </font>";
+        if (from_where.equals("View_All_Comments"))
+        {
 
-		//	data.setText(Html.fromHtml(styledText));
-			
-			try
-			{
-				data.setText( Html.fromHtml(styledText)+Util_Class.emoji_decode( list.get(position).get("data") ));
-			}
-			catch(UnsupportedEncodingException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			time.setText(util.get_time2(list.get(position).get("date")));
+            image.setImageUrl(con, list.get(position).get("profile_image"));
+            //Drawer.imageLoader.displayImage(list.get(position).get("profile_image"), image, Drawer.options);
+            Util_Class util = new Util_Class();
+            String styledText = "<font color='#4F606A'><b>" + list.get(position).get("user_name") + " </b> </font>";
 
+            //	data.setText(Html.fromHtml(styledText));
 
-			result.setOnClickListener(new View.OnClickListener()
-			{
-				@Override
-				public void onClick(View v)
-				{
-					if (list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
-					{
-						//((Drawer) con).click();
-					}
-					else
-					{
-						Global.set_user_id(list.get(position).get("user_id"));
-						Global.set_friend_id(rem_pref.getString("user_id", ""));
+            try
+            {
+                data.setText(Html.fromHtml(styledText) + Util_Class.emoji_decode(list.get(position).get("data")));
+            }
+            catch (UnsupportedEncodingException e)
+            {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            time.setText(util.get_time2(list.get(position).get("date")));
 
-						Intent ij = new Intent(con, Other_Profile.class);
-						//i.putExtra("user_id", list.get(position).get("user_id"));
-						con.startActivity(ij);
-					}
-				}
-			});
-		}
-		else if(from_where.equals("Image_Details") || from_where.equals("Image_Video_Details_bypostid"))
-		{
-			image.setVisibility(View.GONE);
-			time.setVisibility(View.GONE);
-			String styledText = "<font color='#4F606A'><b>" + list.get(position).get("user_name") + " </b> </font>";
+            result.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    if (list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
+                    {
+                        //((Drawer) con).click();
+                    }
+                    else
+                    {
+                        Global.set_user_id(list.get(position).get("user_id"));
+                        Global.set_friend_id(rem_pref.getString("user_id", ""));
 
-			
-			data.setSingleLine(false);
-			data.setEllipsize(TruncateAt.END);
-			data.setLines(1);
-			
-			//Html.fromHtml(styledText))
-			
-			
-			try
-			{
-				
-				data.setText(Html.fromHtml(styledText)+Util_Class.emoji_decode( list.get(position).get("data") ));
-			}
-			catch(UnsupportedEncodingException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
-		else   // View_All_Likes
-		{
-			time.setVisibility(View.GONE);
-			image.setImageUrl(con, list.get(position).get("profile_image"));
-			//Drawer.imageLoader.displayImage(list.get(position).get("profile_image"), image, Drawer.options);
-			data.setText(list.get(position).get("user_name"));
+                        Intent ij = new Intent(con, Other_Profile.class);
+                        //i.putExtra("user_id", list.get(position).get("user_id"));
+                        con.startActivity(ij);
+                    }
+                }
+            });
+        }
+        else if (from_where.equals("Image_Details") || from_where.equals("Image_Video_Details_bypostid"))
+        {
+            image.setVisibility(View.GONE);
+            time.setVisibility(View.GONE);
+            String styledText = "<font color='#4F606A'><b>" + list.get(position).get("user_name") + " </b> </font>";
 
+            data.setSingleLine(false);
+            data.setEllipsize(TruncateAt.END);
+            data.setLines(1);
 
-			result.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v)
-				{
-					if(list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
-					{
-						//((Drawer) con).click();
-					}
-					else
-					{
-						Global.set_user_id(list.get(position).get("user_id"));
-						Global.set_friend_id(rem_pref.getString("user_id", ""));
+            //Html.fromHtml(styledText))
 
-						Intent ij=new Intent(con,Other_Profile.class);
-						//i.putExtra("user_id", list.get(position).get("user_id"));
-						con.startActivity(ij);
-					}
-				}
-			});
+            try
+            {
 
-		}
-		
-		//Log.e(""+position,""+result.getHeight());
-		
-		return result;
+                data.setText(Html.fromHtml(styledText) + Util_Class.emoji_decode(list.get(position).get("data")));
+            }
+            catch (UnsupportedEncodingException e)
+            {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
 
-	}
-	/*public ArrayList<String> get(int position)
+        }
+        else   // View_All_Likes
+        {
+            time.setVisibility(View.GONE);
+            image.setImageUrl(con, list.get(position).get("profile_image"));
+            //Drawer.imageLoader.displayImage(list.get(position).get("profile_image"), image, Drawer.options);
+            data.setText(list.get(position).get("user_name"));
+
+            result.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    if (list.size() > 0)
+                    {
+
+                        if (list.get(position).get("user_id").equals(rem_pref.getString("user_id", "")))
+                        {
+                            //((Drawer) con).click();
+                        }
+                        else
+                        {
+                            Global.set_user_id(list.get(position).get("user_id"));
+                            Global.set_friend_id(rem_pref.getString("user_id", ""));
+
+                            Intent ij = new Intent(con, Other_Profile.class);
+                            //i.putExtra("user_id", list.get(position).get("user_id"));
+                            con.startActivity(ij);
+                        }
+                    }
+                }
+            });
+
+        }
+
+        //Log.e(""+position,""+result.getHeight());
+
+        return result;
+
+    }
+    /*public ArrayList<String> get(int position)
 	{
 		ArrayList<String> data=new ArrayList<String>();
 		SharedPreferences.Editor editor=global_data.edit();
@@ -202,6 +201,5 @@ public class Comments_Adapter extends BaseAdapter/*ArrayAdapter<HashMap<String,S
 		
 		comment_list.addAll(data);
 	}*/
-	
 
 }

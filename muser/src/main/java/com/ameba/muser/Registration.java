@@ -662,12 +662,13 @@ public class Registration extends Activity implements OnClickListener
 			catch (Exception e) {e.printStackTrace();}
 
 		} 
-		else if (requestCode == 2  && data != null) //Gallery
+		else if (requestCode == 2  && data.getData() != null) //Gallery
 		{
-			String filePathG = Environment.getExternalStorageDirectory()+ "/" + TEMP_PHOTO_FILE;
-			InputStream inputStream;
+
 			try 
 			{
+				String filePathG = Environment.getExternalStorageDirectory()+ "/" + TEMP_PHOTO_FILE;
+				InputStream inputStream;
 				inputStream = getContentResolver().openInputStream(data.getData());
 				FileOutputStream fileOutputStream = new FileOutputStream(filePathG);
 				Util_Class.copyStream(inputStream, fileOutputStream);
@@ -679,6 +680,7 @@ public class Registration extends Activity implements OnClickListener
 			} 
 			catch (FileNotFoundException e) {e.printStackTrace();} 
 			catch (IOException e) {e.printStackTrace();}
+			catch (Exception e) {	e.printStackTrace();}
 		}
 		else if (requestCode == 77) 
 		{

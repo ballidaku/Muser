@@ -88,6 +88,10 @@
     <init>();
 }
 
+-keep class com.ameba.muser.Chat_sharan {
+    <init>();
+}
+
 -keep class com.ameba.muser.Global_WebView {
     <init>();
 }
@@ -105,6 +109,10 @@
 }
 
 -keep class com.ameba.muser.Total_Clients {
+    <init>();
+}
+
+-keep class org.appsroid.fxpro.PhotoActivity {
     <init>();
 }
 

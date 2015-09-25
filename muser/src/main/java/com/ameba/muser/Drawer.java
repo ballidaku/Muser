@@ -502,6 +502,19 @@ class Drawer extends FragmentActivity
             e.printStackTrace();
         }
 
+        rem_pref.edit().putInt("message_count", 0).apply();
+        rem_pref.edit().putInt("notification_count", 0).apply();
+        rem_pref.edit().putInt("S", 0).apply();
+        rem_pref.edit().putInt("L", 0).apply();
+        rem_pref.edit().putInt("C", 0).apply();
+        rem_pref.edit().putInt("FC", 0).apply();
+        rem_pref.edit().putInt("FAV", 0).apply();
+
+
+        rem_pref.edit().putInt("Picture_count", 0).apply();
+        rem_pref.edit().putInt("Video_count", 0).apply();
+        rem_pref.edit().putInt("Session_count", 0).apply();
+        rem_pref.edit().putInt("Connect_count", 0).apply();
 
         rem_pref.edit().remove("user_id").commit();
         Intent i = new Intent(con, Login.class);

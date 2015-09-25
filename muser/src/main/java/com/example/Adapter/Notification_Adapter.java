@@ -6,6 +6,7 @@ import java.util.HashMap;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -33,12 +34,20 @@ public class Notification_Adapter extends BaseAdapter
 	SharedPreferences rem_pref;
 	Fragment con2;
 
+	int picture_count=0,video_count=0,session_count=0,connect_count=0;
+
 	public Notification_Adapter(Context con,ArrayList<HashMap<String, String>> list, String type) 
 	{
 		this.con = con;
 		this.list=list;
 		this.type=type;
 		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+
+		picture_count=rem_pref.getInt("Picture_count", 0);
+		video_count=rem_pref.getInt("Video_count",0);
+		session_count=rem_pref.getInt("Session_count",0);
+		connect_count=rem_pref.getInt("Connect_count", 0);
+
 	}
 	
 	public Notification_Adapter(Context con, Fragment con2, ArrayList<HashMap<String, String>> list, String type)
@@ -48,6 +57,14 @@ public class Notification_Adapter extends BaseAdapter
 		this.list=list;
 		this.type=type;
 		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+
+
+		picture_count=rem_pref.getInt("Picture_count", 0);
+		video_count=rem_pref.getInt("Video_count",0);
+		session_count=rem_pref.getInt("Session_count",0);
+		connect_count=rem_pref.getInt("Connect_count",0);
+
+
 	}
 
 	@Override
@@ -90,6 +107,11 @@ public class Notification_Adapter extends BaseAdapter
 				+ "Jorge Luis"
 				+ "</b></font> )and also commented on <font color='black'><b>"
 				+" Sharanpal" + "</b></font> ";*/
+
+
+
+
+
 		
 		if(type.equals("I") || type.equals("V"))
 		{
@@ -103,7 +125,7 @@ public class Notification_Adapter extends BaseAdapter
 			
 			row.setOnClickListener(new OnClickListener()
 			{
-				
+
 				@Override
 				public void onClick(View v)
 				{
@@ -113,15 +135,14 @@ public class Notification_Adapter extends BaseAdapter
 					i.putExtra("time", time.getText().toString());
 					i.putExtra("type", type);
 					con.startActivity(i);*/
-					
-					
-					Intent i=new Intent(con,Image_Video_Details.class);
-					i.putExtra("post_id",list.get(position).get("post_id"));
-					i.putExtra("user_id",rem_pref.getString("user_id", ""));
+
+					Intent i = new Intent(con, Image_Video_Details.class);
+					i.putExtra("post_id", list.get(position).get("post_id"));
+					i.putExtra("user_id", rem_pref.getString("user_id", ""));
 					i.putExtra("from_where", "Notification");
 					i.putExtra("which", "IV");
 					con.startActivity(i);
-					
+
 				}
 			});
 		}
@@ -411,6 +432,23 @@ public class Notification_Adapter extends BaseAdapter
 			
 			
 		}
+
+		if(picture_count>0 && type.equals("I") && picture_count > position)
+		{
+			description.setTypeface(null, Typeface.BOLD);
+		}
+		else if(video_count>0 && type.equals("V") && video_count > position)
+		{
+			description.setTypeface(null, Typeface.BOLD);
+		}
+		else if(session_count>0 && type.equals("S") && session_count > position)
+		{
+			description.setTypeface(null, Typeface.BOLD);
+		}
+		else if(connect_count>0 && type.equals("C") && connect_count > position)
+		{
+			description.setTypeface(null, Typeface.BOLD);
+		}
 		
 		
 		
@@ -428,6 +466,11 @@ public class Notification_Adapter extends BaseAdapter
 	public void add_data(ArrayList<HashMap<String, String>> list)
 	{
 		this.list=list;
+		picture_count=0;
+		video_count=0;
+		session_count=0;
+		connect_count=0;
+
 	}
 	
 	

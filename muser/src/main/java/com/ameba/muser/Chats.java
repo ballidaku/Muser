@@ -24,7 +24,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import android.app.ActionBar.LayoutParams;
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -42,13 +41,13 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.example.ProgressTask.Delete_Message_ProgressTask;
 import com.example.ProgressTask.Get_unreadChat;
 import com.example.classes.Chat_data;
 import com.example.classes.Data_list;
@@ -77,6 +76,8 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 
 	
 	FrameLayout				emojicons;
+
+	Context con;
 	
 	@Override
 	public void onBackPressed()
@@ -120,6 +121,9 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chat);
+
+		con=this;
+
 
 		layoutChat = (LinearLayout) findViewById(R.id.layoutChatContainer);
 		scrollChat = (ScrollView) findViewById(R.id.scrollViewChat);
@@ -340,11 +344,6 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 
 			try
 			{
-				
-				
-				
-				
-				
 
 				List<NameValuePair> param = new ArrayList<NameValuePair>();
 				param.add(new BasicNameValuePair("sender_id", userID));
@@ -463,15 +462,18 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 		return str;
 	}
 
-	private void Showmsgs(List<Chat_data> list)
+	private void Showmsgs(final List<Chat_data> list)
 	{
 
-		for(int i = 0; i < list.size(); i++)
+		for( int i = 0; i < list.size(); i++)
 		{
 
 			String Friend_id = list.get(i).getFriend_id();
 			final String message = list.get(i).getMessage();
 			final String date = list.get(i).getAdded_date();
+			final String message_id= list.get(i).getMessageID();
+			final int pos=i;
+
 
 			String formtDate = parseDateToddMMyyyy(date);
 
@@ -513,7 +515,7 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 				lp.gravity = Gravity.LEFT;
 				layoutMsgContainer.setLayoutParams(lp);
 
-				View view = LayoutInflater.from(Chats.this).inflate(R.layout.chat_my, layoutMsgContainer);
+				View view = LayoutInflater.from(Chats.this).inflate(R.layout.custom_other_chat, layoutMsgContainer);
 
 				EmojiconTextView tvMSG = (EmojiconTextView) view.findViewById(R.id.txtV_MyChatmsg);
 
@@ -545,6 +547,8 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 
 				// layoutMsgContainer.addView(imgv);
 
+
+
 			}
 
 			else
@@ -554,7 +558,9 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 				lp.gravity = Gravity.RIGHT;
 				layoutMsgContainer.setLayoutParams(lp);
 
-				View viewOther = LayoutInflater.from(Chats.this).inflate(R.layout.other_chat, layoutMsgContainer);
+
+
+				View viewOther = LayoutInflater.from(Chats.this).inflate(R.layout.custom_my_chat, layoutMsgContainer);
 
 				EmojiconTextView tvMSG = (EmojiconTextView) viewOther.findViewById(R.id.txtV_otherChatmsg);
 
@@ -583,9 +589,38 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 				}
 				tvTime.setText(date);
 
+				viewOther.setOnLongClickListener(new View.OnLongClickListener()
+				{
+					@Override
+					public boolean onLongClick(View v)
+					{
+
+
+
+						OnClickListener delete = new OnClickListener()
+						{
+							@Override
+							public
+							void onClick(View v)
+							{
+								Util_Class.super_dialog.dismiss();
+
+								new Delete_Message_ProgressTask(con, message_id,pos).execute();
+
+
+							}
+						};
+						Util_Class.show_super_dialog(con, delete, "");
+
+						return false;
+					}
+				});
+
 			}
 
+
 			layoutChat.addView(layoutMsgContainer);
+
 
 			scrollChat.post(new Runnable()
 			{
@@ -597,8 +632,16 @@ public class Chats extends FragmentActivity implements OnClickListener, Emojicon
 				}
 			});
 
+
+
 		}
 
+	}
+
+
+	public void remove_view(int pos)
+	{
+		layoutChat.removeViewAt(pos);
 	}
 
 	@Override

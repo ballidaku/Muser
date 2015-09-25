@@ -92,35 +92,39 @@ public class Total_Clients extends Activity implements OnClickListener
 
 				Log.e("count", "" + count);
 
-				ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
-
-				for (HashMap<String, String> data : list)
+				if(list.size()>0)
 				{
 
-					try
+					ArrayList<HashMap<String, String>> tempList = new ArrayList<>();
+
+					for (HashMap<String, String> data : list)
 					{
-						if ((data.get("user_name").toLowerCase()).contains(s.toString().toLowerCase()))
+
+						try
 						{
-							tempList.add(data);
+							if ((data.get("user_name").toLowerCase()).contains(s.toString().toLowerCase()))
+							{
+								tempList.add(data);
+							}
 						}
+						catch (Exception e)
+						{
+							Log.e("user_name", "" + data.get("user_name"));
+							e.printStackTrace();
+						}
+
 					}
-					catch (Exception e)
+
+					if (count > 0)
 					{
-						Log.e("user_name", "" + data.get("user_name"));
-						e.printStackTrace();
+						adapter.add_data(tempList);
+						adapter.notifyDataSetChanged();
 					}
-
-				}
-
-				if (count > 0)
-				{
-					adapter.add_data(tempList);
-					adapter.notifyDataSetChanged();
-				}
-				else
-				{
-					adapter.add_data(list);
-					adapter.notifyDataSetChanged();
+					else
+					{
+						adapter.add_data(list);
+						adapter.notifyDataSetChanged();
+					}
 				}
 
 			}

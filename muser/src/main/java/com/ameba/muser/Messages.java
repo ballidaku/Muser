@@ -93,4 +93,11 @@ public class Messages extends Fragment
         messages_list.setVisibility(View.VISIBLE);
     }
 
+    public void on_Failure()
+    {
+
+        show_temp_logo();
+        error_message.setText(con.getResources().getString(R.string.no_data_found));
+    }
+
 }

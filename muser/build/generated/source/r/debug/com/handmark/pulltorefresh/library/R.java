@@ -8,10 +8,10 @@ package com.handmark.pulltorefresh.library;
 
 public final class R {
 	public static final class anim {
-		public static final int slide_in_from_bottom = 0x7f040013;
-		public static final int slide_in_from_top = 0x7f040014;
-		public static final int slide_out_to_bottom = 0x7f040015;
-		public static final int slide_out_to_top = 0x7f040016;
+		public static final int slide_in_from_bottom = 0x7f04002c;
+		public static final int slide_in_from_top = 0x7f04002d;
+		public static final int slide_out_to_bottom = 0x7f04002e;
+		public static final int slide_out_to_top = 0x7f04002f;
 	}
 	public static final class attr {
 		public static final int ptrAdapterViewBackground = 0x7f010032;
@@ -42,16 +42,16 @@ public final class R {
 		public static final int indicator_right_padding = 0x7f080039;
 	}
 	public static final class drawable {
-		public static final int default_ptr_flip = 0x7f0200b6;
-		public static final int default_ptr_rotate = 0x7f0200b7;
-		public static final int indicator_arrow = 0x7f020456;
-		public static final int indicator_bg_bottom = 0x7f020458;
-		public static final int indicator_bg_top = 0x7f020459;
+		public static final int default_ptr_flip = 0x7f0200d8;
+		public static final int default_ptr_rotate = 0x7f0200d9;
+		public static final int indicator_arrow = 0x7f020497;
+		public static final int indicator_bg_bottom = 0x7f020499;
+		public static final int indicator_bg_top = 0x7f02049a;
 	}
 	public static final class id {
 		public static final int both = 0x7f0e0011;
 		public static final int disabled = 0x7f0e0012;
-		public static final int fl_inner = 0x7f0e0199;
+		public static final int fl_inner = 0x7f0e01eb;
 		public static final int flip = 0x7f0e0018;
 		public static final int gridview = 0x7f0e0006;
 		public static final int manualOnly = 0x7f0e0013;
@@ -59,17 +59,17 @@ public final class R {
 		public static final int pullFromEnd = 0x7f0e0015;
 		public static final int pullFromStart = 0x7f0e0016;
 		public static final int pullUpFromBottom = 0x7f0e0017;
-		public static final int pull_to_refresh_image = 0x7f0e019a;
-		public static final int pull_to_refresh_progress = 0x7f0e019b;
-		public static final int pull_to_refresh_sub_text = 0x7f0e019d;
-		public static final int pull_to_refresh_text = 0x7f0e019c;
+		public static final int pull_to_refresh_image = 0x7f0e01ec;
+		public static final int pull_to_refresh_progress = 0x7f0e01ed;
+		public static final int pull_to_refresh_sub_text = 0x7f0e01ef;
+		public static final int pull_to_refresh_text = 0x7f0e01ee;
 		public static final int rotate = 0x7f0e0019;
 		public static final int scrollview = 0x7f0e0007;
 		public static final int webview = 0x7f0e0008;
 	}
 	public static final class layout {
-		public static final int pull_to_refresh_header_horizontal = 0x7f030070;
-		public static final int pull_to_refresh_header_vertical = 0x7f030071;
+		public static final int pull_to_refresh_header_horizontal = 0x7f030082;
+		public static final int pull_to_refresh_header_vertical = 0x7f030083;
 	}
 	public static final class string {
 		public static final int pull_to_refresh_from_bottom_pull_label = 0x7f060074;

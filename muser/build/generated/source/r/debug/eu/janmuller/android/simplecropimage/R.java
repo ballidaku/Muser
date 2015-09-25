@@ -8,25 +8,25 @@ package eu.janmuller.android.simplecropimage;
 
 public final class R {
 	public static final class drawable {
-		public static final int btn_crop_operator = 0x7f020076;
-		public static final int btn_crop_pressed = 0x7f020077;
-		public static final int camera_crop_height = 0x7f020079;
-		public static final int camera_crop_width = 0x7f02007a;
-		public static final int ic_rotate_left = 0x7f020452;
-		public static final int ic_rotate_right = 0x7f020453;
-		public static final int indicator_autocrop = 0x7f020457;
-		public static final int selector_crop_button = 0x7f0204c3;
+		public static final int btn_crop_operator = 0x7f020097;
+		public static final int btn_crop_pressed = 0x7f020098;
+		public static final int camera_crop_height = 0x7f02009a;
+		public static final int camera_crop_width = 0x7f02009b;
+		public static final int ic_rotate_left = 0x7f020491;
+		public static final int ic_rotate_right = 0x7f020492;
+		public static final int indicator_autocrop = 0x7f020498;
+		public static final int selector_crop_button = 0x7f020504;
 	}
 	public static final class id {
-		public static final int discard = 0x7f0e010d;
-		public static final int image = 0x7f0e0094;
-		public static final int rotateLeft = 0x7f0e010e;
-		public static final int rotateRight = 0x7f0e010f;
-		public static final int save = 0x7f0e0110;
+		public static final int discard = 0x7f0e0114;
+		public static final int image = 0x7f0e0095;
+		public static final int rotateLeft = 0x7f0e0115;
+		public static final int rotateRight = 0x7f0e0116;
+		public static final int save = 0x7f0e0117;
 	}
 	public static final class layout {
-		public static final int cropimage = 0x7f03002f;
-		public static final int main = 0x7f030064;
+		public static final int cropimage = 0x7f030031;
+		public static final int main = 0x7f030077;
 	}
 	public static final class string {
 		public static final int cancel = 0x7f06006d;
@@ -37,6 +37,6 @@ public final class R {
 		public static final int saving_image = 0x7f060072;
 	}
 	public static final class style {
-		public static final int CropButton = 0x7f0b003c;
+		public static final int CropButton = 0x7f0b0045;
 	}
 }

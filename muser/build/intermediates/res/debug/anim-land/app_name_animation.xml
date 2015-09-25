@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:fillEnabled="true" >
+
+    <translate
+        android:duration="700"
+        android:fromXDelta="-200%"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:toXDelta="0%" />
+
+    <alpha
+        android:duration="700"
+        android:fromAlpha="0"
+        android:toAlpha="1" />
+
+</set><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/anim-land/app_name_animation.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/anim-land/app_name_animation.xml -->

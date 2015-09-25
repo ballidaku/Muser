@@ -132,5 +132,7 @@ public class Tab_Notification_Sessions extends Fragment
 			adapter.notifyDataSetChanged();
 		}
 
+		rem_pref.edit().putInt("Session_count", 0).apply();
+
 	}
 }
