@@ -68,6 +68,8 @@ class Upload_Video_FTP_ProgressTask extends AsyncTask<String, Void, Void>
 
         ((Activity) con).finish();
 
+        //((Activity) con).moveTaskToBack(true);
+
 
         Intent dismissIntent = new Intent(con, CancelUploadingVideo.class);
 
@@ -113,11 +115,11 @@ class Upload_Video_FTP_ProgressTask extends AsyncTask<String, Void, Void>
 
             if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
             {
-                new Upload_Image_ProgressTask(con, map).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                new Upload_Image_ProgressTask(Drawer.con, map).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             }
             else
             {
-                new Upload_Image_ProgressTask(con, map).execute();
+                new Upload_Image_ProgressTask(Drawer.con, map).execute();
             }
         }
 

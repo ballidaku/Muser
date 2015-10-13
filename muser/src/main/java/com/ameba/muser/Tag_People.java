@@ -165,7 +165,7 @@ public class Tag_People extends Activity implements OnClickListener
         }
     }
 
-    private void get_add_data()
+   /* private void get_add_data()
     {
         if (user_list.size() > 0)
         {
@@ -177,9 +177,24 @@ public class Tag_People extends Activity implements OnClickListener
                 }
             }
         }
+    }*/
+
+    private void get_add_data()
+    {
+        if (user_list.size() > 0)
+        {
+            for (int i = 0; i < user_list.size(); i++)
+            {
+                if (check_list.get(i))
+                {
+
+                    Captured_Image.tag_people_map.put(user_list.get(i).get("user_id"),user_list.get(i).get("user_name"));
+                }
+            }
+        }
     }
 
-    ArrayList<HashMap<String, String>> user_list = new ArrayList<HashMap<String, String>>();
+    ArrayList<HashMap<String, String>> user_list = new ArrayList<>();
     boolean                            is_check  = false;
 
     public void set_data(ArrayList<HashMap<String, String>> user_list)

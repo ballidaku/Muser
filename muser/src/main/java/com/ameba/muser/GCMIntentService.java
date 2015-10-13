@@ -125,7 +125,7 @@ class GCMIntentService extends GCMBaseIntentService
                         notication_message = " " + message_count + " Notifications";
                     }
 
-                    Log.e("type",type);
+                   // Log.e("type",type);
 
                     if(type.equals("S"))
                     {
@@ -142,7 +142,7 @@ class GCMIntentService extends GCMBaseIntentService
                         int message_count = rem_pref.getInt("C", 0) + 1;
                         rem_pref.edit().putInt("C", message_count).apply();
                     }
-                    else if(type.equals("FC"))
+                    else if(type.equals("FC") || type.equals("T") || type.equals("RE"))
                     {
                         int message_count = rem_pref.getInt("FC", 0) + 1;
                         rem_pref.edit().putInt("FC", message_count).apply();
@@ -170,7 +170,7 @@ class GCMIntentService extends GCMBaseIntentService
                         int message_count = rem_pref.getInt("Session_count", 0) + 1;
                         rem_pref.edit().putInt("Session_count", message_count).apply();
                     }
-                    else  if(message.contains("followed"))
+                    else  if(message.contains("followed") || message.contains("request"))
                     {
                         int message_count = rem_pref.getInt("Connect_count", 0) + 1;
                         rem_pref.edit().putInt("Connect_count", message_count).apply();

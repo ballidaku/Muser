@@ -5,9 +5,12 @@ import java.util.HashMap;
 
 import com.example.Adapter.Messages_Adapter;
 import com.example.ProgressTask.Get_Messages_Contacts_Thread;
+import com.example.ProgressTask.Get_Trending_FriendActivities_ProgressTask;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -63,6 +66,8 @@ public class Messages extends Fragment
         error_message.setText(con.getResources().getString(R.string.please_wait));
 
         new Get_Messages_Contacts_Thread(con, con2);
+
+
     }
 
     public void add_list(ArrayList<HashMap<String, String>> list)

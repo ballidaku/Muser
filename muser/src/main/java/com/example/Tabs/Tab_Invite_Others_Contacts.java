@@ -40,7 +40,7 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
     ArrayList<HashMap<String, String>> list;
     Context                            con;
     boolean is_check_all = false;
-    ArrayList<Boolean> check_list;
+    //ArrayList<Boolean> check_list;
     EditText           search_editText;
 
     View            rootView;
@@ -153,13 +153,14 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
     {
         switch (v.getId())
         {
-            case R.id.check_all:
+            case R.id.check_all://***********************************************************
                 if (is_check_all = !is_check_all)
                 {
                     check_all.setImageResource(R.drawable.check_box);
                     for (int i = 0; i < list.size(); i++)
                     {
-                        check_list.set(i, true);
+                        //check_list.set(i, true);
+                        list.get(i).put("is_checked", "yes");
                     }
                     contacts_listview.invalidateViews();
                 }
@@ -168,20 +169,23 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
                     check_all.setImageResource(R.drawable.uncheck_box);
                     for (int i = 0; i < list.size(); i++)
                     {
-                        check_list.set(i, false);
+                        list.get(i).put("is_checked","no");
+                        //check_list.set(i, false);
                     }
                     contacts_listview.invalidateViews();
                 }
 
                 break;
 
-            case R.id.invite_selected:
+            case R.id.invite_selected://***********************************************************
 
                 String contacts = "";
                 for (int i = 0; i < list.size(); i++)
                 {
-                    if (check_list.get(i))
+                    if (list.get(i).get("is_checked").equals("yes"))
+                    {
                         contacts += contacts.isEmpty() ? list.get(i).get("phoneNo") : "," + list.get(i).get("phoneNo");
+                    }
                 }
                 Log.e("contacts", contacts);
 
@@ -206,7 +210,8 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
     {
         for (int i = 0; i < list.size(); i++)
         {
-            check_list.set(i, false);
+            list.get(i).put("is_checked","no");
+           // check_list.set(i, false);
         }
         contacts_listview.invalidateViews();
     }
@@ -261,7 +266,7 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
                 public void onClick(View arg0)
                 {
 
-                    check_list.set(position, !check_list.get(position));
+                    //check_list.set(position, !check_list.get(position)); ************************************************************
 
                     if (is_check_all)
                     {
@@ -269,19 +274,21 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
                         check_all.setImageResource(R.drawable.uncheck_box);
                     }
 
-                    if (check_list.get(position))
+                    if (local_list.get(position).get("is_checked").equals("no"))
                     {
+                        local_list.get(position).put("is_checked","yes");
                         check.setImageResource(R.drawable.check_box);
                     }
                     else
                     {
+                        local_list.get(position).put("is_checked","no");
                         check.setImageResource(R.drawable.uncheck_box);
                     }
                 }
 
             });
 
-            if (check_list.get(position))
+            if (local_list.get(position).get("is_checked").equals("yes"))
             {
                 check.setImageResource(R.drawable.check_box);
             }
@@ -344,6 +351,7 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
                         HashMap<String, String> map = new HashMap<String, String>();
                         map.put("name", name);
                         map.put("phoneNo", phoneNo);
+                        map.put("is_checked", "no");
                         list.add(map);
 
                     }
@@ -381,13 +389,13 @@ public class Tab_Invite_Others_Contacts extends Fragment implements OnClickListe
         protected void onPostExecute(Void result)
         {
 
-            super.onPostExecute(result);
+            super.onPostExecute(result);//***********************************************************************
 
-            check_list = new ArrayList<Boolean>();
+           /* check_list = new ArrayList<Boolean>();
             for (int i = 0; i < list.size(); i++)
             {
                 check_list.add(is_check_all);
-            }
+            }*/
 
             total_contacts.setText("" + list.size() + " contacts");
 

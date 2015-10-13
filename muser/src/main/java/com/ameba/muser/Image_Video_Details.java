@@ -949,7 +949,7 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 							
 							if(id[i].equals(rem_pref.getString("user_id", "")))
 							{
-								((Drawer) con).click();
+								//((Drawer) con).click();
 							}
 							else
 							{

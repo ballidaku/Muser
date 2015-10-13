@@ -79,6 +79,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /*import com.aviary.android.feather.FeatherActivity;
 import com.aviary.android.feather.common.utils.StringUtils;
@@ -126,7 +129,9 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
     String video_duration = "";
 
-    public static ArrayList<HashMap<String, String>> tag_people_list = new ArrayList<HashMap<String, String>>();
+    //public static ArrayList<HashMap<String, String>> tag_people_list = new ArrayList<>();
+
+    public static HashMap<String, String> tag_people_map = new HashMap<>();
 
     SharedPreferences rem_pref;
     ShareButton       share;
@@ -134,7 +139,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
     ShareDialog       shareDialog;
 
     ImageView im;
-    String video_image_path="";
+    String video_image_path = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -178,9 +183,8 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
         rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 
-        tag_people_list.clear();
+        tag_people_map.clear();
         Intent i = getIntent();
-
 
         type = i.getStringExtra("type");
 
@@ -193,9 +197,9 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
         {
             title.setText("Loaded Video");
 
-          //  bit = ThumbnailUtils.createVideoThumbnail( i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND);
+            //  bit = ThumbnailUtils.createVideoThumbnail( i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND);
             image_path = i.getStringExtra("image");
-            video_image_path=saveToInternalSorage(ThumbnailUtils.createVideoThumbnail( i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND));
+            video_image_path = saveToInternalSorage(ThumbnailUtils.createVideoThumbnail(i.getStringExtra("image"), MediaStore.Images.Thumbnails.MINI_KIND));
 
         }
         else
@@ -242,7 +246,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
 		
 		/*uiHelper = new UiLifecycleHelper(Captured_Image.this, statusCallback);
-		uiHelper.onCreate(savedInstanceState);
+        uiHelper.onCreate(savedInstanceState);
 		*/
 
         // facebook = (LoginButton) findViewById(R.id.facebook);
@@ -501,7 +505,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
     }
 
-    public void set_Image( )
+    public void set_Image()
     {
         if (bit != null)
         {
@@ -512,7 +516,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
         {
             //bit = ThumbnailUtils.createVideoThumbnail(video_image_path, MediaStore.Images.Thumbnails.MINI_KIND);
 
-           // video_image_path=saveToInternalSorage(bit);
+            // video_image_path=saveToInternalSorage(bit);
             bit = BitmapFactory.decodeFile(video_image_path);
 
         }
@@ -581,9 +585,10 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
     {
         super.onResumeFragments();
 
-        if (tag_people_list.size() > 0)
+    /*    if (tag_people_list.size() > 0)
         {
             String names = "";
+            tagged_peoples_ids = "";
             for (int i = 0; i < tag_people_list.size(); i++)
             {
                 names += i == 0 ? "@" + tag_people_list.get(i).get("user_name") : ", @" + tag_people_list.get(i).get("user_name");
@@ -592,7 +597,29 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
             tag_people.setVisibility(View.VISIBLE);
             tag_people.setText(names);
+        }*/
+
+
+        String names = "";
+        tagged_peoples_ids = "";
+        int i=0;
+
+        Iterator myVeryOwnIterator = tag_people_map.keySet().iterator();
+        while (myVeryOwnIterator.hasNext())
+        {
+            String key = (String) myVeryOwnIterator.next();
+            String value = (String) tag_people_map.get(key);
+
+
+            names += i == 0 ? "@" + value : ", @" + value;
+            tagged_peoples_ids += i == 0 ? key : "," + key;
+
+            i++;
+
         }
+        tag_people.setVisibility(View.VISIBLE);
+        tag_people.setText(names);
+
     }
 
     private void setEmojiconFragment()
@@ -618,7 +645,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
                 Intent cal = new Intent(con, PhotoActivity.class);
                 cal.putExtra(Constants.EXTRA_KEY_IMAGE_SOURCE, 2);
-                Uri uri = Uri.parse(type.equals("I")? image_path : video_image_path);
+                Uri uri = Uri.parse(type.equals("I") ? image_path : video_image_path);
 
                 cal.setData(uri);
                 startActivityForResult(cal, 3);
@@ -753,8 +780,8 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
                 if (type.equals("V"))
                 {
 
-//                 File myImageFile = new File(saveToInternalSorage(bit));
-//                    File myImageFile = new File(image_path);
+                    //                 File myImageFile = new File(saveToInternalSorage(bit));
+                    //                    File myImageFile = new File(image_path);
                     Uri myImageUri = Uri.fromFile(new File(video_image_path));
 
                     Intent intent = new TweetComposer.Builder(this).text(rem_pref.getString("user_name", "") + " posted video on #Muser").image(myImageUri).createIntent();
@@ -1615,7 +1642,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
         }
         else if (requestCode == 3)
         {
-            if(type.equals("I"))
+            if (type.equals("I"))
             {
                 image_path = data.getStringExtra("url");
             }
@@ -1623,8 +1650,6 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
             {
                 video_image_path = data.getStringExtra("url");
             }
-
-
 
             set_Image();
         }

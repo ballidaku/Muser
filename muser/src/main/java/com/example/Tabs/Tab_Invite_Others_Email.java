@@ -40,7 +40,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
     EditText  search_editText;
 
     boolean is_check_all = false;
-    ArrayList<Boolean> check_list;
+   // ArrayList<Boolean> check_list;
     View               rootView;
     Fragment           frag;
     Email_Adapter      adapter;
@@ -154,7 +154,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
         switch (v.getId())
         {
             case R.id.check_all:
-                if (is_check_all = !is_check_all)
+               /* if (is_check_all = !is_check_all)
                 {
                     check_all.setImageResource(R.drawable.check_box);
                     for (int i = 0; i < list.size(); i++)
@@ -171,7 +171,30 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                         check_list.set(i, false);
                     }
                     email_listview.invalidateViews();
+                }*/
+
+                if (is_check_all = !is_check_all)
+                {
+                    check_all.setImageResource(R.drawable.check_box);
+                    for (int i = 0; i < list.size(); i++)
+                    {
+                        //check_list.set(i, true);
+                        list.get(i).setIs_checked("yes");
+                       // put("is_checked", "yes");
+                    }
+                    email_listview.invalidateViews();
                 }
+                else
+                {
+                    check_all.setImageResource(R.drawable.uncheck_box);
+                    for (int i = 0; i < list.size(); i++)
+                    {
+                        list.get(i).setIs_checked("no");
+                        //check_list.set(i, false);
+                    }
+                    email_listview.invalidateViews();
+                }
+
 
                 break;
 
@@ -179,7 +202,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                 String email = "";
                 for (int i = 0; i < list.size(); i++)
                 {
-                    if (check_list.get(i))
+                    if (list.get(i).getIs_checked().equals("yes"))
                         for (int j = 0; j < list.get(i).getEmails().size(); j++)
                         {
 
@@ -187,6 +210,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                         }
 
                 }
+                Log.e("email", email);
                 if (!email.isEmpty())
                 {
                     new Send_Invite_Email_Thread(con, frag, email);
@@ -203,7 +227,8 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
     {
         for (int i = 0; i < list.size(); i++)
         {
-            check_list.set(i, false);
+            //check_list.set(i, false);
+            list.get(i).setIs_checked("no");
         }
         email_listview.invalidateViews();
     }
@@ -244,7 +269,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                 public void onClick(View arg0)
                 {
 
-                    check_list.set(position, !check_list.get(position));
+                   // check_list.set(position, !check_list.get(position));
 
                     if (is_check_all)
                     {
@@ -252,19 +277,21 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                         check_all.setImageResource(R.drawable.uncheck_box);
                     }
 
-                    if (check_list.get(position))
+                    if (local_list.get(position).getIs_checked().equals("no"))
                     {
+                        local_list.get(position).setIs_checked("yes");
                         check.setImageResource(R.drawable.check_box);
                     }
                     else
                     {
+                        local_list.get(position).setIs_checked("no");
                         check.setImageResource(R.drawable.uncheck_box);
                     }
                 }
 
             });
 
-            if (check_list.get(position))
+            if (local_list.get(position).getIs_checked().equals("yes"))
             {
                 check.setImageResource(R.drawable.check_box);
             }
@@ -330,11 +357,11 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
                 }
             });
 
-            check_list = new ArrayList<Boolean>();
+          /*  check_list = new ArrayList<Boolean>();
             for (int i = 0; i < list.size(); i++)
             {
                 check_list.add(is_check_all);
-            }
+            }*/
 
             adapter = new Email_Adapter(list);
             email_listview.setAdapter(adapter);
@@ -410,7 +437,7 @@ public class Tab_Invite_Others_Email extends Fragment implements OnClickListener
 
                     if (emails.size() > 0)
                     {
-                        list.add(new MyArray(displayName, emails));
+                        list.add(new MyArray(displayName, emails,"no"));
                     }
 
                     emailCursor.close();

@@ -76,7 +76,7 @@ class Drawer extends FragmentActivity
     public static ListView drawer_list;
     public static DrawerList_Adapter adapter;
     static SlidingMenuLayout slidingmenu_layout;
-    Context con;
+   public  static Context con;
     ImageView toggle, upload;
     //Button								lk_profile_filter_btn;
     //TextView							title_header;
@@ -165,7 +165,7 @@ class Drawer extends FragmentActivity
                 {
                     // Show/hide the menu
                     drawer_list.smoothScrollToPosition(0);
-                    adapter.notifyDataSetChanged();
+                    adapter.notifyDataSetInvalidated();
                     toggleMenu(v);
 
                 }

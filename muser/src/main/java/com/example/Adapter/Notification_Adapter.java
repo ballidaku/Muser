@@ -212,12 +212,12 @@ public class Notification_Adapter extends BaseAdapter
 				
 				reject.setOnClickListener(new OnClickListener()
 				{
-					
+
 					@Override
 					public void onClick(View arg0)
 					{
-						new Accept_Reject_Request_Thread(con,con2, list.get(position).get("from_user_id"), "N");
-						
+						new Accept_Reject_Request_Thread(con, con2, list.get(position).get("from_user_id"), "N");
+
 					}
 				});
 				
@@ -304,22 +304,48 @@ public class Notification_Adapter extends BaseAdapter
 				});
 			}
 			else if(list.get(position).get("from_user_id").equals(rem_pref.getString("user_id", "")) && list.get(position).get("approve_status").equals("Y"))
-			{   
+			{
 				image.setImageUrl(con,list.get(position).get("to_profile_image"));
 				//Drawer.imageLoader.displayImage(list.get(position).get("to_profile_image"), image, Drawer.options);
 				String styledText = "<font color='#4F606A'><b> You're </b></font><font color='Black' style='font-size:9px;'> "
 						+ list.get(position).get("activity") + list.get(position).get("to_user_name")+"."+ "</font>";
 				description.setText(Html.fromHtml(styledText));
-				
+
 				row.setOnClickListener(new OnClickListener() {
 
 					@Override
 					public void onClick(View arg0)
 					{
-						
+
 						Global.set_user_id(list.get(position).get("to_user_id"));
 						Global.set_friend_id(rem_pref.getString("user_id", ""));
-						
+
+						Intent i=new Intent(con,Other_Profile.class);
+						//i.putExtra("user_id", list.get(position).get("user_id"));
+						con.startActivity(i);
+
+					}
+				});
+			}
+			else if(list.get(position).get("to_user_id").equals(rem_pref.getString("user_id", "")) && list.get(position).get("activity").trim().equals("request"))
+			{
+
+				image.setImageUrl(con,list.get(position).get("from_profile_image"));
+				//Drawer.imageLoader.displayImage(list.get(position).get("from_profile_image"), image, Drawer.options);
+				String styledText = "<font color='#4F606A'><b>"+list.get(position).get("from_user_name")+"</b> </font><font color='Black' style='font-size:9px;'> "
+						  +" has been added to your friends list."+ "</font>";
+				description.setText(Html.fromHtml(styledText));
+
+
+				row.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View arg0)
+					{
+
+						Global.set_user_id(list.get(position).get("from_user_id"));
+						Global.set_friend_id(rem_pref.getString("user_id", ""));
+
 						Intent i=new Intent(con,Other_Profile.class);
 						//i.putExtra("user_id", list.get(position).get("user_id"));
 						con.startActivity(i);
@@ -329,7 +355,7 @@ public class Notification_Adapter extends BaseAdapter
 			}
 			else if(list.get(position).get("to_user_id").equals(rem_pref.getString("user_id", "")))
 			{
-				
+
 				image.setImageUrl(con,list.get(position).get("from_profile_image"));
 				//Drawer.imageLoader.displayImage(list.get(position).get("from_profile_image"), image, Drawer.options);
 				String styledText = "<font color='#4F606A'><b>"+list.get(position).get("from_user_name")+"</b> </font><font color='Black' style='font-size:9px;'> "
@@ -353,6 +379,7 @@ public class Notification_Adapter extends BaseAdapter
 					}
 				});
 			}
+
 			else
 			{
 				image.setImageUrl(con,list.get(position).get("from_profile_image"));

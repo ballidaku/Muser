@@ -215,7 +215,7 @@ public class Get_Find_Friends_ProgressTask extends AsyncTask<String, Void, Void>
 			HttpResponse response = httpclient.execute(httppost);
 			String data = EntityUtils.toString(response.getEntity());
 			
-			Log.e("DATAAA", data);
+			Log.e(" Get Friends DATAAA", data);
 			return data;
 		}
 		catch(SocketTimeoutException e)

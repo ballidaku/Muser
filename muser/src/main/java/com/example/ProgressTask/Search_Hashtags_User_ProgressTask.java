@@ -267,7 +267,8 @@ public class Search_Hashtags_User_ProgressTask extends AsyncTask<String, Void, V
             param.add(new BasicNameValuePair("search_term", value));
             param.add(new BasicNameValuePair("search_type", type));
 
-            if (from_where.equals("Tag_People"))
+           // if (from_where.equals("Tag_People"))
+            if(type.equals("U") )
             {
                 param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
             }

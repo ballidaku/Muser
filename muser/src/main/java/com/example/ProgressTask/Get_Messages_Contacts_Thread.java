@@ -109,7 +109,7 @@ public class Get_Messages_Contacts_Thread
 						String msg_json = new JSONObject(response).getString("status");
 						if(msg_json.equals("Success"))
 						{
-							list = new ArrayList<HashMap<String, String>>();
+							list = new ArrayList<>();
 							JSONArray jo = new JSONObject(response).getJSONArray("recent_chat");
 
 							for(int i = 0; i < jo.length(); i++)
