@@ -16,15 +16,17 @@ repositories {
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.1.0'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
+
+        multiDexEnabled true
         applicationId "com.ameba.muser"
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
+
     }
 
     dexOptions {
@@ -44,7 +46,7 @@ android {
 
   configurations
         {
-            all*.exclude module: 'picasso'
+           // all*.exclude module: 'picasso'
             //exclude module:'support-v4'
            // all*.exclude group: ':aviaryAndroidSDKmaster', module: 'support-v4'
 

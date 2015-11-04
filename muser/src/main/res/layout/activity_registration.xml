@@ -215,7 +215,33 @@
                             android:layout_height="wrap_content"
                             android:text="Trainer" />
                     </LinearLayout>
+
+
+
+
+
                 </LinearLayout>
+
+
+                <EditText
+                    android:id = "@+id/edtxt_paypalid"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "32dp"
+                    android:layout_marginLeft = "10dp"
+                    android:layout_marginRight = "10dp"
+                    android:background = "@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft = "@drawable/paypal_icon"
+                    android:drawablePadding = "8dp"
+                    android:ems = "10"
+                    android:gravity = "center_vertical"
+                    android:hint = "Paypal ID"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:enabled="false"
+                    android:inputType = "textEmailAddress"
+                    android:textColorHint = "@color/Gray"
+                    android:visibility="gone"
+                    android:textSize = "@dimen/text_size_14"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"

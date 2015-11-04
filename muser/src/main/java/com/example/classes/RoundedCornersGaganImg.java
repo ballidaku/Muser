@@ -165,6 +165,9 @@ public class RoundedCornersGaganImg extends ImageView
 
 		imageLoader.displayImage(URL, this, options);
 
+
+
+
 	}
 
 }

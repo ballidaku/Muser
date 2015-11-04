@@ -62,18 +62,18 @@ import eu.janmuller.android.simplecropimage.CropImage;
 
 public class Update_Profile extends FragmentActivity implements OnClickListener,EmojiconGridFragment.OnEmojiconClickedListener,EmojiconsFragment.OnEmojiconBackspaceClickedListener
 {
-	LinearLayout			public_lay, private_lay, optional_fb, optional_tw, optional_ig;
-	TextView				public_textview, private_textview, txt_discription, optional_info, member_type, registered_from, back;
+	//LinearLayout			public_lay, private_lay, optional_fb, optional_tw, optional_ig;
+	TextView				/*public_textview, private_textview, txt_discription, optional_info, member_type, registered_from, */back;
 	TextView				block_peoples, deactivate, report_problem,linked_accounts;
 	String					privacy_status;
 	RoundedCornersGaganImg	update_profile_image;
-	EditText				update_full_name, optional_fb_name, optional_fb_phone, optional_tw_name, optional_tw_phone, optional_ig_name, optional_ig_phone;
+	EditText				update_full_name/*, optional_fb_name, optional_fb_phone, optional_tw_name, optional_tw_phone, optional_ig_name, optional_ig_phone*/;
 	EditText				web_address, email, phone;
 
 	ToggleButton			public_private_toggle, notification_toggle;
 	ImageView				update, smilly;
 	EmojiconEditText		quote;
-	public static EditText	update_user_name, confirm_password, old_password, new_password;
+	public static EditText	update_user_name, confirm_password, old_password, new_password,edtxt_paypalid;
 	FrameLayout				emojicons;
 	public static Bitmap	update_profile_bitmap	= null;
 
@@ -83,8 +83,8 @@ public class Update_Profile extends FragmentActivity implements OnClickListener,
 	SharedPreferences		rem_pref;
 	public AlertDialog		myAlertDialog;
 
-	GoogleCloudMessaging	gcm;
-	String					GCM_Reg_id				= "";
+	//GoogleCloudMessaging	gcm;
+	//String					GCM_Reg_id				= "";
 	//ImageLoader				imageLoader				= ImageLoader.getInstance();
 	String					old, ne, confirm;
 
@@ -121,6 +121,8 @@ public class Update_Profile extends FragmentActivity implements OnClickListener,
 		old_password = (EditText) findViewById(R.id.old_password);
 		new_password = (EditText) findViewById(R.id.new_password);
 		confirm_password = (EditText) findViewById(R.id.confirm_password);
+
+		edtxt_paypalid= (EditText) findViewById(R.id.edtxt_paypalid);
 
 		(update = (ImageView) findViewById(R.id.update)).setOnClickListener(this);
 		(smilly = (ImageView) findViewById(R.id.smilly)).setOnClickListener(this);
@@ -238,6 +240,8 @@ public class Update_Profile extends FragmentActivity implements OnClickListener,
 		{
 			email.setText(rem_pref.getString("key", ""));
 		}
+
+		edtxt_paypalid.setText(rem_pref.getString("paypal_id", ""));
 
 		update_user_name.addTextChangedListener(new TextWatcher()
 		{
@@ -474,40 +478,43 @@ public class Update_Profile extends FragmentActivity implements OnClickListener,
 			case R.id.update:
 
 				//Log.e("quote", quote.getText().toString().trim());
-				String quote_string = "";
-				try
-				{
-					quote_string = URLEncoder.encode(quote.getText().toString(), "UTF-8").trim();
-				}
-				catch(UnsupportedEncodingException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
+
+
+
 
 				if(rem_pref.getString("registration_type", "").equals("M"))
 				{
 
-					new Update_Profile_ProgressTask(con,
-							update_full_name.getText().toString().trim(),
-							quote_string,
-							web_address.getText().toString().trim(),
-							email.getText().toString().trim(),
-							phone.getText().toString().trim(),
-							"",
-							"").execute();
+					if(rem_pref.getString("member_type", "").equals("T") )
+					{
+						if(get_check())
+						{
+							update_manual_profile();
+						}
+					}
+					else
+					{
+						update_manual_profile();
+					}
+
 
 				}
 				else
 				{
 
-					new Update_Profile_ProgressTask(con,
-							update_full_name.getText().toString().trim(),
-							quote_string, web_address.getText().toString(),
-							"",
-							phone.getText().toString(),
-							"",
-							"").execute();
+					if(rem_pref.getString("member_type", "").equals("T") )
+					{
+						if(get_check())
+						{
+							update_social_profile();
+						}
+					}
+					else
+					{
+						update_social_profile();
+					}
+
 				}
 
 				break;
@@ -558,6 +565,80 @@ public class Update_Profile extends FragmentActivity implements OnClickListener,
 			default:
 				break;
 		}
+	}
+
+
+	public boolean get_check()
+	{
+
+		if(edtxt_paypalid.getText().toString().trim().length()==0 )
+		{
+			Util_Class.show_Toast("Please enter paypal email.", con);
+
+			return false;
+		}
+		else if(!Util_Class.isValidEmail(edtxt_paypalid.getText().toString()))
+		{
+			Util_Class.show_Toast("Please enter valid paypal email.", con);
+			return false;
+		}
+		else
+		{
+			return true;
+
+		}
+
+	}
+
+	public void update_manual_profile()
+	{
+
+		String quote_string = "";
+		try
+		{
+			quote_string = URLEncoder.encode(quote.getText().toString(), "UTF-8").trim();
+		}
+		catch(UnsupportedEncodingException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		new Update_Profile_ProgressTask(con,
+				  update_full_name.getText().toString().trim(),
+				  quote_string,
+				  web_address.getText().toString().trim(),
+				  email.getText().toString().trim(),
+				  phone.getText().toString().trim(),
+				  "",
+				  "",
+				  edtxt_paypalid.getText().toString().trim()).execute();
+	}
+
+
+	public void update_social_profile()
+	{
+
+		String quote_string = "";
+		try
+		{
+			quote_string = URLEncoder.encode(quote.getText().toString(), "UTF-8").trim();
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		new Update_Profile_ProgressTask(con,
+				  update_full_name.getText().toString().trim(),
+				  quote_string, web_address.getText().toString(),
+				  "",
+				  phone.getText().toString(),
+				  "",
+				  "",
+				  edtxt_paypalid.getText().toString().trim()).execute();
 	}
 
 	String			s		= "", m = "";

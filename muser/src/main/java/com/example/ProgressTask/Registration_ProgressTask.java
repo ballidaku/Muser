@@ -41,16 +41,16 @@ import com.ameba.muser.Registration;
 
 
 
-public class Registration_ProgressTask extends AsyncTask<String, Void, Void> 
+public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 {
 	Context con;
 	private ProgressDialog dialog;
-	String which, message=null,user_id,msg_json,key;
+	String which, message=null,user_id,msg_json,key,paypalid;
 	String password,user_name,full_name,profile_pic_path,identifier,optional_fb_name,optional_fb_phone;
 	String optional_tw_name,optional_tw_phone,optional_ig_name,optional_ig_phone,member_type,privacy_status;
 	SharedPreferences rem_pref;
 
-	 
+
    public Registration_ProgressTask(Context con,
 		   							String key,
 								    String password,
@@ -65,7 +65,8 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 								    String optional_ig_name,
 								    String optional_ig_phone,
 								    String member_type,
-								    String privacy_status)
+								    String privacy_status,
+									String paypalid)
    {
 	    this.con=con;
 	    this.key				=key;
@@ -82,7 +83,8 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 	    this.optional_ig_phone	=optional_ig_phone;
 	    this.member_type		=member_type;
 	    this.privacy_status		=privacy_status;
-	    
+	    this.paypalid            =paypalid;
+
 	    Log.e("Registration", "key:"+key +"password "+password+"user_name "+user_name+"full_name "+full_name+"profile_pic_path "+profile_pic_path+"identifier"+identifier+"optional_fb_name"+optional_fb_name+"optional_fb_phone"+optional_fb_phone+"optional_tw_name"+optional_tw_name+"optional_tw_phone"+optional_tw_phone+"optional_ig_name"+optional_ig_name+"optional_ig_phone"+optional_ig_phone+"member_type"+member_type+"privacy_status"+privacy_status);
 	   rem_pref=con.getSharedPreferences("Remember",con.MODE_WORLD_READABLE);
    }
@@ -127,22 +129,22 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 						rem_pref.edit().putString("registration_type", jo.getString("registration_type")).commit();
 						rem_pref.edit().putString("member_type", jo.getString("member_type")).commit();
 						rem_pref.edit().putString("full_name", jo.getString("full_name")).commit();
-						
+
 						JSONObject jo2 = jo.getJSONObject("optional_info");
-						
+
 						rem_pref.edit().putString("facebook_name", jo2.getString("facebook_name")).commit();
 						rem_pref.edit().putString("facebook_phone", jo2.getString("facebook_phone")).commit();
 						rem_pref.edit().putString("instagram_name", jo2.getString("instagram_name")).commit();
 						rem_pref.edit().putString("instagram_phone", jo2.getString("instagram_phone")).commit();
 						rem_pref.edit().putString("twitter_name", jo2.getString("twitter_name")).commit();
 						rem_pref.edit().putString("twitter_phone", jo2.getString("twitter_phone")).commit();
-						
+
 						JSONObject jo3 = jo.getJSONObject("profile_counts");
-						
+
 						rem_pref.edit().putString("followers_count", jo3.getString("followers_count")).commit();
 						rem_pref.edit().putString("following_count", jo3.getString("following_count")).commit();
 						rem_pref.edit().putString("post_count", jo3.getString("post_count")).commit();
-						
+
 						Log.e("Preference", "" + rem_pref.getAll());
 					}
 					else if(msg_json.equals("Failure"))
@@ -173,21 +175,21 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 	}
 
     @Override
-    protected void onPostExecute(Void result) 
+    protected void onPostExecute(Void result)
     {
        if(dialog.isShowing())
        {
     	   dialog.dismiss();
        }
        Util_Class.dismiss_dialog();
-       
-       OnClickListener retry=new OnClickListener() 
+
+       OnClickListener retry=new OnClickListener()
 		{
 			@Override
-			public void onClick(View v) 
+			public void onClick(View v)
 			{
 				Util_Class.internet_dialog.dismiss();
-				
+
 				new Registration_ProgressTask( con,
 												user_id,
 						        				password,
@@ -202,8 +204,9 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 						        				optional_ig_name,
 						        				optional_ig_phone,
 						        				member_type,
-						        				privacy_status).execute();
-			
+						        				privacy_status,
+                                                paypalid).execute();
+
 			}
 		};
 		System.out.println("message-->" + message);
@@ -287,6 +290,8 @@ public class Registration_ProgressTask extends AsyncTask<String, Void, Void>
 			reqEntity.addPart("member_type", new StringBody(member_type));
 			reqEntity.addPart("privacy_status", new StringBody(privacy_status));
 			reqEntity.addPart("device_type", new StringBody("A"));
+			reqEntity.addPart("paypal_id", new StringBody(paypalid));
+
 			Log.e("reqEntity", "" + reqEntity);
 			httppost.setEntity(reqEntity);
 			HttpResponse response = httpclient.execute(httppost);

@@ -75,8 +75,9 @@ public class Chat_sharan_Adapter extends BaseAdapter
     }
 
     @Override
-    public View getView(final int position, View row, ViewGroup parent)
+    public View getView(final int position,  View row, ViewGroup parent)
     {
+
 
         String       Friend_id  = list.get(position).getFriend_id();
         final String message    = list.get(position).getMessage();
@@ -166,6 +167,8 @@ public class Chat_sharan_Adapter extends BaseAdapter
                         }
                     };
                     Util_Class.show_super_dialog(con, delete, "");
+
+
 
                     return false;
                 }

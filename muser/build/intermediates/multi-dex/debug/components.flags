@@ -1,7 +1,7 @@
 -injars /home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/multi-dex/debug/allclasses.jar
 -outjars /home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /home/sharan/Android/Sdk/build-tools/21.1.0/multidex/shrinkedAndroid.jar
+-libraryjars /home/sharan/Android/Sdk/build-tools/21.1.2/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
@@ -84,10 +84,6 @@
     <init>();
 }
 
--keep class com.ameba.muser.Chats {
-    <init>();
-}
-
 -keep class com.ameba.muser.Chat_sharan {
     <init>();
 }
@@ -113,6 +109,10 @@
 }
 
 -keep class org.appsroid.fxpro.PhotoActivity {
+    <init>();
+}
+
+-keep class com.ameba.muser.Dialog_Insert_Paypal {
     <init>();
 }
 

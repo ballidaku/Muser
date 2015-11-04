@@ -155,12 +155,6 @@
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name="com.ameba.muser.Chats"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity
             android:name="com.ameba.muser.Chat_sharan"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Sherlock.Light.NoActionBar"
@@ -200,6 +194,11 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity android:name="org.appsroid.fxpro.PhotoActivity" />
+        <activity
+            android:name="com.ameba.muser.Dialog_Insert_Paypal"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sherlock.Light.NoActionBar" >
+        </activity>
 
         <!--
             <activity

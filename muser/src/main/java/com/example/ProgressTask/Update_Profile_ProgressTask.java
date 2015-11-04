@@ -46,7 +46,7 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 	String message = null, msg_json;
 	SharedPreferences rem_pref;
 	ArrayList<HashMap<String, String>> list;
-	String update_full_name, quote, web_address, email, phone, old_password,new_password/*, privacy_status*/;
+	String update_full_name, quote, web_address, email, phone, old_password,new_password, paypal_id;
 //	  ImageLoader imageLoader = ImageLoader.getInstance();
 	  
 	public Update_Profile_ProgressTask(Context con,
@@ -56,8 +56,8 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 										String email,
 										String phone,
 										String old_password,
-										String new_password/*,
-										String privacy_status*/)
+										String new_password,
+										String paypal_id)
 	{
 		this.con = con;
 		
@@ -68,9 +68,9 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 		 this.phone=phone;
 		 this.old_password=old_password;
 		 this.new_password=new_password;
-//		 this.privacy_status=privacy_status;
+		 this.paypal_id=paypal_id;
 		
-		Log.e("quote", quote);
+		Log.e("paypal_id", paypal_id);
 		
 		rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 	}
@@ -115,8 +115,8 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 						rem_pref.edit().putString("phone_number", jo.getString("phone_number")).apply();
 						rem_pref.edit().putString("registration_type", jo.getString("registration_type")).apply();
 						rem_pref.edit().putString("member_type", jo.getString("member_type")).apply();
-						
-						
+
+						//rem_pref.edit().putString("paypal_id", jo.getString("paypal_id")).apply();
 						
 						JSONObject jo2 = jo.getJSONObject("optional_info");
 						rem_pref.edit().putString("facebook_name", jo2.getString("facebook_name")).apply();
@@ -170,8 +170,8 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 												 email,
 												 phone,
 												 old_password,
-												 new_password/*,
-												 privacy_status*/).execute();
+												 new_password,
+												 paypal_id).execute();
 			}
 		};
 		System.out.println("message-->" + message);
@@ -239,6 +239,9 @@ public class Update_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 			reqEntity.addPart("phone_number", new StringBody(phone));
 			reqEntity.addPart("old_password", new StringBody(old_password));
 			reqEntity.addPart("new_password", new StringBody(new_password));
+
+			reqEntity.addPart("paypal_id", new StringBody(paypal_id));
+
 			
 			reqEntity.addPart("privacy_status", new StringBody(rem_pref.getString("privacy_status","")));
 			reqEntity.addPart("device_id", new StringBody(rem_pref.getString("GCM_Reg_id", "")));

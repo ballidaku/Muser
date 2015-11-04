@@ -7,8 +7,6 @@ import java.util.HashMap;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -20,9 +18,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ameba.muser.Chat_sharan;
+import com.example.ProgressTask.Delete_Message_ProgressTask;
 import com.example.classes.RoundedCornersGaganImg;
 import com.example.classes.Util_Class;
-import com.ameba.muser.Chats;
 import com.ameba.muser.R;
 import com.rockerhieu.emojicon.EmojiconTextView;
 
@@ -30,12 +28,16 @@ public class Messages_Adapter extends BaseAdapter
 {
 	
 	Context con;
+	Fragment con2;
 	ArrayList<HashMap<String, String>> list;
+	Util_Class util;
 
-	public Messages_Adapter(Context con, ArrayList<HashMap<String, String>> list) 
+	public Messages_Adapter(Context con,Fragment con2, ArrayList<HashMap<String, String>> list)
 	{
 		this.con = con;
+		this.con2 = con2;
 		this.list=list;
+		util=new Util_Class();
 	}
 	
 	@Override
@@ -65,13 +67,17 @@ public class Messages_Adapter extends BaseAdapter
 		LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		
 		row = inflater.inflate(R.layout.custom_messages_list_item, parent, false);
-		
+
 		RoundedCornersGaganImg other_profile_image=(RoundedCornersGaganImg)row.findViewById(R.id.other_profile_image);
 		TextView other_user_name=(TextView)row.findViewById(R.id.other_user_name);
 		final EmojiconTextView message=(EmojiconTextView)row.findViewById(R.id.message);
 		TextView time=(TextView)row.findViewById(R.id.time);
-		
-		other_profile_image.setImageUrl(con,list.get(position).get("other_profile_image"));
+
+		String url=list.get(position).get("other_profile_image");
+
+		other_profile_image.setImageUrl(con,url);
+		//util.set_image(con,url,other_profile_image);
+
 		
 		other_user_name.setText(list.get(position).get("other_user_name"));
 		try
@@ -84,7 +90,7 @@ public class Messages_Adapter extends BaseAdapter
 			e.printStackTrace();
 		}
 		
-		Util_Class util=new Util_Class();
+
 		time.setText(util.get_time2(list.get(position).get("timestamp")));
 		
 		ViewTreeObserver vto = message.getViewTreeObserver();
@@ -120,6 +126,29 @@ public class Messages_Adapter extends BaseAdapter
 
 			}
 		});
+
+		row.setOnLongClickListener(new View.OnLongClickListener()
+		{
+			@Override
+			public boolean onLongClick(View v)
+			{
+				View.OnClickListener delete = new View.OnClickListener()
+				{
+					@Override
+					public void onClick(View v)
+					{
+						Util_Class.super_dialog.dismiss();
+
+						new Delete_Message_ProgressTask(con,con2,position,list.get(position).get("other_user_id")).execute();
+
+					}
+				};
+				Util_Class.show_super_dialog(con,con2, delete, "");
+
+				return false;
+			}
+		});
+
 
 
 		

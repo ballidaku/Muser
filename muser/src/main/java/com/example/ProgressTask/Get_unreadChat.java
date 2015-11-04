@@ -27,7 +27,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.ameba.muser.Chats;
+import com.ameba.muser.Chat_sharan;
 import com.example.classes.Chat_data;
 import com.example.classes.Data_list;
 import com.example.classes.Util_Class;
@@ -179,7 +179,7 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 				}
 				else
 				{
-					if(Chats.chats)
+					if(Chat_sharan.chats)
 					{
 
 						if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -198,7 +198,7 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 			else
 			{
 
-				if(Chats.chats)
+				if(Chat_sharan.chats)
 				{
 
 					if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -217,7 +217,7 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 		}
 		catch(Exception e)
 		{
-			if(Chats.chats)
+			if(Chat_sharan.chats)
 			{
 
 				if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)

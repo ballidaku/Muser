@@ -1,0 +1,100 @@
+<ScrollView xmlns:android = "http://schemas.android.com/apk/res/android"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_gravity="center"
+            android:background = "@drawable/main_bg">
+
+    <LinearLayout
+        android:id = "@+id/linear_layout_animation"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_gravity="center"
+        android:orientation = "vertical">
+
+        <LinearLayout
+            android:id = "@+id/logo_lay"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:gravity = "center">
+
+            <ImageView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center|bottom"
+                android:src = "@drawable/logo_four_five"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id = "@+id/bottom_lay"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_marginLeft = "25dp"
+            android:layout_marginRight = "25dp"
+            android:layout_marginTop="25dp"
+            android:orientation = "vertical">
+
+            <LinearLayout
+                android:id = "@+id/anim_sceond_lay"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:layout_marginTop = "5dp"
+                android:background = "@drawable/field_bg"
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "5dp"
+                    android:orientation="vertical"
+                    android:padding = "5dp">
+
+
+                    <TextView
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:gravity="center"
+                        android:textSize = "@dimen/text_size_14"
+                        android:text="Please enter your paypal e-mail id for revert transaction of money from app to trainer."/>
+
+                    <EditText
+                        android:id = "@+id/edtxt_paypalid"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginLeft = "5dp"
+                        android:layout_marginRight = "5dp"
+                        android:background = "@drawable/abs__textfield_search_default_holo_light"
+                        android:drawableLeft = "@drawable/paypal_icon"
+                        android:drawablePadding = "5dp"
+                        android:ems = "10"
+                        android:layout_marginTop="25dp"
+                        android:gravity = "center_vertical"
+                        android:hint = "Paypal ID"
+                        android:padding="5dp"
+                        android:inputType = "textEmailAddress"
+                        android:textColorHint = "@color/Gray"
+                        android:textSize = "@dimen/text_size_14"/>
+                </LinearLayout>
+
+
+                <LinearLayout android:layout_width = "match_parent"
+                              android:layout_height = "0dp"
+                              android:layout_weight = "0.8"
+                              android:gravity = "center"
+                              android:orientation = "vertical">
+
+                    <ImageView
+                        android:id = "@+id/imgv_submit"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "40dp"
+                        android:layout_margin = "10dp"
+                        android:background = "@drawable/submit"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/layout/activity_dialog_insert_paypal.xml -->

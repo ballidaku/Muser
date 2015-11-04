@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -51,6 +52,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -69,6 +71,8 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
     Context           con;
     SharedPreferences preferences;
     Util_Class util = new Util_Class();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -120,19 +124,35 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         }
         else
         {*/
-            View activityRootView = findViewById(R.id.main);
-            checkKeyboardHeight(activityRootView);
+        View activityRootView = findViewById(R.id.main);
+        checkKeyboardHeight(activityRootView);
         //}
 
 
+       /* listv_chat.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
+            {
+
+                if(list.get(position).getFriend_id().equalsIgnoreCase(userID))
+                {
+                    view.setBackgroundColor(Color.parseColor("#B3E2FF"));
+                }
+
+                return true;
+            }
+        });*/
+
     }
+
+
 
     @Override
     public void onBackPressed()
     {
 
         changeKeyboardHeight(0);
-        Log.e("onBack", "BACK" );
+        Log.e("onBack", "BACK");
     }
 
     @Override
@@ -233,7 +253,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         super.onResumeFragments();
     }
 
-    boolean		isKeyBoardVisible;
+    boolean isKeyBoardVisible;
 
     private void changeKeyboardHeight(int height)
     {
@@ -259,12 +279,11 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                 int screenHeight     = parentLayout.getRootView().getHeight();
                 int heightDifference = screenHeight - (r.bottom);
 
-
-                Log.e("heightDifference",""+heightDifference);
+                Log.e("heightDifference", "" + heightDifference);
 
                 if (heightDifference > 100)
                 {
-                    preferences.edit().putInt("keyboard_height",heightDifference).apply();
+                    preferences.edit().putInt("keyboard_height", heightDifference).apply();
 
                     isKeyBoardVisible = true;
                     changeKeyboardHeight(heightDifference);
@@ -279,7 +298,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                     isKeyBoardVisible = false;
 
                 }
-
 
             }
         });
@@ -307,7 +325,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
     public void emoji_keyboard(String s)
     {
 
-        if(isKeyBoardVisible)
+        if (isKeyBoardVisible)
         {
             emojicons.setVisibility(View.GONE);
         }
@@ -333,8 +351,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
 
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(edMSG.getWindowToken(), 0);
-
-
 
         }
 
@@ -393,7 +409,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
             adapter = new Chat_sharan_Adapter(con, list, user_img);
             listv_chat.setAdapter(adapter);
 
-
             e.printStackTrace();
         }
         scrollMyListViewToBottom();
@@ -423,9 +438,9 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
     {
         String jsonStr = "";
 
-        String message    = "";
-        String identifier = "";
-        int pos;
+        String message = "";
+        int    pos;
+        String formattedDateJOBJ;
 
         Chat_data chatData;
 
@@ -448,7 +463,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
             }
             catch (Exception e)
             {
-                pos=0;
+                pos = 0;
                 e.printStackTrace();
             }
 
@@ -458,9 +473,9 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         protected void onPreExecute()
         {
 
-            Calendar         c                 = Calendar.getInstance();
-            SimpleDateFormat dfJOBJ            = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String           formattedDateJOBJ = dfJOBJ.format(c.getTime());
+            Calendar         c      = Calendar.getInstance();
+            SimpleDateFormat dfJOBJ = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            formattedDateJOBJ = dfJOBJ.format(c.getTime());
 
             chatData = new Chat_data(frndID, message, "", formattedDateJOBJ);
 
@@ -488,6 +503,8 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                 param.add(new BasicNameValuePair("message", message));
                 // param.add(new BasicNameValuePair("timezone",
                 // UtilClass.timezone));
+
+
 
                 HttpParams httpParams = new BasicHttpParams();
                 httpParams.setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
@@ -548,6 +565,8 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
             try
             {
 
+
+
                 JSONObject jsonobject = new JSONObject(jsonStr);
 
                 String response = jsonobject.getString("status");
@@ -573,4 +592,12 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         }
 
     }
+
+    public void HideEmoji()
+    {
+        emojicons.setVisibility(View.GONE);
+        smilly.setVisibility(View.VISIBLE);
+        keyboard.setVisibility(View.GONE);
+    }
+
 }

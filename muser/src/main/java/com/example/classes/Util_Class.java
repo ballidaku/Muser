@@ -14,7 +14,6 @@ import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
@@ -33,24 +32,25 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ameba.muser.Chat_sharan;
-import com.ameba.muser.Chats;
 import com.ameba.muser.Drawer;
+import com.ameba.muser.Messages;
 import com.ameba.muser.Other_Profile;
 import com.ameba.muser.R;
 import com.ameba.muser.Trainers;
 import com.ameba.muser.Update_Profile;
 import com.ameba.muser.Wallet;
 import com.rockerhieu.emojicon.EmojiconTextView;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -58,6 +58,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
@@ -128,6 +129,7 @@ public class Util_Class
     public static String cancel_subscription               = main + "/user.php?muser=cancel_subscription";
     public static String get_subscription                  = main + "/user.php?muser=get_subscription";
     public static String delete_message                    = main + "/user.php?muser=delete_msg";
+    public static String delete_all_message                    = main + "/user.php?muser=delete_all_msg";
 
     public static final String SENDER_ID = "423011141634";
 
@@ -211,6 +213,18 @@ public class Util_Class
         }
 
     }
+
+
+ /*   public void set_image(Context con,String url,ImageView imageView)
+    {
+        Picasso.with(con)
+                  .load(url)
+                  .placeholder(R.drawable.loading_image)   // optional
+                  .error(R.drawable.no_media)      // optional
+                 // .resize(250, 200)                        // optional
+                //  .rotate(90)                             // optional
+                  .into(imageView);
+    }*/
 
     private void buildAlertMessageNoGps(final Context con)
     {
@@ -454,6 +468,48 @@ public class Util_Class
         {
             super_dialog.setTitle("Confirmation");
             text.setText("Are you sure, you want to delete this message ?");
+            yes.setText("Yes");
+            no.setText("No");
+        }
+
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(super_dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
+        super_dialog.show();
+        super_dialog.getWindow().setAttributes(lp);
+
+        yes.setOnClickListener(y);
+
+        no.setOnClickListener(new OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                super_dialog.dismiss();
+
+            }
+        });
+
+    }
+
+    public static void show_super_dialog(final Context con,Fragment frag, OnClickListener y, String trainer_name)
+    {
+        super_dialog = new Dialog(con);
+        super_dialog.setContentView(R.layout.dialog_super);
+
+        TextView text = (TextView) super_dialog.findViewById(R.id.text);
+        Button   yes  = (Button) super_dialog.findViewById(R.id.yes);
+        Button   no   = (Button) super_dialog.findViewById(R.id.no);
+
+
+        if (frag instanceof Messages)
+        {
+            super_dialog.setTitle("Confirmation");
+            text.setText("Are you sure, you want to delete this Thread ?");
             yes.setText("Yes");
             no.setText("No");
         }

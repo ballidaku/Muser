@@ -1,0 +1,551 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/left_arrow"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="Back"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Update Profile"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:src="@drawable/right_btn" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Personal Information"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <com.example.classes.RoundedCornersGaganImg
+                android:id="@+id/update_profile_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_iamge" />
+
+            <EditText
+                android:id="@+id/update_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/name_icon"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Full Name"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size_14" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/update_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/user_name"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/right_green"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Username"
+                android:inputType="textCapSentences"
+                android:maxLength="30"
+                android:paddingLeft="10dp"
+                android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_"
+                android:textSize="@dimen/text_size_14" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.rockerhieu.emojicon.EmojiconEditText
+                    android:id="@+id/quote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/abs__textfield_search_default_holo_light"
+                    android:drawableLeft="@drawable/quote"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="What’s on your mind"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="120"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size_14" />
+
+        
+
+                <ImageView
+                    android:id="@+id/smilly"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:src="@drawable/smily"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emo_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/emojicons"
+                    android:layout_width="match_parent"
+                    android:layout_height="234dp"
+                    
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!--
+                  <zhaohg.emojiview.EmojiView
+                android:id="@+id/emojiView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#EEEEEE"
+                android:visibility="gone"
+                emoji:indicatorDotsColor="#222222" />
+            -->
+            <!--
+                 <FrameLayout
+                android:id="@+id/emojicons"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="gone" >
+                
+               
+                
+                </FrameLayout>
+            -->
+
+            <EditText
+                android:id="@+id/web_address"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/website"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Web address"
+                android:inputType="textWebEmailAddress"
+                android:maxLength="30"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size_14" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/optional_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Private Information"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/email_icon"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                android:textSize="@dimen/text_size_14" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/phn_no"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size_14" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/old_password"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Old Password"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/text_size_14" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/text_size_14" />
+
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Account"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+
+            <EditText
+                android:id = "@+id/edtxt_paypalid"
+                android:layout_width = "match_parent"
+                android:layout_height = "32dp"
+                android:background = "@drawable/abs__textfield_search_default_holo_light"
+                android:drawableLeft = "@drawable/paypal_icon"
+                android:drawablePadding = "8dp"
+                android:ems = "10"
+                android:gravity = "center_vertical"
+                android:hint = "Paypal ID"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:inputType = "textEmailAddress"
+                android:textColorHint = "@color/Gray"
+                android:textSize = "@dimen/text_size_14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Make Private"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ToggleButton
+                    android:id="@+id/public_private_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/switch_selector"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:id="@+id/block_peoples"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="People I Blocked"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Settings"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:id="@+id/linked_accounts"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Linked Accounts"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Notifications"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ToggleButton
+                    android:id="@+id/notification_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/switch_selector"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Support"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:id="@+id/report_problem"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Report Problem"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Private Policy"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+
+            <TextView
+                android:id="@+id/terms_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Terms and Conditions"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line_color" />
+            
+             <TextView
+                 android:id="@+id/deactivate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                android:text="Deactivate Account"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+             
+             
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/layout/activity_update_profile.xml -->

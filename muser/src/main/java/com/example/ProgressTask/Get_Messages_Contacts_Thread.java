@@ -55,14 +55,14 @@ public class Get_Messages_Contacts_Thread
 			try
 			{
 				HttpPost httppost = new HttpPost(Util_Class.get_messages_contacts);
-				
+
 				HttpParams httpParameters = new BasicHttpParams();
 				List<NameValuePair> param = new ArrayList<NameValuePair>();
 				param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
-				
+
 				httppost.setEntity(new UrlEncodedFormEntity(param));
-				
-				
+				Log.e("Message Param", "" + param);
+
 				DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
 				HttpResponse response = httpclient.execute(httppost);
 				String data = EntityUtils.toString(response.getEntity());
@@ -70,7 +70,7 @@ public class Get_Messages_Contacts_Thread
 				threadMsg(data);
 
 			}
-			catch(Throwable t)
+			catch (Throwable t)
 			{
 				// just end the background thread
 				Log.e("Get_Messages_Contacts_Thread", "Thread  exception " + t);
@@ -80,7 +80,7 @@ public class Get_Messages_Contacts_Thread
 		private void threadMsg(String msg)
 		{
 
-			if(!msg.equals(null) && !msg.equals(""))
+			if (!msg.equals(null) && !msg.equals(""))
 			{
 				Message msgObj = handler.obtainMessage();
 				Bundle b = new Bundle();
@@ -90,55 +90,52 @@ public class Get_Messages_Contacts_Thread
 			}
 		}
 
-		
 		private final Handler handler = new Handler()
 		{
 
 			public void handleMessage(Message msg)
 			{
-				
 
 				String response = msg.getData().getString("message");
 
-				Log.e("Msg response",""+response);
+				Log.e("Msg response", "" + response);
 
-				if((null != response))
+				if ((null != response))
 				{
 					try
 					{
 						String msg_json = new JSONObject(response).getString("status");
-						if(msg_json.equals("Success"))
+						if (msg_json.equals("Success"))
 						{
 							list = new ArrayList<>();
 							JSONArray jo = new JSONObject(response).getJSONArray("recent_chat");
 
-							for(int i = 0; i < jo.length(); i++)
+							for (int i = 0; i < jo.length(); i++)
 							{
 								JSONObject obj = jo.getJSONObject(i);
-								
+
 								HashMap<String, String> map = new HashMap<String, String>();
 								map.put("last_message", obj.getString("last_message"));
 								map.put("read_status", obj.getString("read_status"));
 								map.put("timestamp", obj.getString("timestamp"));
-								
-								JSONObject obj2=obj.getJSONObject("user_info");
+
+								JSONObject obj2 = obj.getJSONObject("user_info");
 								map.put("other_user_id", obj2.getString("user_id"));
 								map.put("other_user_name", obj2.getString("user_name"));
 								map.put("other_profile_image", obj2.getString("profile_image"));
-								
+
 								list.add(map);
 							}
-							
-							con2.add_list(list);
 
+							con2.add_list(list);
 
 						}
 						else
 						{
-							((Messages)con2).on_Failure();
+							((Messages) con2).on_Failure();
 						}
 					}
-					catch(JSONException e)
+					catch (JSONException e)
 					{
 						e.printStackTrace();
 					}

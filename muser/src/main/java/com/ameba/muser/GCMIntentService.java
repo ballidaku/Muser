@@ -170,7 +170,7 @@ class GCMIntentService extends GCMBaseIntentService
                         int message_count = rem_pref.getInt("Session_count", 0) + 1;
                         rem_pref.edit().putInt("Session_count", message_count).apply();
                     }
-                    else  if(message.contains("followed") || message.contains("request"))
+                    else  if(message.contains("followed") || message.contains("following") || message.contains("request"))
                     {
                         int message_count = rem_pref.getInt("Connect_count", 0) + 1;
                         rem_pref.edit().putInt("Connect_count", message_count).apply();

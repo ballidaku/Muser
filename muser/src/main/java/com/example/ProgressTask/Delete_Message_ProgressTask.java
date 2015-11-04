@@ -4,13 +4,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 
 import com.ameba.muser.Chat_sharan;
-import com.ameba.muser.Chats;
-import com.ameba.muser.R;
-import com.example.Adapter.Chat_sharan_Adapter;
+import com.ameba.muser.Messages;
 import com.example.classes.Util_Class;
 
 import org.apache.http.HttpResponse;
@@ -41,6 +40,8 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
     String message_id = "", message = null, msg_json;
     SharedPreferences rem_pref;
     int position;
+    String other_user_id;
+    Fragment frag;
 
     public Delete_Message_ProgressTask(Context con, String message_id,int position)
     {
@@ -48,6 +49,15 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
         this.message_id = message_id;
         rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
         this.position=position;
+    }
+
+    public Delete_Message_ProgressTask(Context con,Fragment frag, int position,String other_user_id)
+    {
+        this.con = con;
+        this.frag=frag;
+        rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
+        this.position=position;
+        this.other_user_id=other_user_id;
     }
 
     protected void onPreExecute()
@@ -61,7 +71,17 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
     @Override
     protected Void doInBackground(String... params)
     {
-        String response = delete();
+
+        String response;
+        if(con instanceof  Chat_sharan)
+        {
+            response = delete_single_message();
+        }
+        else
+        {
+            response = delete_all_message();
+        }
+
         try
         {
             if (response != null)
@@ -109,7 +129,15 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
             @Override
             public void onClick(View v)
             {
-                new Delete_Message_ProgressTask(con, message_id,position).execute();
+                if(con instanceof Chat_sharan)
+                {
+                    new Delete_Message_ProgressTask(con, message_id,position).execute();
+                }
+                else
+                {
+                    new Delete_Message_ProgressTask(con,frag,position,other_user_id).execute();
+                }
+
             }
         };
         System.out.println("message-->" + message);
@@ -123,8 +151,17 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
         }
         else if (message.equals("Success"))
         {
-            Util_Class.show_Toast("Deleted successfully", con);
-            ((Chat_sharan)con).delete_message(position);
+            if(con instanceof Chat_sharan)
+            {
+
+                Util_Class.show_Toast("Deleted successfully", con);
+                ((Chat_sharan) con).delete_message(position);
+            }
+            else
+            {
+                Util_Class.show_Toast("Deleted successfully", con);
+                ((Messages) frag).delete_message(position);
+            }
         }
         else if (message.equals("Failure"))
         {
@@ -136,7 +173,7 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
 
     }
 
-    public String delete()
+    public String delete_single_message()
     {
         HttpPost httppost       = new HttpPost(Util_Class.delete_message);
         HttpParams httpParameters = new BasicHttpParams();
@@ -145,6 +182,45 @@ public class Delete_Message_ProgressTask extends AsyncTask<String, Void, Void>
         {
             List<NameValuePair> param = new ArrayList<NameValuePair>();
             param.add(new BasicNameValuePair("msg_id", message_id));
+            param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
+            httppost.setEntity(new UrlEncodedFormEntity(param));
+            HttpResponse response = httpclient.execute(httppost);
+            String data = EntityUtils.toString(response.getEntity());
+            Log.e("DATAAA", data);
+            return data;
+        }
+        catch (SocketTimeoutException e)
+        {
+            e.printStackTrace();
+            return "Slow";
+        }
+        catch (ConnectTimeoutException e)
+        {
+            e.printStackTrace();
+            return "Slow";
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+            return "null";
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return "Slow";
+        }
+    }
+
+
+    public String delete_all_message()
+    {
+        HttpPost httppost       = new HttpPost(Util_Class.delete_all_message);
+        HttpParams httpParameters = new BasicHttpParams();
+        DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
+        try
+        {
+            List<NameValuePair> param = new ArrayList<NameValuePair>();
+            param.add(new BasicNameValuePair("other_id", other_user_id));
             param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
             httppost.setEntity(new UrlEncodedFormEntity(param));
             HttpResponse response = httpclient.execute(httppost);

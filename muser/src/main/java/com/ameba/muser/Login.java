@@ -467,6 +467,11 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
                 });
 
 
+
+
+        stop_fb();
+
+
     }
 
 
@@ -921,7 +926,7 @@ class Login extends FragmentActivity implements OnClickListener, OnTouchListener
                     else
                     {
                         registerInBackground();
-                        System.out.println("Attention" + "Registration Id not found");
+                        Log.e("Attention" , "Registration Id not found");
                     }
 
 

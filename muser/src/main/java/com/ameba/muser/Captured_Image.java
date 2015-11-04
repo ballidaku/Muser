@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcel;
 import android.provider.MediaStore;
 import android.provider.SyncStateContract;
 import android.support.v4.app.FragmentActivity;
@@ -57,6 +58,8 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.share.Sharer;
+import com.facebook.share.internal.ShareFeedContent;
+import com.facebook.share.model.ShareContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareButton;
@@ -1640,8 +1643,12 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
                 twitter_text.setCompoundDrawablesWithIntrinsicBounds(R.drawable.twitter_new_selected, 0, 0, 0);
             }
         }
-        else if (requestCode == 3)
+        else if (requestCode == 3 && data.getStringExtra("url") != null)
         {
+
+            Log.e("Intent Data",""+data.getStringExtra("url"));
+
+
             if (type.equals("I"))
             {
                 image_path = data.getStringExtra("url");

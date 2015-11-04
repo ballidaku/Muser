@@ -17,7 +17,7 @@
 package com.rockerhieu.emojicon;
 
 import com.ameba.muser.Captured_Image;
-import com.ameba.muser.Chats;
+import com.ameba.muser.Chat_sharan;
 import com.ameba.muser.R;
 import com.ameba.muser.View_All_Comments;
 
@@ -25,9 +25,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 /**
@@ -102,9 +100,9 @@ public class EmojiconEditText extends EditText {
 			{
 				((View_All_Comments) ac).HideEmoji();
 			}
-			else if ( ac instanceof Chats ) 
+			else if ( ac instanceof Chat_sharan)
 			{
-				((Chats) ac).HideEmoji();
+				((Chat_sharan) ac).HideEmoji();
 			}
 			else if(con instanceof Captured_Image)
 			{

@@ -78,9 +78,15 @@ public class Messages extends Fragment
         hide_temp_logo();
 
         this.list = list;
-        adapter = new Messages_Adapter(con, list);
+        adapter = new Messages_Adapter(con,con2, list);
         messages_list.setAdapter(adapter);
 
+    }
+
+    public void delete_message(int pos)
+    {
+        list.remove(pos);
+        add_list(list);
     }
 
     private void show_temp_logo()

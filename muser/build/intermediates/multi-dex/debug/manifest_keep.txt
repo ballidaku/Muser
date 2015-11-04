@@ -19,7 +19,6 @@
 -keep class com.ameba.muser.Captured_Image { <init>(); }
 -keep class com.ameba.muser.Tag_People { <init>(); }
 -keep class com.ameba.muser.Camera { <init>(); }
--keep class com.ameba.muser.Chats { <init>(); }
 -keep class com.ameba.muser.Chat_sharan { <init>(); }
 -keep class com.ameba.muser.Global_WebView { <init>(); }
 -keep class com.ameba.muser.Linked_Accounts { <init>(); }
@@ -27,6 +26,7 @@
 -keep class com.ameba.muser.Cancel_Sessions { <init>(); }
 -keep class com.ameba.muser.Total_Clients { <init>(); }
 -keep class org.appsroid.fxpro.PhotoActivity { <init>(); }
+-keep class com.ameba.muser.Dialog_Insert_Paypal { <init>(); }
 -keep class com.facebook.FacebookActivity { <init>(); }
 -keep class com.facebook.FacebookContentProvider { <init>(); }
 -keep class com.ameba.muser.GCMIntentService { <init>(); }

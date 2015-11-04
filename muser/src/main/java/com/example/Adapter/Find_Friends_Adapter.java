@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +15,6 @@ import android.widget.TextView;
 
 import com.example.ProgressTask.Set_Block_Follow_Users_ProgressTask;
 import com.example.classes.RoundedCornersGaganImg;
-import com.ameba.muser.Chats;
-import com.ameba.muser.Drawer;
 import com.ameba.muser.R;
 
 public class Find_Friends_Adapter extends BaseAdapter
