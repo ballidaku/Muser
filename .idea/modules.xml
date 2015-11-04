@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Muser.iml" filepath="$PROJECT_DIR$/Muser.iml" />
       <module fileurl="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aviaryAndroidSDKmaster/aviaryAndroidSDKmaster.iml" filepath="$PROJECT_DIR$/aviaryAndroidSDKmaster/aviaryAndroidSDKmaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cameraPro/cameraPro.iml" filepath="$PROJECT_DIR$/cameraPro/cameraPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/facebook/facebook.iml" filepath="$PROJECT_DIR$/facebook/facebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/muser/muser.iml" filepath="$PROJECT_DIR$/muser/muser.iml" />
       <module fileurl="file://$PROJECT_DIR$/pull_To_Refresh_Llibrary/pull_To_Refresh_Llibrary.iml" filepath="$PROJECT_DIR$/pull_To_Refresh_Llibrary/pull_To_Refresh_Llibrary.iml" />

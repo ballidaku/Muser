@@ -7,46 +7,41 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* .gitignore
-* README
-* android-tests\
-* android-tests\.classpath
-* android-tests\.project
-* android-tests\default.properties
-* android-tests\gen\
-* android-tests\gen\net\
-* android-tests\gen\net\video\
-* android-tests\gen\net\video\trimmer\
-* android-tests\gen\net\video\trimmer\test\
-* android-tests\gen\net\video\trimmer\test\R.java
-* android-tests\proguard.cfg
+* .idea/
+* .idea/.name
+* .idea/Effects-Pro-1.0.iml
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* LICENSE
+* README.md
+* ic_launcher-web.png
+* proguard-project.txt
 
-Replaced Libraries with Dependencies:
--------------------------------------
-The importer recognized the following library projects as third party
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
 libraries and replaced them with Gradle dependencies instead. This has
 the advantage that more explicit version information is known, and the
 libraries can be updated automatically. However, it is possible that
-the source files in your project were of an older version than the
+the .jar file in your project was of an older version than the
 dependency we picked, which could render the project not compileable.
-You can disable the library replacement in the import wizard and try
-again:
+You can disable the jar replacement in the import wizard and try again:
 
-appcompat-v7 => [com.android.support:appcompat-v7:19.+]
+android-support-v4.jar => com.android.support:support-v4:20.+
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* android-tests\res\ => videotrimmer\src\androidTest\res\
-* android-tests\src\ => videotrimmer\src\androidTest\java\
-* AndroidManifest.xml => videotrimmer\src\main\AndroidManifest.xml
-* jni\ => videotrimmer\src\main\jni\
-* libs\armeabi\libffmpeg.so => videotrimmer\src\main\jniLibs\armeabi\libffmpeg.so
-* res\ => videotrimmer\src\main\res\
-* src\ => videotrimmer\src\main\java\
-* test\ => videotrimmer\src\main\java\
+* AndroidManifest.xml => cameraPro/src/main/AndroidManifest.xml
+* res/ => cameraPro/src/main/res/
+* src/ => cameraPro/src/main/java/
 
 Missing Android Support Repository:
 -----------------------------------
