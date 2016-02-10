@@ -90,6 +90,8 @@ public class Get_unreadChat extends AsyncTask<Void, Void, String>
 			// param.add(new BasicNameValuePair("timezone",
 			// UtilClass.timezone));
 
+			//Log.e("Get Unread messages",""+param.toString());
+
 			HttpParams httpParams = new BasicHttpParams();
 			httpParams.setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
 

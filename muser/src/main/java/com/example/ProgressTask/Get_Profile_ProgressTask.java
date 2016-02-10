@@ -165,33 +165,32 @@ public class Get_Profile_ProgressTask extends AsyncTask<String, Void, Void>
 						}
 						else
 						{
-						rem_pref.edit().putString("user_id", jo.getString("user_id")).commit();
-						rem_pref.edit().putString("key", jo.getString("key")).commit();
+						rem_pref.edit().putString("user_id", jo.getString("user_id")).apply();
+						rem_pref.edit().putString("key", jo.getString("key")).apply();
 //						rem_pref.edit().putString("password", jo.getString("password")).commit();
-						rem_pref.edit().putString("user_name", jo.getString("user_name")).commit();
-						rem_pref.edit().putString("full_name", jo.getString("full_name")).commit();
+						rem_pref.edit().putString("user_name", jo.getString("user_name")).apply();
+						rem_pref.edit().putString("full_name", jo.getString("full_name")).apply();
 						
-						rem_pref.edit().putString("user_description", jo.getString("user_description")).commit();
-						rem_pref.edit().putString("profile_image", jo.getString("profile_image")).commit();
-						rem_pref.edit().putString("privacy_status", jo.getString("privacy_status")).commit();
-						rem_pref.edit().putString("web_address", jo.getString("web_address")).commit();
-						rem_pref.edit().putString("phone_number", jo.getString("phone_number")).commit();
-						rem_pref.edit().putString("registration_type", jo.getString("registration_type")).commit();
-						rem_pref.edit().putString("member_type", jo.getString("member_type")).commit();
-						
-						
+						rem_pref.edit().putString("user_description", jo.getString("user_description")).apply();
+						rem_pref.edit().putString("profile_image", jo.getString("profile_image")).apply();
+						rem_pref.edit().putString("privacy_status", jo.getString("privacy_status")).apply();
+						rem_pref.edit().putString("web_address", jo.getString("web_address")).apply();
+						rem_pref.edit().putString("phone_number", jo.getString("phone_number")).apply();
+						rem_pref.edit().putString("registration_type", jo.getString("registration_type")).apply();
+						rem_pref.edit().putString("member_type", jo.getString("member_type")).apply();
+							rem_pref.edit().putString("paypal_id", jo.getString("paypal_id")).apply();
 						
 						JSONObject jo2 = jo.getJSONObject("optional_info");
-						rem_pref.edit().putString("facebook_name", jo2.getString("facebook_name")).commit();
-						rem_pref.edit().putString("facebook_phone", jo2.getString("facebook_phone")).commit();
-						rem_pref.edit().putString("instagram_name", jo2.getString("instagram_name")).commit();
-						rem_pref.edit().putString("instagram_phone", jo2.getString("instagram_phone")).commit();
-						rem_pref.edit().putString("twitter_name", jo2.getString("twitter_name")).commit();
-						rem_pref.edit().putString("twitter_phone", jo2.getString("twitter_phone")).commit();
+						rem_pref.edit().putString("facebook_name", jo2.getString("facebook_name")).apply();
+							rem_pref.edit().putString("facebook_phone", jo2.getString("facebook_phone")).apply();
+						rem_pref.edit().putString("instagram_name", jo2.getString("instagram_name")).apply();
+						rem_pref.edit().putString("instagram_phone", jo2.getString("instagram_phone")).apply();
+						rem_pref.edit().putString("twitter_name", jo2.getString("twitter_name")).apply();
+						rem_pref.edit().putString("twitter_phone", jo2.getString("twitter_phone")).apply();
 						JSONObject jo3 = jo.getJSONObject("profile_counts");
-						rem_pref.edit().putString("followers_count", jo3.getString("followers_count")).commit();
-						rem_pref.edit().putString("following_count", jo3.getString("following_count")).commit();
-						rem_pref.edit().putString("post_count", jo3.getString("post_count")).commit();
+						rem_pref.edit().putString("followers_count", jo3.getString("followers_count")).apply();
+						rem_pref.edit().putString("following_count", jo3.getString("following_count")).apply();
+						rem_pref.edit().putString("post_count", jo3.getString("post_count")).apply();
 						Log.e("Preference", "" + rem_pref.getAll());
 						
 						//These are static values for MY Profile section 

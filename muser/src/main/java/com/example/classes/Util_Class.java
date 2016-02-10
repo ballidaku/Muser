@@ -21,6 +21,8 @@ import android.location.LocationManager;
 import android.media.ExifInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -41,6 +43,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Async_Thread.Super_AsyncTask;
 import com.ameba.muser.Chat_sharan;
 import com.ameba.muser.Drawer;
 import com.ameba.muser.Messages;
@@ -78,7 +81,7 @@ public class Util_Class
     //static String				main								= "http://muser.amebasoftware.com";
 
     //static String				main="http://108.179.199.92:8025";
-    static String main = "http://muser.amebatechnologies.com";
+    public static String main = "http://muser.amebatechnologies.com";
 
     public static String registration            = main + "/user.php?muser=register";
     public static String login                   = main + "/user.php?muser=login";
@@ -124,7 +127,7 @@ public class Util_Class
     public static String save_messages                     = main + "/user.php?muser=save_messages";
     public static String get_funds                         = main + "/user.php?muser=get_fund";
     public static String add_fund                          = main + "/user.php?muser=add_fund";
-    public static String withdraw_funds                    = main + "/user.php?muser=withdraw_fund";
+    public static String withdraw_funds                    = main + "/user.php?muser=paypal_deposit"; /*withdraw_fund"*/
     public static String withdraw_get_trainers             = main + "/user.php?muser=gettrainer";
     public static String cancel_subscription               = main + "/user.php?muser=cancel_subscription";
     public static String get_subscription                  = main + "/user.php?muser=get_subscription";
@@ -157,6 +160,22 @@ public class Util_Class
     //Client
     public static final String TWITTER_KEY    = "patOLLgA9Z8B1zgiNvj8mCGyp";
     public static final String TWITTER_SECRET = "g2uiJqmrgIgYDbwBZxjIGHIw2DpUBFEOqPIpAwDQyNa5CPw3B3";
+
+
+
+    public static void execute(Super_AsyncTask asyncTask)
+    {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+        {
+            asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        }
+        else
+        {
+            asyncTask.execute();
+        }
+
+    }
 
     public static void dismiss_dialog()
     {
@@ -382,7 +401,14 @@ public class Util_Class
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
-        internet_dialog.show();
+        try
+        {
+            internet_dialog.show();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         internet_dialog.getWindow().setAttributes(lp);
 
         retry.setOnClickListener(ret);
@@ -903,7 +929,7 @@ public class Util_Class
         }
     }
 
-    public String get_time(String date)
+/*    public String get_time(String date)
     {
         String           time              = null;
         Calendar         c                 = Calendar.getInstance();
@@ -927,7 +953,7 @@ public class Util_Class
         }
 
         return time;
-    }
+    }*/
 
     public String get_time2(String date)
     {
@@ -968,6 +994,43 @@ public class Util_Class
         return date_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(now);
 
     }
+
+    public String get_date(String date)
+    {
+        //Log.e("date",""+date);
+        SimpleDateFormat input_format  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat output_format = new SimpleDateFormat("MMM dd yyyy hh:mm a");
+
+        Date   inputDate = null;
+        String returnDate;
+        try
+        {
+            inputDate = input_format.parse(date.trim());
+        }
+        catch (ParseException e)
+        {
+
+            e.printStackTrace();
+            return "";
+        }
+
+        if (inputDate == null)
+        {
+            returnDate = "";
+        }
+        else
+        {
+            returnDate = output_format.format(inputDate);
+        }
+
+        return returnDate;
+
+    }
+
+
+
+
+
 
     public static String emoji_decode(String text) throws UnsupportedEncodingException
     {

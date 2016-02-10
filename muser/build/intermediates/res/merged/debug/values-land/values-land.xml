@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values-land/values-land.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/values-land/values-land.xml -->
     <eat-comment/>
     <dimen name="abs__action_bar_default_height">40dip</dimen>
     <dimen name="abs__action_bar_icon_vertical_padding">4dip</dimen>
@@ -8,7 +8,7 @@
     <dimen name="abs__action_bar_subtitle_text_size">12dp</dimen>
     <dimen name="abs__action_bar_subtitle_top_margin">-2dp</dimen>
     <dimen name="abs__action_bar_title_text_size">16dp</dimen>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values-land/values-land.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/values-land/values-land.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Effects Pro</string>

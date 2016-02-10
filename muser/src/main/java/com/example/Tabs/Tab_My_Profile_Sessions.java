@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.ameba.muser.Other_Profile;
 import com.example.Adapter.My_Profile_Videos_Adapter;
 import com.example.Adapter.Trending_Pictures_Adapter;
 import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
@@ -119,7 +120,7 @@ public class Tab_My_Profile_Sessions extends Fragment
 			mIsReceiverRegistered = true;
 		}
 
-		Log.e("onResume:Tab_MyProfile_Session", rem_pref.getString("current_frag", ""));
+		//Log.e("onResume:Tab_MyProfile_Session", rem_pref.getString("current_frag", ""));
 		if (rem_pref.getString("current_frag","").equals("My Profile") ||rem_pref.getString("current_frag","").equals("Home") || getActivity().getLocalClassName().equals("Other_Profile"))
 		{
 			refresh();
@@ -160,7 +161,7 @@ public class Tab_My_Profile_Sessions extends Fragment
 		if(list.size()==0)
 		{
 			show_temp_logo();
-			//error_message.setText(con.getResources().getString(R.string.please_wait));
+			//error_message.setText(con.getResources().getString(R.string.please_whttp://officechat.amebasoftwares.com/ufs/rocketchat_uploads/XuRy3KSDsNZARieGg/Clipboardait));
 			error_message.setText("Training session are available for subscribed users. To view your selected trainer(s) sessions chose the “train with” option from their profile.");
 		}
 		
@@ -186,7 +187,8 @@ public class Tab_My_Profile_Sessions extends Fragment
 		}
 		else
 		{
-			new Get_Pictures_Videos_ProgressTask(con, con2, Global.get_user_id(), "V", "").execute();
+//			Global.get_user_id()
+			new Get_Pictures_Videos_ProgressTask(con, con2,Global.get_user_id(), "V", "").execute();
 		}
 	}
 

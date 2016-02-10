@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1 ч</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1 с</item>
         <item quantity="other">%d с</item>
     </plurals>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">При загрузке изображения возникла неожиданная ошибка.</string>
     <string name="com_facebook_internet_permission_error_message">Для входа в WebView необходимо разрешение INTERNET</string>
@@ -32,7 +32,7 @@
     <string name="com_facebook_send_button_text">Отправить</string>
     <string name="com_facebook_share_button_text">Поделиться</string>
     <string name="com_facebook_tooltip_default">Новинка! У вас все под контролем — выбирайте, какой информацией вы хотите поделиться с приложениями.</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/common_strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Требуется обновить приложение Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Для работы этого приложения требуется обновить Android Wear."</string>
@@ -65,7 +65,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Войти"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Войти в аккаунт Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Сервисы Google Play, необходимые для работы приложения, сейчас недоступны. Обратитесь за помощью к разработчику."</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Отмена</string>
     <string name="dgts__communication_error">Ошибка связи</string>
@@ -111,35 +111,35 @@
     <string name="dgts_pin_code_terms">Вы уже ввели код двухэтапной проверки на сайте digits.com</string>
     <string name="dgts_verify">Проверить</string>
     <string name="dgts_verifying">Проверка</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Отпр</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="pull_to_refresh_pull_label">Потяните для обновления…</string>
     <string name="pull_to_refresh_refreshing_label">Загрузка…</string>
     <string name="pull_to_refresh_release_label">Отпустите для обновления…</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Разрешить</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Загрузка твита</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Войти с учётной записью Твиттера</string>
     <string name="tw__not_now_btn_txt">Не сейчас</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">dd.MM.y</string>
     <string name="tw__relative_date_format_short">d MMM</string>
     <string name="tw__retweeted_by_format">Ретвитнуто пользователем %1$s</string>
     <string name="tw__share_content_format">Посмотрите твит пользователя \@%1$s: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Получать обновления и другую информацию от %1$s, если вы позволите им видеть ваш адрес электронной почты в вашем профиле Твиттера \@%2$s</string>
     <string name="tw__share_email_title">Поделиться своим адресом электронной почты</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Твит от %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Поделиться твитом</string>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/colors_appthemeblue.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/colors_appthemeblue.xml -->
     <eat-comment/>
     <color name="appthemeblue_color">#33b5e5</color>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/colors_appthemecolorize.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/colors_appthemecolorize.xml -->
     <eat-comment/>
     <color name="appthemecolorize_color">#e51a51</color>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/colors_appthemegreen.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/colors_appthemegreen.xml -->
     <eat-comment/>
     <color name="appthemegreen_color">#99cc00</color>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Effects Pro</string>
@@ -69,18 +69,18 @@
     <string name="saved">Please find your image at:\n:url:"</string>
     <string name="take_photo_camera">Take photo</string>
     <string name="yes">Yes</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppThemeBlack" parent="@android:style/Theme.Translucent.NoTitleBar">
     </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/themes_appthemeblue.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/themes_appthemeblue.xml -->
     <eat-comment/>
     <style name="AppThemeBlue" parent="@android:style/Theme.Translucent.NoTitleBar">
 
     <item name="android:seekBarStyle">@style/SeekBarAppThemeBlue</item>
 
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/themes_appthemecolorize.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/themes_appthemecolorize.xml -->
     <eat-comment/>
     <style name="AppThemeColorize" parent="@android:style/Theme.Translucent.NoTitleBar">
 
@@ -91,14 +91,14 @@
     <item name="android:seekBarStyle">@style/SeekBarAppThemeColorize</item>
 
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/themes_appthemegreen.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/themes_appthemegreen.xml -->
     <eat-comment/>
     <style name="AppThemeGreen" parent="@android:style/Theme.Translucent.NoTitleBar">
 
     <item name="android:seekBarStyle">@style/SeekBarAppThemeGreen</item>
 
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/styles_appthemecolorize.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/styles_appthemecolorize.xml -->
     <eat-comment/>
     <style name="ButtonAppThemeColorize" parent="android:Widget.Button">
 	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
@@ -109,7 +109,7 @@
     <style name="ImageButtonAppThemeColorize" parent="android:Widget.ImageButton">
 	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/styles_appthemeblue.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/styles_appthemeblue.xml -->
     <eat-comment/>
     <style name="SeekBarAppThemeBlue" parent="android:Widget.SeekBar">
       <item name="android:progressDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
@@ -121,7 +121,7 @@
       <item name="android:paddingLeft">16dip</item>
       <item name="android:paddingRight">16dip</item>
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/styles_appthemecolorize.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/styles_appthemecolorize.xml -->
     <eat-comment/>
     <style name="SeekBarAppThemeColorize" parent="android:Widget.SeekBar">
       <item name="android:progressDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
@@ -133,7 +133,7 @@
       <item name="android:paddingLeft">16dip</item>
       <item name="android:paddingRight">16dip</item>
   </style>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/values/styles_appthemegreen.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values/styles_appthemegreen.xml -->
     <eat-comment/>
     <style name="SeekBarAppThemeGreen" parent="android:Widget.SeekBar">
       <item name="android:progressDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>

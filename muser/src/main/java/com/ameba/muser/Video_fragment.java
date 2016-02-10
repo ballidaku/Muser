@@ -140,15 +140,29 @@ public class Video_fragment extends Fragment implements OnClickListener, OnTouch
 	@Override
 	public void onPause()
 	{
-		onOrientationChange.disable();
-		if(camera != null)
+
+
+		if(recording)
 		{
-			camera.stopPreview();
-			camera.setPreviewCallback(null);
-			camera.lock();
-			camera.release();
-			camera = null;
+			start_work();
 		}
+		else
+		{
+			onOrientationChange.disable();
+			if (camera != null)
+			{
+				camera.stopPreview();
+				camera.setPreviewCallback(null);
+				camera.lock();
+				camera.release();
+				camera = null;
+			}
+		}
+
+
+
+
+
 		super.onPause();
 	}
 	
@@ -669,9 +683,14 @@ public void refresh_recoder()
 		try
 		{
 			recorder.stop();
-			camera.reconnect();
+
+            camera.stopPreview();
+            camera.setPreviewCallback(null);
+            camera.lock();
+            camera.release();
+            camera = null;
 		}
-		catch(IOException e)
+		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
@@ -691,25 +710,30 @@ public void refresh_recoder()
 		if(recording)
 		{
 			counter.cancel();
-			
+
+			//*******************************************Stop Timer*****************************************************
 			mHandler.removeCallbacks(startTimer);
 			stopped = true;
+			//************************************************************************************************
+
 
 			try
 			{
 
 				recorder.stop();
+				recorder.release();
+				recorder = null;
 				camera.reconnect();
 			}
-			catch(IOException e)
+			catch(Exception e)
 			{
 				e.printStackTrace();
 			}
 			recording = false;
-			recorder = null;
+
 		}
 
-		((Activity) con).finish();
+		getActivity().finish();
 	}
 	
 

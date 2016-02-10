@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 import com.example.Adapter.Trending_Videos_Adapter;
 import com.example.ProgressTask.Get_Home_Pictures_Videos_ProgressTask;
+import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
 import com.example.classes.Global;
 import com.ameba.muser.Drawer;
 import com.ameba.muser.R;
@@ -121,15 +122,25 @@ public class Tab_Home_Sessions extends Fragment
 
 
 
-		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
+		/*if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
 		{
 			new Get_Home_Pictures_Videos_ProgressTask(con,con2, Global.get_user_id(), "V","S").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 		}
 		else
 		{
 			new Get_Home_Pictures_Videos_ProgressTask(con,con2, Global.get_user_id(), "V","S").execute();
+		}*/
+
+
+		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
+		{
+			new Get_Pictures_Videos_ProgressTask(con, con2, Global.get_user_id(), "V", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 		}
-		
+		else
+		{
+			//			Global.get_user_id()
+			new Get_Pictures_Videos_ProgressTask(con, con2,Global.get_user_id(), "V", "").execute();
+		}
 	}
 
 

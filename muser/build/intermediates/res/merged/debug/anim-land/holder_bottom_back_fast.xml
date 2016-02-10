@@ -9,4 +9,4 @@
         android:interpolator="@android:anim/accelerate_interpolator"
         android:toXDelta="100%" />
 
-</set><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/anim-land/holder_bottom_back_fast.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/anim-land/holder_bottom_back_fast.xml -->
+</set><!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/anim-land/holder_bottom_back_fast.xml --><!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/anim-land/holder_bottom_back_fast.xml -->

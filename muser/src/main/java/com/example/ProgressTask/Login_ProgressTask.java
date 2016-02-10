@@ -116,7 +116,7 @@ public class Login_ProgressTask extends AsyncTask<String, Void, Void>
 						rem_pref.edit().putString("registration_type", jo.getString("registration_type")).apply();
 						rem_pref.edit().putString("member_type", jo.getString("member_type")).apply();
 						rem_pref.edit().putString("full_name", jo.getString("full_name")).apply();
-						//rem_pref.edit().putString("paypal_id", jo.getString("paypal_id")).apply();
+						rem_pref.edit().putString("paypal_id", jo.getString("paypal_id")).apply();
 
 						JSONObject jo2 = jo.getJSONObject("optional_info");
 						rem_pref.edit().putString("facebook_name", jo2.getString("facebook_name")).apply();

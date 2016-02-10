@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.ameba.muser.Other_Profile;
 import com.example.Adapter.My_Profile_Pictures_Adapter;
 import com.example.Adapter.My_Profile_Videos_Adapter;
 import com.example.ProgressTask.Get_My_Favoutite_Pictures_Videos_Users_ProgressTask;
@@ -160,7 +161,7 @@ public class Tab_My_Profile_Videos extends Fragment
 			error_message.setText("You got 15 seconds! Promote your session, share your fitness story, show us who you are! ");
 		}
 		
-		Log.e("Where", "Tab_My_Profile_Videos");
+		//Log.e("Where", "Tab_My_Profile_Videos");
 		
 
 	/*	if(Global.is_public_or_private.equals("PR") && Global.is_follow.equals("N"))
@@ -175,10 +176,10 @@ public class Tab_My_Profile_Videos extends Fragment
 
 		//}
 
-
+		// TODO:by Gagan ->user id removed.
 		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
 		{
-			new Get_Pictures_Videos_ProgressTask(con, con2, Global.get_user_id(), "V", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+			new Get_Pictures_Videos_ProgressTask(con, con2,  Global.get_user_id(), "V", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 		}
 		else
 		{

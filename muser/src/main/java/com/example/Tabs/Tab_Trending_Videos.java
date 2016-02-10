@@ -136,6 +136,12 @@ public class Tab_Trending_Videos extends Fragment
 			adapter.notifyDataSetChanged();
 		}
 
+		if(list.size()==0)
+		{
+			on_Failure();
+		}
+
+
 	}
 	
 	public void on_Failure()

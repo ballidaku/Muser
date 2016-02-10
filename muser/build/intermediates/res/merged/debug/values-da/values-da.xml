@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1t</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1s</item>
         <item quantity="other">%ds</item>
     </plurals>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Der opstod en uventet fejl under download af et billede.</string>
     <string name="com_facebook_internet_permission_error_message">WebView-login kræver tilladelse til INTERNET</string>
@@ -32,7 +32,7 @@
     <string name="com_facebook_send_button_text">Send</string>
     <string name="com_facebook_share_button_text">Del</string>
     <string name="com_facebook_tooltip_default">Nyhed! Du har styringen – vælg de oplysninger, som du vil dele med apps.</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-da/common_strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-da/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"En applikation kræver en opdatering af appen Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Denne app kan ikke køre, medmindre du opdaterer appen Android Wear."</string>
@@ -65,7 +65,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Log ind"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Log ind med Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Denne app kræver en eller flere Google Play-tjenester, der ikke er tilgængelige i øjeblikket. Kontakt udvikleren for at få hjælp."</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Annuller</string>
     <string name="dgts__communication_error">Kommunikationsfejl</string>
@@ -111,30 +111,30 @@
     <string name="dgts_pin_code_terms">Du har tidligere sat en 2-trins-bekræftelseskode på digits.com</string>
     <string name="dgts_verify">Verificer</string>
     <string name="dgts_verifying">Verificerer</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Send</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Tillad</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Indlæser tweet</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Log ind med Twitter</string>
     <string name="tw__not_now_btn_txt">Ikke nu</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">d/M/y</string>
     <string name="tw__relative_date_format_short">d. MMM</string>
     <string name="tw__retweeted_by_format">Retweetet af %1$s</string>
     <string name="tw__share_content_format">Tjek \@%1$s\s tweet: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Få opdateringer og andre informationer fra %1$s, når du giver dem adgang til din e-mail på din Twitter-konto \@%2$s</string>
     <string name="tw__share_email_title">Del din e-mailadresse</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-da/values-da.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet fra %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Del tweet</string>

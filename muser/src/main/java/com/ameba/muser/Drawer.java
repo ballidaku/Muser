@@ -985,8 +985,19 @@ class Drawer extends FragmentActivity
                         {
                             if(listFile[i].getAbsolutePath().length() != 0)
                             {
-                                MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-                                retriever.setDataSource(s);
+                                MediaMetadataRetriever retriever = null;
+                                try
+                                {
+                                    retriever = new MediaMetadataRetriever();
+                                    retriever.setDataSource(s);
+                                }
+                                    catch (Exception e)
+                                    {
+
+                                        e.printStackTrace();
+                                        break;
+                                    }
+
                                 int d = Integer.parseInt(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
 
                                 if(d <= time && d != 0)
@@ -998,10 +1009,13 @@ class Drawer extends FragmentActivity
 
                                     fileList.add(video_data);
                                 }
+
+
+
                             }
 
                         }
-                        catch (Exception e)
+                        catch (Exception | Error e)
                         {
                             e.printStackTrace();
 

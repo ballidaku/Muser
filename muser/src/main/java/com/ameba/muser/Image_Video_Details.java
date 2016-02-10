@@ -22,6 +22,7 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.media.MediaPlayer.OnSeekCompleteListener;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.Spannable;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
@@ -104,6 +105,9 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 	
 	Animation  ani ;
 
+	int count=0;
+	boolean double_tap=false;
+
 	@SuppressWarnings({ "unchecked", "static-access", "deprecation" })
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -121,7 +125,7 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 		
 
 		title_header = (TextView) findViewById(R.id.title_header);
-		image = (RoundedCornersGaganImg) findViewById(R.id.image);
+		(image = (RoundedCornersGaganImg) findViewById(R.id.image)).setOnClickListener(this);
 		video_play_icon=(ImageView) findViewById(R.id.video_play_icon);
 		mVideoView = (VideoView) findViewById(R.id.videoView);
 		video_duration=(TextView)findViewById(R.id.video_duration);
@@ -193,10 +197,27 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 		}
 		else if(getIntent().getStringExtra("from_where").equals("Notification"))
 		{
+
+			try
+			{
+				set_data((HashMap<String, String>) getIntent().getSerializableExtra("map"));
+			}
+			catch(UnsupportedEncodingException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
 			post_id = getIntent().getStringExtra("post_id");
 			user_id= getIntent().getStringExtra("user_id");
-			
-			new Get_Pictures_Videos_ProgressTask(con,"","",post_id,getIntent().getStringExtra("which")).execute();
+
+
+			// i inserted the new AsyncTask which gets the data from server and then sets thats why there is no need of using this service here.
+			//new Get_Pictures_Videos_ProgressTask(con,"","",post_id,getIntent().getStringExtra("which")).execute();
+
+
+
 		}
 		else if(getIntent().getStringExtra("from_where").equals("serch_tags"))
 		{
@@ -282,41 +303,29 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 				}
 				break;
 
-			case R.id.like_image:  
+			case R.id.like_image:
 
-				if(is_like = !is_like)
+				set_Like_UnLike();
+
+				break;
+
+
+			//Double tab on imageview ,like
+
+			case R.id.image:
+
+				if(count == 0)
 				{
-					like_image.setImageResource(R.drawable.like_selected);
+					count++;
+					new MyCountDownTimer(250, 250).start();
 
-					l_c++;
-					likes_count.setText(l_c + " like(s)");
-					
-				
-					
-					HashMap<String, String> map = new HashMap<String, String>();
-					map.put("post_id", post_id);
-					map.put("action", "L");
-					map.put("data", "");
-					//map.put("type", type);
-					new Add_Like_Comment_Repost_ProgressTask(con, map).execute();
 				}
 				else
 				{
-					like_image.setImageResource(R.drawable.like);
 
-					l_c--;
-					likes_count.setText(l_c + " like(s)");
-					
-					
-					
-					HashMap<String, String> map = new HashMap<String, String>();
-					map.put("post_id", post_id);
-					map.put("action", "U");
-					map.put("data", "");
-					//map.put("type", type);
-
-					new Add_Like_Comment_Repost_ProgressTask(con, map).execute();
+					double_tap = true;
 				}
+
 
 				break;
 
@@ -342,6 +351,10 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 				break;
 				
 			case R.id.recommend:
+
+
+				int  res = data_hashmap.get("is_self_recommended").equals("N") ? R.drawable.recommend_selected : R.drawable.recommend_unselected ;
+				recommend.setImageResource(res);
 				
 				String value=data_hashmap.get("is_self_recommended").equals("Y")?"N":"Y";
 				new Recommend_Unrecommend_Post_ProgressTask(con,data_hashmap.get("post_id"), value).execute();
@@ -370,6 +383,8 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 				Intent iii = new Intent(con, Other_Profile.class);
 				// i.putExtra("user_id", list.get(position).get("user_id"));
 				con.startActivity(iii);*/
+
+				Log.e("user_id",""+user_id);
 				
 				if(user_id.equals(rem_pref.getString("user_id", "")))
 				{
@@ -392,6 +407,72 @@ public class Image_Video_Details extends Activity implements OnClickListener /* 
 		}
 
 	}
+
+
+	public class MyCountDownTimer extends CountDownTimer
+	{
+
+		public MyCountDownTimer(long startTime, long interval)
+		{
+			super(startTime, interval);
+		}
+
+		@Override
+		public void onFinish()
+		{
+			count=0;
+
+			if(double_tap)
+			{
+
+				double_tap=false;
+
+				set_Like_UnLike();
+			}
+		}
+
+		@Override
+		public void onTick(long millisUntilFinished){}
+	}
+
+
+	public void set_Like_UnLike()
+	{
+		if(is_like = !is_like)
+		{
+			like_image.setImageResource(R.drawable.like_selected);
+
+			l_c++;
+			likes_count.setText(l_c + " like(s)");
+
+
+
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("post_id", post_id);
+			map.put("action", "L");
+			map.put("data", "");
+			//map.put("type", type);
+			new Add_Like_Comment_Repost_ProgressTask(con, map).execute();
+		}
+		else
+		{
+			like_image.setImageResource(R.drawable.like);
+
+			l_c--;
+			likes_count.setText(l_c + " like(s)");
+
+
+
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("post_id", post_id);
+			map.put("action", "U");
+			map.put("data", "");
+			//map.put("type", type);
+
+			new Add_Like_Comment_Repost_ProgressTask(con, map).execute();
+		}
+	}
+
 	private void show_menu_dialog()
 	{
 		final Dialog menu_dialog = new Dialog(con);

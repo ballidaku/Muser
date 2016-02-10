@@ -105,7 +105,7 @@ public class Tab_My_Profile_Pictures extends Fragment
 		}
 
 
-		Log.e("onResume:Tab_MyProfile_Pictures", rem_pref.getString("current_frag", "")+"......;"+getActivity().getLocalClassName());
+		//Log.e("onResume:Tab_MyProfile_Pictures", rem_pref.getString("current_frag", "")+"......;"+getActivity().getLocalClassName());
 		if (rem_pref.getString("current_frag","").equals("My Profile")   || getActivity().getLocalClassName().equals("Other_Profile"))
 		{
 			refresh();
@@ -165,7 +165,7 @@ public class Tab_My_Profile_Pictures extends Fragment
 
 		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
 		{
-			new Get_Pictures_Videos_ProgressTask(con, con2, Global.get_user_id(), "I", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+			new Get_Pictures_Videos_ProgressTask(con, con2,Global.get_user_id(), "I", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 		}
 		else
 		{

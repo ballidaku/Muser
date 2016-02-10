@@ -69,6 +69,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:clickable="true"
                     android:paddingLeft="10dp" >
 
                     <com.example.classes.RoundedCornersGaganImg
@@ -511,4 +512,4 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/layout/activity_image_detail.xml -->
+</LinearLayout><!-- From: file:/home/sharan/Dropbox/Muser/muser/src/main/res/layout/activity_image_detail.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1ชม.</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1วิ</item>
         <item quantity="other">%dวิ</item>
     </plurals>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">เกิดข้อผิดพลาดที่ไม่คาดคิดขณะดาวน์โหลดรูปภาพ</string>
     <string name="com_facebook_internet_permission_error_message">การเข้าสู่ระบบ WebView จำเป็นต้องได้รับอนุญาตจากอินเทอร์เน็ต</string>
@@ -32,7 +32,7 @@
     <string name="com_facebook_send_button_text">ส่ง</string>
     <string name="com_facebook_share_button_text">แชร์</string>
     <string name="com_facebook_tooltip_default">ใหม่! คุณเป็นฝ่ายควบคุม โปรดเลือกข้อมูลที่คุณต้องการแชร์ด้วยแอพ</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-th/common_strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-th/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"แอปพลิเคชันรายการหนึ่งต้องการให้อัปเดตแอป Android Wear"</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"แอปนี้จะไม่ทำงานจนกว่าคุณจะอัปเดตแอป Android Wear"</string>
@@ -65,7 +65,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"ลงชื่อใช้"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"ลงชื่อเข้าใช้ด้วย Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"แอปนี้ต้องใช้บริการ Google Play อย่างน้อย 1 บริการ ซึ่งไม่พร้อมใช้งานในปัจจุบัน โปรดติดต่อนักพัฒนาซอฟต์แวร์เพื่อขอความช่วยเหลือ"</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="dgts__cancel">ยกเลิก</string>
     <string name="dgts__communication_error">ข้อผิดพลาดการสื่อสาร</string>
@@ -111,30 +111,30 @@
     <string name="dgts_pin_code_terms">คุณได้ตั้งรหัสยืนยัน 2 ชั้นไว้ก่อนหน้านี้บน digits.com</string>
     <string name="dgts_verify">ยืนยัน</string>
     <string name="dgts_verifying">กำลังยืนยัน</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">ส่ง</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">อนุญาต</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">กำลังโหลดทวีต</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">เข้าสู่ระบบด้วยทวิตเตอร์</string>
     <string name="tw__not_now_btn_txt">ไม่ใช่ตอนนี้</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">d/M/y</string>
     <string name="tw__relative_date_format_short">d MMM</string>
     <string name="tw__retweeted_by_format">ถูกรีทวีตโดย %1$s</string>
     <string name="tw__share_content_format">ดูทวีตของ \@%1$s: Tweet: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">รับการอัพเดทและข้อมูลอื่นๆ ได้จาก %1$s เมื่อคุณให้สิทธิ์ในการเข้าถึงอีเมลของคุณบนบัญชีทวิตเตอร์ \@%2$s</string>
     <string name="tw__share_email_title">แชร์ที่อยู่อีเมลของคุณ</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-th/values-th.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">ทวีตจาก %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">แบ่งปันทวีต</string>

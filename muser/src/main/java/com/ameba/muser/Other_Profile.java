@@ -347,8 +347,9 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 
 			Bundle bundle = msg.getData();
 			String balance= bundle.getString("balance");
-			
-			if(Integer.parseInt(balance)>5)
+			int b=Math.round(Float.parseFloat(balance));
+
+			if(b >= 5)
 			{
 				new Subscribe_Unsubscribe_Trainer_ProgressTask(con, user_id, "S").execute();
 			}
@@ -390,7 +391,7 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 	protected void onResume()
 	{
 		
-		Log.e("zzzzzzzzzzzzzzzzzzzz", "11111111111111111");
+
 		con = this;
 		Global.set_user_id(user_id);
 
@@ -420,7 +421,7 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 	{
 		switch (v.getId())
 		{
-			case R.id.description:
+			/*case R.id.description:
 				try
 				{
 					Util_Class.show_description_dialog(con,description.getText().toString(), screenWidth);
@@ -430,7 +431,7 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				break;
+				break;*/
 			case R.id.following_layout:
 				startActivity(new Intent(con, Following.class));
 				break;
@@ -469,11 +470,16 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 
 	}
 
+//	TODO:i am extremly sorry for the jugad sir ,but new year party start hon vali h..
+	//public static String USER_ID_Gagan="";
+
 	private void initialiseTabHost(Bundle args)
 	{
 		mTabHost = (TabHost) findViewById(android.R.id.tabhost);
 		mTabHost.setup();
 		TabInfo tabInfo = null;
+
+	//	USER_ID_Gagan=Global.get_user_id();
 
 		Other_Profile.AddTab(this, this.mTabHost, this.mTabHost.newTabSpec("Pictures").setIndicator(""), (tabInfo = new TabInfo("Pictures", Tab_My_Profile_Pictures.class, args)));
 		this.mapTabInfo.put(tabInfo.tag, tabInfo);
@@ -497,47 +503,11 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 
 	public void onTabChanged(String tag)
 	{
-		// TabInfo newTab = this.mapTabInfo.get(tag);
 		int pos = this.mTabHost.getCurrentTab();
 		mViewPager.setCurrentItem(pos);
-		// Log.e("tag", "" + tag);
-		// change_pic(pos);
 	}
 
-	/*
-	 * public void change_pic(int pos) { //
-	 * mTabHost.getTabWidget().getChildAt(0).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90)); //
-	 * mTabHost.getTabWidget().getChildAt(0).setBackgroundResource(images[0]);
-	 * mTabHost.getTabWidget().getChildAt(0).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90));
-	 * //mTabHost.getTabWidget().getChildAt(0).setBackgroundResource(images[0]);
-	 * mTabHost.getTabWidget().getChildAt(1).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90));
-	 * //mTabHost.getTabWidget().getChildAt(1).setBackgroundResource(images[1]);
-	 * mTabHost.getTabWidget().getChildAt(2).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90)); //
-	 * mTabHost.getTabWidget().getChildAt(2).setBackgroundResource(images[2]);
-	 * mTabHost.getTabWidget().getChildAt(4).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(4).setBackgroundResource(images[4]);
-	 * mTabHost.getTabWidget().getChildAt(5).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(5).setBackgroundResource(images[5]);
-	 * mTabHost.getTabWidget().getChildAt(6).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(6).setBackgroundResource(images[6]);
-	 * 
-	 * final View tabView = mTabHost.getTabWidget().getChildTabViewAt(pos);
-	 * 
-	 * int scrollX = (tabView.getLeft() - (screenWidth / 2)) +
-	 * (tabView.getWidth() / 2);
-	 * 
-	 * horizontal_tab.scrollTo(scrollX, 0);
-	 * 
-	 * //mTabHost.getTabWidget().getChildAt(pos).setBackgroundResource(
-	 * images_selected[pos]); }
-	 */
+
 	@Override
 	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
 	{
@@ -555,64 +525,7 @@ public class Other_Profile extends FragmentActivity implements TabHost.OnTabChan
 	{
 	}
 	
-/*	@Override
-	public void onActivityResult(int requestCode, int resultCode, Intent data)
-	{
-		super.onActivityResult(requestCode, resultCode, data);
 
-		if(requestCode == REQUEST_CODE_PAYMENT)
-		{
-			if(resultCode == Activity.RESULT_OK)
-			{
-				PaymentConfirmation confirm = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-				if(confirm != null)
-				{
-					try
-					{
-						Log.e(TAG, confirm.toJSONObject().toString(4));
-						Log.i(TAG, confirm.toJSONObject().toString(4));
-
-						JSONObject jsonObj = new JSONObject(confirm.toJSONObject().toString());
-						
-						if(jsonObj.getJSONObject("response").getString("state").equals("approved"))
-						{
-							//String val=spinner.getSelectedItem().toString().equals("Train With")?"S":"U";
-							//new Subscribe_Unsubscribe_Trainer_ProgressTask(con, Global.get_user_id(), "S",confirm.toJSONObject().toString()).execute();
-						}
-
-						String paymentId = jsonObj.getJSONObject("response").getString("id");    //payment id jo krna kar lao ehda..
-
-						//Toast.makeText(con, paymentId, Toast.LENGTH_LONG).show();
-						
-						
-
-					}
-					catch(JSONException e)
-					{
-						Toast.makeText(con, "An Error has occur while adding money..please try again later..!", Toast.LENGTH_LONG).show();
-
-					}
-				}
-			}
-			else if(resultCode == Activity.RESULT_CANCELED)
-			{
-				Toast.makeText(con, "Request canceled..!", Toast.LENGTH_LONG).show();
-
-			}
-			else if(resultCode == PaymentActivity.RESULT_EXTRAS_INVALID)
-			{
-				Toast.makeText(con, "An invalid Payment was submitted. Please see the docs for more details.", Toast.LENGTH_LONG).show();
-
-			}
-
-			stopService(new Intent(con, PayPalService.class));
-		}
-
-	}
-	
-	private static final int REQUEST_CODE_PAYMENT = 1;
-
-	 private static final String TAG      = "payment";*/
 	
 	
 }

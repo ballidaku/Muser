@@ -20,4 +20,4 @@
     <item android:state_selected="true" android:drawable="@drawable/appthemegreen_scrubber_control_focused_holo" />
     <item android:drawable="@drawable/appthemegreen_scrubber_control_normal_holo" />
 </selector>
-<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/drawable/appthemegreen_scrubber_control_selector_holo_dark.xml -->
+<!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/drawable/appthemegreen_scrubber_control_selector_holo_dark.xml -->

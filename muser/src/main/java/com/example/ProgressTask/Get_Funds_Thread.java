@@ -63,7 +63,7 @@ public class Get_Funds_Thread
 				
 				DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
 				
-				List<NameValuePair> param = new ArrayList<NameValuePair>();
+				List<NameValuePair> param = new ArrayList<>();
 				param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
 				
 				httppost.setEntity(new UrlEncodedFormEntity(param));

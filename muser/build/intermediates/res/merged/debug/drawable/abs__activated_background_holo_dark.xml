@@ -18,4 +18,4 @@
     <item android:state_activated="true" android:drawable="@drawable/abs__list_activated_holo" />
     <item android:drawable="@android:color/transparent" />
 </selector>
-<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/actionbarsherlock/res/drawable/abs__activated_background_holo_dark.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/drawable/abs__activated_background_holo_dark.xml -->
+<!-- From: file:/home/sharan/Dropbox/Muser/actionbarsherlock/res/drawable/abs__activated_background_holo_dark.xml --><!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/actionbarsherlock/unspecified/res/drawable/abs__activated_background_holo_dark.xml -->

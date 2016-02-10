@@ -157,7 +157,8 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 		}
 		else
 		{
-			this.list=list;
+			//this.list=list;
+			adapter.add_data(list);
 			adapter.notifyDataSetChanged();
 		}
 		
@@ -197,9 +198,21 @@ public class Cancel_Sessions extends Activity implements OnClickListener
 			
 			RoundedCornersGaganImg trainer_image	=(RoundedCornersGaganImg)row.findViewById(R.id.trainer_image);
 			TextView trainer_name		=(TextView)row.findViewById(R.id.trainer_name);
+			TextView message		=(TextView)row.findViewById(R.id.message);
 			ImageView unsubscribe	=(ImageView)row.findViewById(R.id.unsubscribe);
-			
-			unsubscribe.setVisibility(View.VISIBLE);
+
+
+			if(local_list.get(position).get("recurring").trim().equals("Y"))
+			{
+				unsubscribe.setVisibility(View.VISIBLE);
+
+			}
+			else
+			{
+				message.setVisibility(View.VISIBLE);
+				message.setText(local_list.get(position).get("message"));
+			}
+
 			
 			trainer_image.setImageUrl(con, local_list.get(position).get("profile_image"));
 			trainer_name.setText(local_list.get(position).get("user_name"));

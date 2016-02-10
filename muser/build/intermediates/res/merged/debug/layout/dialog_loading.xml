@@ -6,4 +6,4 @@
     android:layout_marginLeft="20dp"
     android:contentDescription="@string/img_desc"
     android:src="@drawable/ic_loading" />
-<!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/layout/dialog_loading.xml --><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/layout/dialog_loading.xml -->
+<!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/layout/dialog_loading.xml --><!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/cameraPro/unspecified/res/layout/dialog_loading.xml -->

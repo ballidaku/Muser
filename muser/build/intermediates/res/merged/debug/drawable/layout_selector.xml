@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/send_bg_selected" android:state_pressed="true"></item>
     <item android:drawable="@drawable/send_bg"></item>
 
-</selector><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/drawable/layout_selector.xml -->
+</selector><!-- From: file:/home/sharan/Dropbox/Muser/muser/src/main/res/drawable/layout_selector.xml -->

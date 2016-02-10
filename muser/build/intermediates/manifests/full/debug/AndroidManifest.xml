@@ -18,6 +18,7 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <permission
         android:name="com.example.muser.permission.C2D_MESSAGE"
@@ -196,6 +197,11 @@
         <activity android:name="org.appsroid.fxpro.PhotoActivity" />
         <activity
             android:name="com.ameba.muser.Dialog_Insert_Paypal"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sherlock.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.ameba.muser.Transaction_History"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Sherlock.Light.NoActionBar" >
         </activity>

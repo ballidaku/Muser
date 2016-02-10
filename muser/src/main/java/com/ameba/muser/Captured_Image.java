@@ -92,7 +92,7 @@ import com.aviary.android.feather.library.Constants;*/
 
 public class Captured_Image extends FragmentActivity implements OnClickListener, EmojiconGridFragment.OnEmojiconClickedListener, EmojiconsFragment.OnEmojiconBackspaceClickedListener
 {
-    LinearLayout edit_image/*, instagram*/;
+    LinearLayout edit_image,lay_tag_people/*, instagram*/;
     Bitmap       src;
 
     Context con;
@@ -104,14 +104,14 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
     boolean selected = false;
     int                      width;
-    Get_Area_Of_Focus_Thread gaof;
+//    Get_Area_Of_Focus_Thread gaof;
 
     public static ArrayList<HashMap<String, String>> aof_list;
     public static ArrayList<HashMap<String, String>> categories_list;
     public static ArrayList<HashMap<String, String>> fitness_goal_list;
     //String[] fitness_goal_list = { "Build Endurance", "Build muscle", "Burn Fat", "Eat right", "Improve Flexibility", "Improve Lifestyle", "Joint Therapy", "Lose weight", "Reduce Stress", "Stability", "Stamina", "Tone", "Run a mile under 5 mins", "Lower body fat" };
 
-    TextView tag_people_textview, title;
+    TextView  title,tag_people;
     ToggleButton location_toggle;
     boolean is_location_on = false;
 
@@ -128,7 +128,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
     //	InstagramApp										mApp;
     FrameLayout emojicons;
     ImageView   smilly;
-    EditText    tag_people, location_name;
+    EditText     location_name;
 
     String video_duration = "";
 
@@ -238,9 +238,11 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 
         //	tag				=(EditText)findViewById(R.id.tag);
         //	location		=(EditText)findViewById(R.id.location);
-        tag_people = (EditText) findViewById(R.id.tag_people);
+        tag_people = (TextView) findViewById(R.id.tag_people);
 
-        (tag_people_textview = (TextView) findViewById(R.id.tag_people_textview)).setOnClickListener(this);
+
+
+        (lay_tag_people = (LinearLayout) findViewById(R.id.lay_tag_people)).setOnClickListener(this);
         trained_with = (AutoCompleteTextView) findViewById(R.id.trained_with);
         fitness_goal_spinner = (Spinner) findViewById(R.id.fitness_goal_spinner);
         category_spinner = (Spinner) findViewById(R.id.category_spinner);
@@ -371,13 +373,13 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
             @Override
             public void afterTextChanged(Editable s)
             {
-                if (trained_with.getText().toString().length() == 3 && selected == false)
+                if (trained_with.getText().toString().length() == 1 && selected == false)
                 {
                     new Get_Trainer_Thread(con, s.toString());
                     //new Get_Trainers_ProgressTask(con, s.toString()).execute();
                     //	new Get_Trainer(con,s.toString());
                 }
-                else if (trained_with.getText().toString().length() < 3 && selected == true)
+                else if (trained_with.getText().toString().length() < 1 && selected == true)
                 {
                     selected = false;
                 }
@@ -875,7 +877,7 @@ public class Captured_Image extends FragmentActivity implements OnClickListener,
 		/*	case R.id.instagram:
 				break;
 				*/
-            case R.id.tag_people_textview:
+            case R.id.lay_tag_people:
                 startActivity(new Intent(con, Tag_People.class));
 
                 break;

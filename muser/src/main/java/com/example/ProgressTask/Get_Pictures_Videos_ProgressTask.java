@@ -28,6 +28,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.Tabs.Tab_Home_Pictures;
+import com.example.Tabs.Tab_Home_Sessions;
+import com.example.Tabs.Tab_Home_Videos;
 import com.example.Tabs.Tab_My_Profile_Pictures;
 import com.example.Tabs.Tab_My_Profile_Sessions;
 import com.example.Tabs.Tab_My_Profile_Videos;
@@ -116,11 +119,13 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 					{
 						message = "Success";
 						JSONArray jo = new JSONObject(response).getJSONArray("post_info");
-						list = new ArrayList<HashMap<String, String>>();
+						list = new ArrayList<>();
 						for(int i = 0; i < jo.length(); i++)
 						{
 							JSONObject obj = jo.getJSONObject(i);
 							HashMap<String, String> map = new HashMap<String, String>();
+
+
 							map.put("user_id", obj.getString("user_id"));
 							map.put("user_name", obj.getString("user_name"));
 							map.put("profile_image", obj.getString("profile_image"));
@@ -154,6 +159,8 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 								map.put("repost_user_id", ob.getString("user_id"));
 								map.put("repost_user_name", ob.getString("user_name"));
 								map.put("repost_profile_image", ob.getString("profile_image"));
+
+
 							}
 							else
 							{
@@ -223,7 +230,7 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 				message = "null";
 			}
 		}
-		catch(JSONException e)
+		catch(Exception e)
 		{
 			e.printStackTrace();
 			message = "null";
@@ -244,11 +251,33 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 		}
 		else if(data_type.equals("I"))
 		{
-			((Tab_My_Profile_Pictures) con2).refresh_complete();
+
+
+			if (con2 instanceof Tab_My_Profile_Pictures)
+			{
+				((Tab_My_Profile_Pictures) con2).refresh_complete();
+			}
+			else if (con2 instanceof Tab_Home_Pictures)
+			{
+				((Tab_Home_Pictures) con2).refresh_complete();
+
+			}
+
 		}
 		else if(data_type.equals("V"))
 		{
-			((Tab_My_Profile_Videos) con2).refresh_complete();
+
+
+			if (con2 instanceof Tab_My_Profile_Videos)
+			{
+				((Tab_My_Profile_Videos) con2).refresh_complete();
+			}
+			else if (con2 instanceof Tab_Home_Videos)
+			{
+				((Tab_Home_Videos) con2).refresh_complete();
+			}
+
+
 		}
 		
 		
@@ -286,13 +315,37 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 				
 				/*My_Profile_Pictures_Adapter adapter = new My_Profile_Pictures_Adapter(con, list);
 				Tab_My_Profile_Pictures.gridView.setAdapter(adapter);*/
-				((Tab_My_Profile_Pictures) con2).set_data(list);
+				if (con2 instanceof Tab_My_Profile_Pictures)
+				{
+					((Tab_My_Profile_Pictures) con2).set_data(list);
+				}
+				else if (con2 instanceof Tab_Home_Pictures)
+				{
+					((Tab_Home_Pictures) con2).set_data(list);
+				}
+
 			}
 			else if(data_type.equals("V") /*&& !user_id.isEmpty()*/)
 			{
-				((Tab_My_Profile_Videos) con2).set_data(list);
+				if (con2 instanceof Tab_My_Profile_Videos)
+				{
+					((Tab_My_Profile_Videos) con2).set_data(list);
+				}
+				else if (con2 instanceof Tab_Home_Videos)
+				{
+					((Tab_Home_Videos) con2).set_data(list);
+				}
+				else if (con2 instanceof Tab_Home_Sessions)
+				{
+					((Tab_Home_Sessions) con2).set_data(list);
+				}
 				/*My_Profile_Videos_Adapter adapter = new My_Profile_Videos_Adapter(con, list);
 				Tab_My_Profile_Videos.gridView.setAdapter(adapter);*/
+
+
+
+
+
 			}
 			else if(data_type.isEmpty())
 			{
@@ -327,6 +380,7 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 
 			}
 
+
 		}
 		else if(message.equals("Failure"))
 		{
@@ -337,13 +391,35 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 			}
 			else if(data_type.equals("I") /*&& !user_id.isEmpty()*/)
 			{
-				((Tab_My_Profile_Pictures) con2).on_Failure();
+
+
+				if (con2 instanceof Tab_My_Profile_Pictures)
+				{
+					((Tab_My_Profile_Pictures) con2).on_Failure();
+
+				}
+				else if (con2 instanceof Tab_Home_Pictures)
+				{
+					((Tab_Home_Pictures) con2).on_Failure();
+
+				}
 
 			}
 			else if(data_type.equals("V")/* && !user_id.isEmpty()*/)
 			{
-				((Tab_My_Profile_Videos) con2).on_Failure();
 
+				if (con2 instanceof Tab_My_Profile_Videos)
+				{
+					((Tab_My_Profile_Videos) con2).on_Failure();
+				}
+				else if (con2 instanceof Tab_Home_Videos)
+				{
+					((Tab_Home_Videos) con2).on_Failure();
+				}
+				else if (con2 instanceof Tab_Home_Sessions)
+				{
+					((Tab_Home_Sessions) con2).on_Failure();
+				}
 			}
 
 			//Util_Class.show_global_dialog(con, con.getResources().getString(R.string.no_data_found));
@@ -360,20 +436,28 @@ public class Get_Pictures_Videos_ProgressTask extends AsyncTask<String, Void, Vo
 		try
 		{
 			
-			List<NameValuePair> param = new ArrayList<NameValuePair>();
+			List<NameValuePair> param = new ArrayList<>();
 			param.add(new BasicNameValuePair("user_id", user_id));
 			param.add(new BasicNameValuePair("data_type", data_type));
 			param.add(new BasicNameValuePair("post_id", post_id));
 			param.add(new BasicNameValuePair("myfavid", rem_pref.getString("user_id", "")));
 			
 			
-			if(con2 instanceof Tab_My_Profile_Sessions)
+			if(con2 instanceof Tab_My_Profile_Sessions || con2 instanceof Tab_Home_Sessions)
 			{
 				param.add(new BasicNameValuePair("session", "S"));
 			}
 			else if(which.equals("S"))
 			{
 				param.add(new BasicNameValuePair("session", "S"));
+			}
+
+			// For home tab images video we set limit to get 24 hr data
+
+
+			if(con2 instanceof Tab_Home_Pictures || con2 instanceof Tab_Home_Videos || con2 instanceof Tab_Home_Sessions)
+			{
+				param.add(new BasicNameValuePair("limit", "Y"));
 			}
 			
 			Log.e(" Get", param.toString());

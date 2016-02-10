@@ -68,10 +68,7 @@ public class Camera extends FragmentActivity
 //	}
 	
 	
-	public void abc()
-	{
-		
-	}
+
 	
 	@Override
 	public void onConfigurationChanged(Configuration newConfig)
@@ -84,8 +81,14 @@ public class Camera extends FragmentActivity
 		frag.refresh();*/
 		//setCameraDisplayOrientation(getActivity(), CameraInfo.CAMERA_FACING_BACK, camera);
 	}
-	
-	
+
+	/*@Override
+	protected void onPause()
+	{
+		super.onPause();
+		video_fragment.finish_on_spot();
+	}*/
+
 	@Override
 	public void onBackPressed()
 	{

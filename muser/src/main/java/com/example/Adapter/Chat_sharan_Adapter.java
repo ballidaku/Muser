@@ -1,11 +1,7 @@
 package com.example.Adapter;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +17,8 @@ import com.example.classes.RoundedCornersGaganImg;
 import com.example.classes.Util_Class;
 import com.rockerhieu.emojicon.EmojiconTextView;
 
-import org.apache.http.ParseException;
-
 import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  Created by sharan on 22/9/15. */
@@ -36,9 +28,8 @@ public class Chat_sharan_Adapter extends BaseAdapter
     ArrayList<Chat_data> list;
     private Context con;
     SharedPreferences rem_pref;
-    String userID = "", DateTemp = "", user_img = "", my_img = "";
+    String userID = "", user_img = "", my_img = "";
 
-    View result;
     Util_Class util;
 
     public Chat_sharan_Adapter(Context con, ArrayList<Chat_data> list, String user_img)
@@ -53,7 +44,7 @@ public class Chat_sharan_Adapter extends BaseAdapter
         my_img = rem_pref.getString("profile_image", "");
         userID = rem_pref.getString("user_id", "1");
 
-        util=new Util_Class();
+        util = new Util_Class();
     }
 
     @Override
@@ -75,9 +66,8 @@ public class Chat_sharan_Adapter extends BaseAdapter
     }
 
     @Override
-    public View getView(final int position,  View row, ViewGroup parent)
+    public View getView(final int position, View row, ViewGroup parent)
     {
-
 
         String       Friend_id  = list.get(position).getFriend_id();
         final String message    = list.get(position).getMessage();
@@ -86,7 +76,7 @@ public class Chat_sharan_Adapter extends BaseAdapter
 
         LayoutInflater inflater = (LayoutInflater) con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (Friend_id.equalsIgnoreCase(userID))
+        if (Friend_id.equalsIgnoreCase(userID))  // if my message
         {
             row = inflater.inflate(R.layout.custom_other_chat, parent, false);
             EmojiconTextView tvMSG = (EmojiconTextView) row.findViewById(R.id.txtV_MyChatmsg);
@@ -99,8 +89,6 @@ public class Chat_sharan_Adapter extends BaseAdapter
             FrameLayout imageContainer = (FrameLayout) row.findViewById(R.id.FrameLayoutIMAGE);
 
             DP.setImageUrl(con, user_img);
-
-
 
             FramemsgLayout.setVisibility(View.VISIBLE);
             imageContainer.setVisibility(View.GONE);
@@ -115,11 +103,12 @@ public class Chat_sharan_Adapter extends BaseAdapter
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            tvTime.setText(util.get_time2(date));
+            String t=util.get_time2(date);
+            tvTime.setText(t);
 
         }
 
-        else
+        else  // if other message
         {
 
             row = inflater.inflate(R.layout.custom_my_chat, parent, false);
@@ -134,7 +123,6 @@ public class Chat_sharan_Adapter extends BaseAdapter
             FrameLayout imageContainer = (FrameLayout) row.findViewById(R.id.FrameLayoutIMAGE_Other);
 
             DP.setImageUrl(con, my_img);
-
 
             FramemsgLayout.setVisibility(View.VISIBLE);
             imageContainer.setVisibility(View.GONE);
@@ -168,73 +156,26 @@ public class Chat_sharan_Adapter extends BaseAdapter
                     };
                     Util_Class.show_super_dialog(con, delete, "");
 
-
-
                     return false;
                 }
             });
 
         }
 
-/*        LinearLayout lay_date = (LinearLayout) row.findViewById(R.id.lay_date);
-
-        String formtDate = parseDateToddMMyyyy(date);
-        if (!DateTemp.equals(formtDate))
-        {
-
-            LinearLayout.LayoutParams lpDate = new LinearLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
-            lpDate.gravity = Gravity.CENTER;
-
-            TextView tvdate = new TextView(con);
-            tvdate.setLayoutParams(lpDate);
-            tvdate.setText(formtDate + "");
-            tvdate.setTextColor(Color.BLACK);
-            tvdate.setTextSize(15);
-            tvdate.setPadding(5, 5, 5, 5);
-
-            // tvdate.setBackgroundColor(R.drawable.btn_gray_pressed);
-            tvdate.setGravity(Gravity.CENTER);
-            lay_date.addView(tvdate);
-        }
-        DateTemp = formtDate;*/
-
         return row;
 
     }
 
-
-
     public void add_data(ArrayList<Chat_data> list)
     {
+
         this.list = list;
     }
 
-   /* public static String parseDateToddMMyyyy(String time)
+
+    public void add_dataAll(ArrayList<Chat_data> list)
     {
-        String           inputPattern  = "yyyy-MM-dd HH:mm:ss";
-        String           outputPattern = "dd-MMMM";
-        SimpleDateFormat inputFormat   = new SimpleDateFormat(inputPattern);
-        SimpleDateFormat outputFormat  = new SimpleDateFormat(outputPattern);
-
-        Date   date = null;
-        String str  = null;
-
-        try
-        {
-            date = inputFormat.parse(time);
-            str = outputFormat.format(date);
-        }
-        catch (ParseException e)
-        {
-
-            e.printStackTrace();
-        }
-        catch (java.text.ParseException e)
-        {
-
-            e.printStackTrace();
-        }
-        return str;
-    }*/
+        this.list.addAll(list);
+    }
 
 }

@@ -42,11 +42,12 @@ public class Wallet extends Fragment implements OnClickListener
 			rem_pref = con.getSharedPreferences("Remember", con.MODE_WORLD_READABLE);
 
 			balance_text = (TextView) v.findViewById(R.id.balance);
-			((TextView) v.findViewById(R.id.addFunds)).setOnClickListener(this);
-			((TextView) v.findViewById(R.id.withdrawFunds)).setOnClickListener(this);
-			((TextView) v.findViewById(R.id.train_with)).setOnClickListener(this);
-			((TextView) v.findViewById(R.id.cancel_session)).setOnClickListener(this);
-			((TextView) v.findViewById(R.id.total_clients)).setOnClickListener(this);
+			( v.findViewById(R.id.addFunds)).setOnClickListener(this);
+			( v.findViewById(R.id.withdrawFunds)).setOnClickListener(this);
+			( v.findViewById(R.id.train_with)).setOnClickListener(this);
+			( v.findViewById(R.id.cancel_session)).setOnClickListener(this);
+			( v.findViewById(R.id.total_clients)).setOnClickListener(this);
+			( v.findViewById(R.id.insidefirstLinearlayout)).setOnClickListener(this);
 
 		}
 		
@@ -82,6 +83,13 @@ public class Wallet extends Fragment implements OnClickListener
 	{
 		switch (v.getId())
 		{
+
+			case R.id.insidefirstLinearlayout:
+
+				startActivity(new Intent(con,Transaction_History.class));
+
+				break;
+
 			case R.id.addFunds:
 				OnClickListener y = new OnClickListener()
 				{

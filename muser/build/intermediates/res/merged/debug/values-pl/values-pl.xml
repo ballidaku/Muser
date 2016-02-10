@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1 godz.</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1 s</item>
         <item quantity="other">%d s</item>
     </plurals>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Nieoczekiwany błąd podczas pobierania obrazu.</string>
     <string name="com_facebook_internet_permission_error_message">Logowanie się do sieci wymaga zezwolenia na dostęp do INTERNETU</string>
@@ -32,7 +32,7 @@
     <string name="com_facebook_send_button_text">Wyślij</string>
     <string name="com_facebook_share_button_text">Udostępnij</string>
     <string name="com_facebook_tooltip_default">Nowość! Masz pełną kontrolę – określ, jakie informacje chcesz udostępniać aplikacjom.</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pl/common_strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pl/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Aplikacja wymaga aktualizacji do Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Ta aplikacja nie będzie działać, jeśli nie zaktualizujesz aplikacji Google Wear."</string>
@@ -65,7 +65,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Zaloguj się"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Zaloguj się przez Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Ta aplikacja wymaga co najmniej jednej usługi Google Play, która jest obecnie niedostępna. Skontaktuj się z programistą, by uzyskać pomoc."</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Anuluj</string>
     <string name="dgts__communication_error">Błąd połączenia</string>
@@ -111,35 +111,35 @@
     <string name="dgts_pin_code_terms">Ustawiono poprzednio dwuetapową weryfikację kodu na digits.com</string>
     <string name="dgts_verify">Zweryfikuj</string>
     <string name="dgts_verifying">Weryfikowanie</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Wyślij</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/Muser/pull_To_Refresh_Llibrary/unspecified/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="pull_to_refresh_pull_label">Pociągnij, aby odświeżyć…</string>
     <string name="pull_to_refresh_refreshing_label">Wczytywanie…</string>
     <string name="pull_to_refresh_release_label">Puść, aby odświeżyć…</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Zezwól</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Wczytywanie tweeta</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Zaloguj się przez Twittera</string>
     <string name="tw__not_now_btn_txt">Nie teraz</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">d.MM.y</string>
     <string name="tw__relative_date_format_short">d MMM</string>
     <string name="tw__retweeted_by_format">Podane dalej przez %1$s</string>
     <string name="tw__share_content_format">Zobacz tweet od \@%1$s\: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Otrzymasz aktualizacje i inne informacje od %1$s, jeśli zezwolisz im na dostęp do Twojego adresu e-mail na swoim koncie na Twitterze \@%2$s</string>
     <string name="tw__share_email_title">Udostępnij swój adres e-mail</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-pl/values-pl.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet od użytkownika %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Udostępnij tweet</string>

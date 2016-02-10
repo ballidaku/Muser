@@ -62,7 +62,7 @@ public class Withdraw_Funds_Thread
 				
 				List<NameValuePair> param = new ArrayList<NameValuePair>();
 				param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
-				param.add(new BasicNameValuePair("fund", withdraw_amount));
+				param.add(new BasicNameValuePair("amount", withdraw_amount));
 				
 				httppost.setEntity(new UrlEncodedFormEntity(param));
 				
@@ -101,27 +101,29 @@ public class Withdraw_Funds_Thread
 
 			public void handleMessage(Message msg)
 			{
-				
 
 				String response = msg.getData().getString("message");
 
-				if((null != response))
+				if ((null != response))
 				{
 					try
 					{
-						String msg_json = new JSONObject(response).getString("status");
-						if(msg_json.equals("Success"))
+						JSONObject obj = new JSONObject(response);
+						String msg_json = obj.getString("status");
+						if (msg_json.equals("Success"))
 						{
-							String balance = new JSONObject(response).getString("balance");
-							Wallet.set_balance(balance);
+							//String balance = new JSONObject(response).getString("balance");
+							//Wallet.set_balance(balance);
+
+							Util_Class.show_Toast(obj.getString("message"), con);
 						}
-						else if(msg_json.equals("Failure1"))
+						else if (msg_json.equals("Failure"))
 						{
-							String message = new JSONObject(response).getString("message");
+							String message = obj.getString("message");
 							Util_Class.show_Toast(message, con);
 						}
 					}
-					catch(JSONException e)
+					catch (JSONException e)
 					{
 						e.printStackTrace();
 					}

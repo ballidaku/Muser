@@ -81,14 +81,18 @@ public class Search_Child_ProgressTask extends AsyncTask<String, Void, Void>
 					if(msg_json.equals("Success"))
 					{
 						message = "Success";
+
+
 						JSONArray jo = new JSONObject(response).getJSONArray("post_info");
+
+						String s=""+jo.length();
 						if(type.equals("T"))
 						{
-							hashtags_list_child=new ArrayList<HashMap<String, String>>();
+							hashtags_list_child=new ArrayList<>();
 							for(int i = 0; i < jo.length(); i++)
 							{
 								JSONObject obj = jo.getJSONObject(i);
-								HashMap<String, String> map = new HashMap<String, String>();
+								HashMap<String, String> map = new HashMap<>();
 								map.put("user_id", obj.getString("user_id"));
 								map.put("user_name", obj.getString("user_name"));
 								map.put("profile_image", obj.getString("profile_image"));

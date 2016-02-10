@@ -155,7 +155,7 @@ class GCMIntentService extends GCMBaseIntentService
 
 
 
-                    if(message.contains("Image"))
+                    if(message.contains("Image") || message.contains("picture"))
                     {
                         int message_count = rem_pref.getInt("Picture_count", 0) + 1;
                         rem_pref.edit().putInt("Picture_count", message_count).apply();
@@ -165,7 +165,7 @@ class GCMIntentService extends GCMBaseIntentService
                         int message_count = rem_pref.getInt("Video_count", 0) + 1;
                         rem_pref.edit().putInt("Video_count", message_count).apply();
                     }
-                    else  if(message.contains("subscribed") || message.contains("Session"))
+                    else  if(message.contains("subscribed") || message.contains("session") || message.contains("Session"))
                     {
                         int message_count = rem_pref.getInt("Session_count", 0) + 1;
                         rem_pref.edit().putInt("Session_count", message_count).apply();

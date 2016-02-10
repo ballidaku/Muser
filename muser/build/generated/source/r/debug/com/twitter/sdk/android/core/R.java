@@ -8,13 +8,13 @@ package com.twitter.sdk.android.core;
 
 public final class R {
 	public static final class color {
-		public static final int tw__blue_default = 0x7f0d0039;
-		public static final int tw__blue_pressed = 0x7f0d003a;
-		public static final int tw__blue_pressed_light = 0x7f0d003b;
-		public static final int tw__light_gray = 0x7f0d003c;
-		public static final int tw__medium_gray = 0x7f0d003d;
-		public static final int tw__solid_white = 0x7f0d003e;
-		public static final int tw__transparent = 0x7f0d003f;
+		public static final int tw__blue_default = 0x7f0d003a;
+		public static final int tw__blue_pressed = 0x7f0d003b;
+		public static final int tw__blue_pressed_light = 0x7f0d003c;
+		public static final int tw__light_gray = 0x7f0d003d;
+		public static final int tw__medium_gray = 0x7f0d003e;
+		public static final int tw__solid_white = 0x7f0d003f;
+		public static final int tw__transparent = 0x7f0d0040;
 	}
 	public static final class dimen {
 		public static final int tw__btn_bar_margin_left = 0x7f08003e;
@@ -44,27 +44,27 @@ public final class R {
 		public static final int tw__transparent = 0x7f020539;
 	}
 	public static final class id {
-		public static final int imageView = 0x7f0e0207;
-		public static final int tw__allow_btn = 0x7f0e020a;
-		public static final int tw__not_now_btn = 0x7f0e0209;
-		public static final int tw__share_email_desc = 0x7f0e0208;
-		public static final int tw__spinner = 0x7f0e0206;
-		public static final int tw__web_view = 0x7f0e0205;
+		public static final int imageView = 0x7f0e020c;
+		public static final int tw__allow_btn = 0x7f0e020f;
+		public static final int tw__not_now_btn = 0x7f0e020e;
+		public static final int tw__share_email_desc = 0x7f0e020d;
+		public static final int tw__spinner = 0x7f0e020b;
+		public static final int tw__web_view = 0x7f0e020a;
 	}
 	public static final class layout {
-		public static final int tw__activity_oauth = 0x7f03009b;
-		public static final int tw__activity_share_email = 0x7f03009c;
+		public static final int tw__activity_oauth = 0x7f03009e;
+		public static final int tw__activity_share_email = 0x7f03009f;
 	}
 	public static final class raw {
 		public static final int tw__cacerts = 0x7f050001;
 	}
 	public static final class string {
 		public static final int kit_name = 0x7f0600cb;
-		public static final int tw__allow_btn_txt = 0x7f060060;
-		public static final int tw__login_btn_txt = 0x7f060062;
-		public static final int tw__not_now_btn_txt = 0x7f060063;
-		public static final int tw__share_email_desc = 0x7f060068;
-		public static final int tw__share_email_title = 0x7f060069;
+		public static final int tw__allow_btn_txt = 0x7f06005f;
+		public static final int tw__login_btn_txt = 0x7f060061;
+		public static final int tw__not_now_btn_txt = 0x7f060062;
+		public static final int tw__share_email_desc = 0x7f060067;
+		public static final int tw__share_email_title = 0x7f060068;
 	}
 	public static final class style {
 		public static final int tw__Button = 0x7f0b008a;

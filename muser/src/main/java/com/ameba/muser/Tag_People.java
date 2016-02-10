@@ -154,7 +154,7 @@ public class Tag_People extends Activity implements OnClickListener
             users_listView.setVisibility(View.VISIBLE);
             error_message.setVisibility(View.GONE);
 
-            new Search_Hashtags_User_ProgressTask(con, search_editText.getText().toString(), "U", "Tag_People").execute();
+            new Search_Hashtags_User_ProgressTask(con, value, "U", "Tag_People").execute();
 
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(search_editText.getWindowToken(), 0);

@@ -52,6 +52,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -72,8 +73,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
     SharedPreferences preferences;
     Util_Class util = new Util_Class();
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -81,8 +80,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         setContentView(R.layout.activity_chat_sharan);
 
         con = this;
-
-
 
         edMSG = (EmojiconEditText) findViewById(R.id.editT_msg);
 
@@ -144,8 +141,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         });*/
 
     }
-
-
 
     @Override
     public void onBackPressed()
@@ -279,7 +274,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                 int screenHeight     = parentLayout.getRootView().getHeight();
                 int heightDifference = screenHeight - (r.bottom);
 
-                Log.e("heightDifference", "" + heightDifference);
+              //  Log.e("heightDifference", "" + heightDifference);
 
                 if (heightDifference > 100)
                 {
@@ -288,7 +283,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                     isKeyBoardVisible = true;
                     changeKeyboardHeight(heightDifference);
 
-                    Log.e("Hello", "Ki gal bandra");
+                  //  Log.e("Hello", "Ki gal bandra");
                     //parentLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
 
                 }
@@ -356,6 +351,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
 
     }
 
+    /************************************** This method is called for getting unread data from server ***********************/
     Handler responseHandlerChat = new Handler()
     {
         public void handleMessage(Message msg)
@@ -365,7 +361,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
 
             // Showmsgs(data.getList());
 
-            set_chat_data(data.getList());
+            set_chat_data(data.getList(),"Reciever");
 
             if (chats)
             {
@@ -386,7 +382,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
 
     Chat_sharan_Adapter adapter;
 
-    public void set_chat_data(ArrayList<Chat_data> list)
+    public void set_chat_data(ArrayList<Chat_data> list, String who)
     {
         try
         {
@@ -398,9 +394,18 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
             }
             else
             {
+                if (who.equals("Sender"))
+                {
+                    adapter.add_data(list);
 
-                adapter.add_data(list);
-                listv_chat.invalidateViews();
+                }
+                else
+                {
+                    adapter.add_dataAll(list);
+
+                }
+
+               listv_chat.invalidateViews();
 
             }
         }
@@ -418,7 +423,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
     public void delete_message(int pos)
     {
         list.remove(pos);
-        set_chat_data(list);
+        set_chat_data(list,"Sender");
     }
 
     private void scrollMyListViewToBottom()
@@ -473,16 +478,28 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
         protected void onPreExecute()
         {
 
-            Calendar         c      = Calendar.getInstance();
-            SimpleDateFormat dfJOBJ = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            formattedDateJOBJ = dfJOBJ.format(c.getTime());
+            Calendar         now     = Calendar.getInstance();
 
+
+            Calendar tmp = (Calendar) now.clone();
+           // tmp.add(Calendar.HOUR_OF_DAY, 1);
+            tmp.add(Calendar.MINUTE, 2);
+            tmp.add(Calendar.SECOND, 53);
+            Calendar nowPlus2_53Minutes = tmp;
+
+            SimpleDateFormat dfJOBJ = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+            formattedDateJOBJ = dfJOBJ.format(nowPlus2_53Minutes.getTime());
+
+
+            Log.e("formattedDateJOBJ",""+formattedDateJOBJ);
             chatData = new Chat_data(frndID, message, "", formattedDateJOBJ);
 
             // ArrayList<Chat_data> list = new ArrayList<Chat_data>();
             list.add(chatData);
 
-            set_chat_data(list);
+            set_chat_data(list, "Sender");
 
             // Showmsgs(list);******************************************************************************************************************************************
             edMSG.setText("");
@@ -503,8 +520,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
                 param.add(new BasicNameValuePair("message", message));
                 // param.add(new BasicNameValuePair("timezone",
                 // UtilClass.timezone));
-
-
 
                 HttpParams httpParams = new BasicHttpParams();
                 httpParams.setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
@@ -565,8 +580,6 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
             try
             {
 
-
-
                 JSONObject jsonobject = new JSONObject(jsonStr);
 
                 String response = jsonobject.getString("status");
@@ -577,7 +590,7 @@ public class Chat_sharan extends FragmentActivity implements View.OnClickListene
 
                     list.get(pos).set_message_id(jsonobject.getJSONObject("message_info").getString("message_id"));
 
-                    set_chat_data(list);
+                    set_chat_data(list,"Sender");
 
                 }
 

@@ -3,4 +3,4 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fromAlpha="0.0"
     android:toAlpha="1.0"
-    android:duration="1500" /><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/src/main/res/anim/alpha.xml -->
+    android:duration="1500" /><!-- From: file:/home/sharan/Dropbox/Muser/muser/src/main/res/anim/alpha.xml -->
