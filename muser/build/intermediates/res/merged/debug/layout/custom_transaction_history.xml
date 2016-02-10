@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:gravity = "center_vertical"
+              android:orientation = "horizontal">
+
+    <LinearLayout
+        android:id = "@+id/click_me"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_weight = "4"
+        android:gravity = "center_vertical"
+        android:orientation = "horizontal">
+
+        <com.example.classes.RoundedCornersGaganImg
+            android:id = "@+id/user_image"
+            android:layout_width = "60dp"
+            android:layout_height = "60dp"
+            android:layout_margin = "8dp"
+            android:scaleType = "fitXY"
+            android:src = "@drawable/loading_image"/>
+
+        <LinearLayout
+            android:layout_width = "wrap_content"
+            android:layout_height = "match_parent"
+            android:gravity = "center_vertical"
+            android:orientation = "vertical">
+
+            <TextView
+                android:id = "@+id/user_name"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:paddingLeft = "2dp"
+                android:text = "Sharan"
+                android:textColor = "@android:color/black"
+                android:textSize = "@dimen/text_size_14"/>
+
+            <TextView
+                android:id = "@+id/txtv_transaction_date"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:paddingLeft = "2dp"
+                android:text = "Sharan"
+                android:textColor = "@color/Gray"
+                android:textSize = "@dimen/text_size_14"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_weight = "1.2"
+        android:gravity = "center_vertical"
+        android:orientation = "vertical"
+        android:padding = "5dp">
+
+
+        <TextView
+            android:id = "@+id/amount"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:gravity = "center"
+            android:text = "+ $ 5"
+            android:textColor = "@color/Black"
+            android:textSize = "14sp"
+            android:textStyle = "bold"
+            android:visibility = "visible"/>
+
+        <TextView
+            android:id="@+id/txtv_status"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text = "Recieved"
+            android:gravity="center"
+            android:textColor = "@color/Green"
+            android:textSize = "14sp"
+            android:textStyle = "bold"
+            android:visibility = "visible"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout><!-- From: file:/home/sharan/Dropbox/Muser/muser/src/main/res/layout/custom_transaction_history.xml -->

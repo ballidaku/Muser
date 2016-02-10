@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/themes_appthemeblue.xml -->
+    <eat-comment/>
+    <style name="AppThemeBlue" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeBlue</item>
+
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/themes_appthemecolorize.xml -->
+    <eat-comment/>
+    <style name="AppThemeColorize" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:buttonStyle">@style/ButtonAppThemeColorize</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonAppThemeColorize</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeColorize</item>
+
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/themes_appthemegreen.xml -->
+    <eat-comment/>
+    <style name="AppThemeGreen" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+    <item name="android:seekBarStyle">@style/SeekBarAppThemeGreen</item>
+
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/styles_appthemecolorize.xml -->
+    <eat-comment/>
+    <style name="ButtonAppThemeColorize" parent="android:Widget.Holo.Button">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+  </style>
+    <style name="ImageButtonAppThemeColorize" parent="android:Widget.Holo.ImageButton">
+	  <item name="android:background">@drawable/appthemecolorize_btn_default_holo_dark</item>
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/styles_appthemeblue.xml -->
+    <eat-comment/>
+    <style name="SeekBarAppThemeBlue" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemeblue_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemeblue_scrubber_control_selector_holo_dark</item>
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/styles_appthemecolorize.xml -->
+    <eat-comment/>
+    <style name="SeekBarAppThemeColorize" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemecolorize_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemecolorize_scrubber_control_selector_holo_dark</item>
+  </style>
+    <!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/values-v11/styles_appthemegreen.xml -->
+    <eat-comment/>
+    <style name="SeekBarAppThemeGreen" parent="android:Widget.Holo.SeekBar">
+      <item name="android:progressDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:indeterminateDrawable">@drawable/appthemegreen_scrubber_progress_horizontal_holo_dark</item>
+      <item name="android:thumb">@drawable/appthemegreen_scrubber_control_selector_holo_dark</item>
+  </style>
+</resources>
