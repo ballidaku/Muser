@@ -239,7 +239,7 @@ public class My_Profile extends Fragment implements TabHost.OnTabChangeListener,
 	{
 		switch (v.getId())
 		{
-			case R.id.description:
+			/*case R.id.description:
 				try
 				{
 					Util_Class.show_description_dialog(con, description.getText().toString(), screenWidth);
@@ -249,7 +249,7 @@ public class My_Profile extends Fragment implements TabHost.OnTabChangeListener,
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				break;
+				break;*/
 
 			case R.id.update_profile:
 				startActivity(new Intent(con, Update_Profile.class));
@@ -276,6 +276,11 @@ public class My_Profile extends Fragment implements TabHost.OnTabChangeListener,
 
 	private void intialiseViewPager()
 	{
+
+		// Other_Profile.USER_ID_Gagan="";
+
+
+
 		List<Fragment> fragments = new Vector<Fragment>();
 		// fragments.add(Fragment.instantiate(con,
 		// Tab_My_Profile_Details.class.getName()));
@@ -333,40 +338,7 @@ public class My_Profile extends Fragment implements TabHost.OnTabChangeListener,
 		// change_pic(pos);
 	}
 
-	/*
-	 * public void change_pic(int pos) { //
-	 * mTabHost.getTabWidget().getChildAt(0).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90)); //
-	 * mTabHost.getTabWidget().getChildAt(0).setBackgroundResource(images[0]);
-	 * mTabHost.getTabWidget().getChildAt(0).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90));
-	 * //mTabHost.getTabWidget().getChildAt(0).setBackgroundResource(images[0]);
-	 * mTabHost.getTabWidget().getChildAt(1).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90));
-	 * //mTabHost.getTabWidget().getChildAt(1).setBackgroundResource(images[1]);
-	 * mTabHost.getTabWidget().getChildAt(2).setLayoutParams(new
-	 * LinearLayout.LayoutParams(screenWidth/3, 90)); //
-	 * mTabHost.getTabWidget().getChildAt(2).setBackgroundResource(images[2]);
-	 * mTabHost.getTabWidget().getChildAt(4).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(4).setBackgroundResource(images[4]);
-	 * mTabHost.getTabWidget().getChildAt(5).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(5).setBackgroundResource(images[5]);
-	 * mTabHost.getTabWidget().getChildAt(6).setLayoutParams(new
-	 * LinearLayout.LayoutParams(100, 90));
-	 * mTabHost.getTabWidget().getChildAt(6).setBackgroundResource(images[6]);
-	 * 
-	 * final View tabView = mTabHost.getTabWidget().getChildTabViewAt(pos);
-	 * 
-	 * int scrollX = (tabView.getLeft() - (screenWidth / 2)) +
-	 * (tabView.getWidth() / 2);
-	 * 
-	 * horizontal_tab.scrollTo(scrollX, 0);
-	 * 
-	 * //mTabHost.getTabWidget().getChildAt(pos).setBackgroundResource(
-	 * images_selected[pos]); }
-	 */
+
 	@Override
 	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
 	{

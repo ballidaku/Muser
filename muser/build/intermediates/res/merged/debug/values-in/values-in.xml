@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <plurals name="tw__time_hours">
         <item quantity="one">1 jam</item>
@@ -14,7 +14,7 @@
         <item quantity="one">1 dtk</item>
         <item quantity="other">%d dtk</item>
     </plurals>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-in/common_strings.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-in/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Aplikasi memerlukan pembaruan ke aplikasi Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Aplikasi ini tidak akan berjalan sampai Anda memperbarui layanan Android Wear."</string>
@@ -47,7 +47,7 @@
     <string msgid="9071884888741449141" name="common_signin_button_text">"Masuk"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Masuk dengan Google"</string>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Aplikasi ini memerlukan satu atau beberapa layanan Google Play yang saat ini tidak tersedia. Hubungi pengembang untuk mendapatkan bantuan."</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.6.2/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="dgts__cancel">Batal</string>
     <string name="dgts__communication_error">Kesalahan Komunikasi</string>
@@ -96,30 +96,30 @@ Layanan, Kebijakan Privasi, dan Kebijakan Kuki dari Digits by Twitter, dan bahwa
     <string name="dgts_pin_code_terms">Anda sebelumnya telah menetapkan kode verifikasi 2 langkah di digits.com</string>
     <string name="dgts_verify">Verifikasi</string>
     <string name="dgts_verifying">Memverifikasi</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.facebook.android/facebook/4.4.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Kirim</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__allow_btn_txt">Izinkan</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__loading_tweet">Memuat Tweet</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__login_btn_txt">Masuk dengan Twitter</string>
     <string name="tw__not_now_btn_txt">Jangan sekarang</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__relative_date_format_long">d/M/y</string>
     <string name="tw__relative_date_format_short">d MMM</string>
     <string name="tw__retweeted_by_format">Di-retweet oleh %1$s</string>
     <string name="tw__share_content_format">Lihat Tweet \@%1$s: https://twitter.com/%1$s/status/%2$s</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.4.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__share_email_desc">Dapatkan pembaruan dan informasi lainnya dari %1$s bila Anda memberinya akses ke email di akun Twitter Anda \@%2$s</string>
     <string name="tw__share_email_title">Sebarkan alamat email Anda</string>
-    <!-- From: file:/home/sharan/AndroidStudioProjects/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
+    <!-- From: file:/home/sharan/Dropbox/Muser/muser/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.3.1/res/values-in/values-in.xml -->
     <eat-comment/>
     <string name="tw__share_subject_format">Tweet dari %1$s (\@%2$s)</string>
     <string name="tw__share_tweet">Sebarkan Tweet</string>

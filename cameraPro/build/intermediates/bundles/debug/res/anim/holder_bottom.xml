@@ -9,4 +9,4 @@
         android:interpolator="@android:anim/accelerate_interpolator"
         android:toYDelta="0%" />
 
-</set><!-- From: file:/home/sharan/AndroidStudioProjects/Muser/cameraPro/src/main/res/anim/holder_bottom.xml -->
+</set><!-- From: file:/home/sharan/Dropbox/Muser/cameraPro/src/main/res/anim/holder_bottom.xml -->

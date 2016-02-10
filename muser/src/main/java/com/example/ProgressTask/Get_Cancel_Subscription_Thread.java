@@ -54,7 +54,7 @@ public class Get_Cancel_Subscription_Thread
 				
 				DefaultHttpClient httpclient = new DefaultHttpClient(httpParameters);
 				
-				List<NameValuePair> param = new ArrayList<NameValuePair>();
+				List<NameValuePair> param = new ArrayList<>();
 				param.add(new BasicNameValuePair("user_id", rem_pref.getString("user_id", "")));
 				
 				httppost.setEntity(new UrlEncodedFormEntity(param));
@@ -117,8 +117,9 @@ public class Get_Cancel_Subscription_Thread
 								map.put("user_id", obj.getString("user_id"));
 								map.put("user_name", obj.getString("user_name"));
 								map.put("profile_image", obj.getString("profile_image"));
-								
-								
+								map.put("recurring", obj.getString("recurring"));
+								map.put("message", obj.getString("message"));
+
 								list.add(map);
 							}
 							

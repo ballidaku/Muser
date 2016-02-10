@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.example.Adapter.Trending_Pictures_Adapter;
 import com.example.Adapter.Trending_Videos_Adapter;
 import com.example.ProgressTask.Get_Home_Pictures_Videos_ProgressTask;
+import com.example.ProgressTask.Get_Pictures_Videos_ProgressTask;
 import com.example.classes.Global;
 import com.ameba.muser.Drawer;
 import com.ameba.muser.R;
@@ -117,6 +118,16 @@ public class Tab_Home_Videos extends Fragment
 			 new Get_Home_Pictures_Videos_ProgressTask(con, con2, Global.get_user_id(), "V", "").execute();
 		}
 
+	/*	// TODO:by Gagan ->user id removed. and getimagevideo service is used instead of gethomeVideos.
+
+		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB )
+		{
+			new Get_Pictures_Videos_ProgressTask(con, con2, "", "V", "").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+		}
+		else
+		{
+			new Get_Pictures_Videos_ProgressTask(con, con2,"", "V", "").execute();
+		}*/
 
 		
 	}

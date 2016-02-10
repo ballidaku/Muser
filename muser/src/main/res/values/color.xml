@@ -9,6 +9,8 @@
     <color name="checkbox_active">#143D55</color>
     <color name="checkbox_inactive">#ffffff</color>
 
+    <color name="Green">#008000</color>
+
     <color name="app_color">#112b46</color>
     <color name="view_color">#bbbbbb</color>
 
