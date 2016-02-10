@@ -224,24 +224,19 @@ public class Trainers extends Activity implements OnClickListener
 		message.setText("Please Wait...Loading...");
 		new Get_Wallet_Trainers_Thread(con);
 	}
-	
-	
 
-	
-	
-
-	
-	
-	private Handler	handler	= new Handler()
+	private Handler handler = new Handler()
 	{
 		@Override
 		public void handleMessage(Message msg)
 		{
 
-			Bundle bundle = msg.getData();
-			String balance= bundle.getString("balance");
-			
-			if(Integer.parseInt(balance)>=5)
+			Bundle bundle  = msg.getData();
+			String balance = bundle.getString("balance");
+
+			int    b       = Math.round(Float.parseFloat(balance));
+
+			if (b >= 5)
 			{
 				new Subscribe_Unsubscribe_Trainer_ProgressTask(con, user_id, "S").execute();
 			}
@@ -252,8 +247,7 @@ public class Trainers extends Activity implements OnClickListener
 		}
 
 	};
-	
-	
+
 	@Override
 	public void onClick(View v)
 	{
@@ -262,21 +256,20 @@ public class Trainers extends Activity implements OnClickListener
 			case R.id.back:
 				this.finish();
 				break;
-				
+
 			default:
 				break;
 		}
-		
+
 	}
-
-
 
 	class Trainer_Adapter extends BaseAdapter
 	{
 		ArrayList<HashMap<String, String>> local_list;
+
 		Trainer_Adapter(ArrayList<HashMap<String, String>> local_list)
 		{
-			this.local_list=local_list;
+			this.local_list = local_list;
 		}
 
 		@Override
@@ -286,39 +279,34 @@ public class Trainers extends Activity implements OnClickListener
 
 			row = inflater.inflate(R.layout.custom_trainer, parent, false);
 
-			RoundedCornersGaganImg trainer_image	=(RoundedCornersGaganImg)row.findViewById(R.id.trainer_image);
-			TextView trainer_name		=(TextView)row.findViewById(R.id.trainer_name);
-			ImageView train_with	=(ImageView)row.findViewById(R.id.train_with);
+			RoundedCornersGaganImg trainer_image = (RoundedCornersGaganImg) row.findViewById(R.id.trainer_image);
+			TextView               trainer_name  = (TextView) row.findViewById(R.id.trainer_name);
+			ImageView              train_with    = (ImageView) row.findViewById(R.id.train_with);
 
 			train_with.setVisibility(View.VISIBLE);
 
 			trainer_image.setImageUrl(con, local_list.get(position).get("profile_image"));
 			trainer_name.setText(local_list.get(position).get("user_name"));
 
-
-
-
 			train_with.setOnClickListener(new OnClickListener()
 			{
 
 				@Override
-				public
-				void onClick(View arg0)
+				public void onClick(View arg0)
 				{
 					user_id = "";
 					OnClickListener proceed = new OnClickListener()
 					{
 						@Override
-						public
-						void onClick(View v)
+						public void onClick(View v)
 						{
 							Util_Class.super_dialog.dismiss();
 							user_id = local_list.get(position).get("user_id");
 							new Get_Funds_Thread(con, handler);
 
-//							new Subscribe_Unsubscribe_Trainer_ProgressTask(con, user_id, "S").execute();
-//							Paypal_idea p = new Paypal_idea(con, "5");
-//							p.onBuyPressed();
+							//							new Subscribe_Unsubscribe_Trainer_ProgressTask(con, user_id, "S").execute();
+							//							Paypal_idea p = new Paypal_idea(con, "5");
+							//							p.onBuyPressed();
 
 						}
 					};
@@ -327,16 +315,15 @@ public class Trainers extends Activity implements OnClickListener
 				}
 			});
 
-
 			row.setOnClickListener(new OnClickListener()
 			{
-				@Override public
-				void onClick(View view)
+				@Override
+				public void onClick(View view)
 				{
 					Global.set_user_id(local_list.get(position).get("user_id"));
 					Global.set_friend_id(rem_pref.getString("user_id", ""));
 
-					Intent i=new Intent(con,Other_Profile.class);
+					Intent i = new Intent(con, Other_Profile.class);
 					con.startActivity(i);
 				}
 			});
@@ -367,7 +354,7 @@ public class Trainers extends Activity implements OnClickListener
 
 		public void add_data(ArrayList<HashMap<String, String>> list)
 		{
-			local_list=list;
+			local_list = list;
 		}
 	}
 }

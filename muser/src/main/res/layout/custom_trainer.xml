@@ -1,58 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    android:orientation="horizontal" >
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:gravity = "center_vertical"
+              android:orientation = "horizontal">
 
     <LinearLayout
-        android:id="@+id/click_me"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:id = "@+id/click_me"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_weight = "2"
+        android:gravity = "center_vertical"
+        android:orientation = "horizontal">
 
         <com.example.classes.RoundedCornersGaganImg
-            android:id="@+id/trainer_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="8dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/loading_image" />
+            android:id = "@+id/trainer_image"
+            android:layout_width = "60dp"
+            android:layout_height = "60dp"
+            android:layout_margin = "8dp"
+            android:scaleType = "fitXY"
+            android:src = "@drawable/loading_image"/>
 
-        <TextView
-            android:id="@+id/trainer_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="2dp"
-            android:text="Sharan"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_14"
-            android:textStyle="bold" >
-        </TextView>
+        <LinearLayout android:layout_width = "match_parent"
+                      android:layout_height = "wrap_content"
+                      android:orientation = "vertical">
+
+            <TextView
+                android:id = "@+id/trainer_name"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:paddingLeft = "2dp"
+                android:text = "Sharan"
+                android:textColor = "@android:color/black"
+                android:textSize = "@dimen/text_size_14"
+                android:textStyle = "bold"/>
+
+            <TextView
+                android:id = "@+id/message"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:paddingLeft = "2dp"
+                android:text = "Sharan"
+                android:textColor = "@android:color/black"
+                android:visibility = "gone"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-   
-    
-    <ImageView
-        android:id="@+id/train_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_margin="5dp"
-        android:src="@drawable/train_with" 
-        android:visibility="gone"/>
-    
-     <ImageView
-        android:id="@+id/unsubscribe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_margin="5dp"
-        android:src="@drawable/unsubscribe" 
-        android:visibility="gone"/>
 
-    
+    <ImageView
+        android:id = "@+id/train_with"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_margin = "5dp"
+        android:padding = "5dp"
+        android:src = "@drawable/train_with"
+        android:visibility = "gone"/>
+
+    <ImageView
+        android:id = "@+id/unsubscribe"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_margin = "5dp"
+        android:padding = "5dp"
+        android:src = "@drawable/unsubscribe"
+        android:visibility = "gone"/>
+
 
 </LinearLayout>

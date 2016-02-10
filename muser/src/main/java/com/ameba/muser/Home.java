@@ -134,7 +134,7 @@ public class Home extends Fragment implements TabHost.OnTabChangeListener, ViewP
 		fragments.add(Fragment.instantiate(con, Tab_Home_Videos.class.getName()));
 
 		//***********************************I changed Tab_Home_Sessions to Tab_My_Profile_Sessions******************************************
-		fragments.add(Fragment.instantiate(con, Tab_My_Profile_Sessions.class.getName()));
+		fragments.add(Fragment.instantiate(con, Tab_Home_Sessions.class.getName()));
 
 		//***********************************************************************************************************************************
 		mPagerAdapter = new PagerAdapter(super.getFragmentManager(), fragments);
@@ -163,7 +163,7 @@ public class Home extends Fragment implements TabHost.OnTabChangeListener, ViewP
 		this.mapTabInfo.put(tabInfo.tag, tabInfo);
 		Home.AddTab(this, this.mTabHost,this.mTabHost.newTabSpec("Videos").setIndicator(""),(tabInfo = new TabInfo("Videos", Tab_Home_Videos.class, args)));
 		this.mapTabInfo.put(tabInfo.tag, tabInfo);
-		Home.AddTab(this, this.mTabHost,this.mTabHost.newTabSpec("Session").setIndicator(""),(tabInfo = new TabInfo("Session", Tab_My_Profile_Sessions.class, args)));
+		Home.AddTab(this, this.mTabHost,this.mTabHost.newTabSpec("Session").setIndicator(""),(tabInfo = new TabInfo("Session", Tab_Home_Sessions.class, args)));
 		this.mapTabInfo.put(tabInfo.tag, tabInfo);
 		
 		mTabHost.setOnTabChangedListener(this);
